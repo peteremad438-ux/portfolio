@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en" data-theme="dark" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peter Emad — Frontend Developer</title>
+    <meta
+      name="description"
+      content="Peter Emad — Frontend Web Developer. Crafting beautiful, fast, and accessible web experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-dot"></span>portfolio
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li>
+            <a href="#home" class="nav-link" data-en="Home" data-ar="الرئيسية"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link" data-en="About" data-ar="عني"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="nav-link"
+              data-en="Skills"
+              data-ar="مهاراتي"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="nav-link"
+              data-en="Projects"
+              data-ar="مشاريعي"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#srvices"
+              class="nav-link"
+              data-en="Services"
+              data-ar="خدماتي"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="nav-link"
+              data-en="Contact"
+              data-ar="تواصل"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="toggle-btn lang-toggle"
+            id="langToggle"
+            title="Toggle Language"
+          >
+            <span class="toggle-label">EN</span>
+          </button>
+          <button
+            class="toggle-btn theme-toggle"
+            id="themeToggle"
+            title="Toggle Theme"
+          >
+            <i class="fa-solid fa-moon" id="themeIcon"></i>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-grid"></div>
+      </div>
+      <div class="hero-container">
+        <div class="content-text" data-aos="fade-right">
+          <p class="greeting">
+            <span class="greeting-line"></span>
+            <span
+              class="text-primary"
+              data-en="HI THERE, I'M"
+              data-ar="مرحباً، أنا"
+              >HI THERE, I'M</span
+            >
+          </p>
+
+          <h1 class="hero-name">
+            <span class="name-top"></span>
+            <span class="accent-name"> Peter Emad </span>
+          </h1>
+          <div class="title-wrapper">
+            <span class="title-static" data-en="Frontend" data-ar="مطور"
+              >Frontend</span
+            >
+            <div class="typewriter-block">
+              <span id="typewriter" class="typewriter-text"></span>
+              <span class="cursor-blink">|</span>
+            </div>
+          </div>
+          <p
+            class="hero-bio"
+            data-en="I build fast, beautiful & accessible web experiences that leave an impression."
+            data-ar="أبني تجارب ويب سريعة وجميلة وسهلة الوصول تترك أثراً."
+          >
+            I build fast, beautiful &amp; accessible web experiences that leave
+            an impression.
+          </p>
+          <div class="social">
+            <a
+              href="https://www.facebook.com/share/1ChHSu1Bxj/"
+              target="_blank"
+              class="social-icon"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/pepoo__emad?igsh=dmdpbHBrMDB5YzNj"
+              target="_blank"
+              class="social-icon"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/peter-emad-057505361"
+              target="_blank"
+              class="social-icon"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/peteremad438-ux"
+              target="_blank"
+              class="social-icon"
+              aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://wa.me/201212713718"
+              target="_blank"
+              class="social-icon"
+              aria-label="WhatsApp"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#">
+              <span data-en="Download CV" data-ar="تحميل السيرة"
+                >Download CV</span
+              >
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a class="btn btn-outline" href="https://wa.me/201212713718">
+              <span data-en="Hire Me" data-ar="وظفني">Hire Me</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-img-wrapper" data-aos="fade-left">
+          <div class="img-ring ring-1"></div>
+          <div class="img-ring ring-2"></div>
+          <div class="img-glow"></div>
+          <img src="web- (1).png" alt="Peter Emad" class="hero-img" />
+          <div class="img-badge badge-1">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <div class="img-badge badge-2"><i class="fa-brands fa-js"></i></div>
+          <div class="img-badge badge-3">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span data-en="scroll" data-ar="تمرير">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </header>
+
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-en="WHO I AM" data-ar="من أنا"
+            >WHO I AM</span
+          >
+          <h2 class="section-title" data-en="About Me" data-ar="عني">
+            About Me
+          </h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-col" data-aos="fade-right">
+            <div class="about-img-frame">
+              <div class="about-img-bg"></div>
+              <img src="about me.jpeg" alt="Peter Emad" class="about-img" />
+              <div class="about-exp-badge">
+                <span class="exp-num">1+</span>
+                <span class="exp-text" data-en="Year Exp." data-ar="سنة خبرة"
+                  >Year Exp.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="about-text-col" data-aos="fade-left">
+            <h3
+              class="about-subtitle"
+              data-en="Frontend Developer &"
+              data-ar="مطور واجهات أمامية باستخدام الرياكت "
+            >
+              Frontend Developer| react.js
+            </h3>
+            <p
+              class="about-desc"
+              data-en="Hi! I'm Peter Emad, a passionate Frontend Web Developer based in Egypt. I specialize in crafting modern, responsive, and visually captivating web interfaces using the latest technologies."
+              data-ar="مرحباً! أنا بيتر عماد، مطور واجهات ويب أمامية متحمس من مصر. أتخصص في بناء واجهات ويب حديثة ومتجاوبة وجذابة باستخدام أحدث التقنيات."
+            >
+              Hi! I'm Peter Emad, a passionate Frontend Web Developer based in
+              Egypt. I specialize in crafting modern, responsive, and visually
+              captivating web interfaces using the latest technologies.
+            </p>
+            <p
+              class="about-desc"
+              data-en="I believe great code and great design go hand in hand. I'm always learning, always building, and always pushing the limits of what the web can do."
+              data-ar="أؤمن أن الكود الرائع والتصميم الرائع يسيران جنباً إلى جنب. أنا دائماً أتعلم وأبني وأتحدى حدود ما يمكن للويب تحقيقه."
+            >
+              I believe great code and great design go hand in hand. I'm always
+              learning, always building, and always pushing the limits of what
+              the web can do.
+            </p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <span class="stat-num">15+</span>
+                <span class="stat-label" data-en="Projects" data-ar="مشروع"
+                  >Projects</span
+                >
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">10+</span>
+                <span class="stat-label" data-en="Technologies" data-ar="تقنية"
+                  >Technologies</span
+                >
+              </div>
+              <div class="stat-card">
+                <span class="stat-num">100%</span>
+                <span class="stat-label" data-en="Dedication" data-ar="تفاني"
+                  >Dedication</span
+                >
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              style="margin-top: 1.5rem; width: fit-content"
+            >
+              <span data-en="Let's Talk" data-ar="لنتحدث">Let's Talk</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-en="WHAT I KNOW" data-ar="ما أعرفه"
+            >WHAT I KNOW</span
+          >
+          <h2 class="section-title" data-en="My Skills" data-ar="مهاراتي">
+            My Skills
+          </h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="0">
+            <div class="skill-icon-wrap" style="--clr: #e34f26">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5"
+              />
+            </div>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="60">
+            <div class="skill-icon-wrap" style="--clr: #264de4">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3"
+              />
+            </div>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="120">
+            <div class="skill-icon-wrap" style="--clr: #f7df1e">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+              />
+            </div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="180">
+            <div class="skill-icon-wrap" style="--clr: #61dafb">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+              />
+            </div>
+            <span class="skill-name">React.js</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="240">
+            <div class="skill-icon-wrap" style="--clr: #339933">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt="Node.js"
+              />
+            </div>
+            <span class="skill-name">Node.js</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="skill-icon-wrap" style="--clr: #3178c6">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+            </div>
+            <span class="skill-name">TypeScript</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="360">
+            <div class="skill-icon-wrap" style="--clr: #f05032">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt="Git"
+              />
+            </div>
+            <span class="skill-name">Git</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="420">
+            <div class="skill-icon-wrap" style="--clr: #fff">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub"
+              />
+            </div>
+            <span class="skill-name">GitHub</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="480">
+            <div class="skill-icon-wrap" style="--clr: #21759b">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                alt="WordPress"
+              />
+            </div>
+            <span class="skill-name">WordPress</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="540">
+            <div class="skill-icon-wrap" style="--clr: #38bdf8">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt="Tailwind"
+              />
+            </div>
+            <span class="skill-name">Tailwind</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+            <div class="skill-icon-wrap" style="--clr: #000">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                alt="Next.js"
+              />
+            </div>
+            <span class="skill-name">Next.js</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="660">
+            <div class="skill-icon-wrap" style="--clr: #7952b3">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap"
+              />
+            </div>
+            <span class="skill-name">Bootstrap</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="720">
+            <div class="skill-icon-wrap" style="--clr: #4479a1">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+              />
+            </div>
+            <span class="skill-name">MySQL</span>
+          </div>
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="780">
+            <div class="skill-icon-wrap" style="--clr: #336791">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                alt="PostgreSQL"
+              />
+            </div>
+            <span class="skill-name">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         PROJECTS SECTION
+    ══════════════════════════════════════ -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-en="WHAT I BUILT" data-ar="ما بنيته"
+            >WHAT I BUILT</span
+          >
+          <h2 class="section-title" data-en="My Projects" data-ar="مشاريعي">
+            My Projects
+          </h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- ============================
+               PROJECT 1 — E-Commerce
+          ============================= -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 1: غير اسم الصورة -->
+              <img
+                src="Screenshot_29-5-2026_171232_.jpeg"
+                alt="E-Commerce Platform"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 1 -->
+                <a
+                  href="https://modern-gym-eight.vercel.app"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en="ENGAGE GYM"
+                data-ar=" جيم حديث"
+              >
+                ENGAGE GYM
+              </h3>
+              <p
+                class="project-desc"
+                data-en="
+A modern gym website showcasing fitness programs, memberships, and an engaging user experience.."
+                data-ar=" موقع جيم حديث يعرض برامج اللياقة والاشتراكات بتجربة مستخدم جذابة."
+              >
+                A modern gym website showcasing fitness programs, memberships,
+                and an engaging user experience.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JS</span>
+              </div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 1 -->
+                <a
+                  href="https://modern-gym-eight.vercel.app"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 1 -->
+                <a
+                  href="https://github.com/peteremad438-ux/Modern-gym.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 2: غير اسم الصورة -->
+              <img
+                src="Screenshot_10-6-2026_142442_.jpeg"
+                alt="Portfolio Template"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 2 -->
+                <a
+                  href="https://fifa-world-cup-ashen.vercel.app/"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en="fifa world cup"
+                data-ar=" كاس العالم"
+              >
+                fifa world cup
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A quick journey through World Cup history, showcasing iconic editions, legendary players, and unforgettable moments in football"
+                data-ar="رحلة سريعة عبر تاريخ كأس العالم، تستعرض أشهر النسخ، أعظم اللاعبين، وأبرز اللحظات الخالدة في عالم كرة القدم."
+              >
+                A quick journey through World Cup history, showcasing iconic
+                editions, legendary players, and unforgettable moments in
+                football
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 2 -->
+                <a
+                  href="https://fifa-world-cup-ashen.vercel.app/"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 2 -->
+                <a
+                  href="https://github.com/peteremad438-ux/FIFA-WORLD-CUP.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================
+               PROJECT 3 — Dashboard UI
+          ============================= -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 3: غير اسم الصورة -->
+              <img
+                src="Screenshot_27-5-2026_15187_.jpeg"
+                alt="Dashboard UI"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 3 -->
+                <a
+                  href="https://kingdom2026.netlify.app"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en=" KINGDOM RESTAURANT"
+                data-ar="  مطعم كينجدوم"
+              >
+                KINGDOM RESTAURANT
+              </h3>
+              <p
+                class="project-desc"
+                data-en="An elegant restaurant website highlighting premium meals, offers, and a luxurious design."
+                data-ar="موقع مطعم راقي يبرز الوجبات المميزة والعروض بتصميم فاخر."
+              >
+                An elegant restaurant website highlighting premium meals,
+                offers, and a luxurious design.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 3 -->
+                <a
+                  href="https://kingdom2026.netlify.app"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 3 -->
+                <a
+                  href="https://github.com/peteremad438-ux/KINGDOM.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 4: غير اسم الصورة -->
+              <img
+                src="WhatsApp Image 2026-06-04 at 9.51.42 PM.jpeg"
+                alt="Landing Page"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 4 -->
+                <a
+                  href="https://made-care-lake.vercel.app/"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en="MADE CARE"
+                data-ar=" مستشفي ميد كير"
+              >
+                MADE CARE
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A professional healthcare website designed to showcase medical services, expert doctors, and patient care solutions."
+                data-ar="موقع مستشفى احترافي يعرض الخدمات الطبية والأطباء المتخصصين وحلول الرعاية الصحية للمرضى."
+              >
+                A professional healthcare website designed to showcase medical
+                services, expert doctors, and patient care solutions.
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>javascript</span>
+              </div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 4 -->
+                <a
+                  href="https://made-care-lake.vercel.app/"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 4 -->
+                <a
+                  href="https://github.com/peteremad438-ux/MADE-CARE.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================
+               PROJECT 4 — Landing Page
+          ============================= -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 4: غير اسم الصورة -->
+              <img
+                src="Screenshot_29-5-2026_171152_.jpeg"
+                alt="Landing Page"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 4 -->
+                <a
+                  href="https://spreso.netlify.app"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en="CAFFEINE COVE"
+                data-ar=" متجر قهوة"
+              >
+                CAFFEINE COVE
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A cozy coffee shop website presenting drinks, ambiance, and a warm, inviting design."
+                data-ar="موقع كافيه يعرض المشروبات والأجواء بتصميم مريح وجذاب."
+              >
+                A cozy coffee shop website presenting drinks, ambiance, and a
+                warm, inviting design.
+              </p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 4 -->
+                <a
+                  href="https://spreso.netlify.app"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 4 -->
+                <a
+                  href="https://github.com/peteremad438-ux/COFFE.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ============================
+               PROJECT 5 — Blog Platform
+          ============================= -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 5: غير اسم الصورة -->
+              <img
+                src="Screenshot_29-5-2026_171133_.jpeg"
+                alt="Blog Platform"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 5 -->
+                <a
+                  href="https://mota5ss2026.netlify.app"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en="COPTIC HUMNS "
+                data-ar=" الحان قبطية"
+              >
+                COPTIC HUMNS
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A spiritual website dedicated to Coptic hymns with organized content and a peaceful user interface"
+                data-ar="موقع روحي مخصص للألحان القبطية بمحتوى منظم وواجهة هادئة."
+              >
+                A spiritual website dedicated to Coptic hymns with organized
+                content and a peaceful user interface
+              </p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 5 -->
+                <a
+                  href="https://mota5ss2026.netlify.app"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 5 -->
+                <a
+                  href="https://github.com/peteremad438-ux/COPTIC-HUMNS.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============================
+               PROJECT 6 — Quiz App
+          ============================= -->
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-img-wrap">
+              <!-- 🖼️ صورة المشروع 6: غير اسم الصورة -->
+              <img
+                src="Screenshot_29-5-2026_171015_.jpeg"
+                alt="Interactive Quiz App"
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+
+              <div class="project-overlay">
+                <!-- 🔗 رابط الـ Demo للمشروع 6 -->
+                <a
+                  href="https://peteremad438-ux.github.io/petooo/"
+                  target="_blank"
+                  class="overlay-btn"
+                  data-en="View Project"
+                  data-ar="عرض المشروع"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="project-body">
+              <h3
+                class="project-title"
+                data-en="SIMPLE CARD ABOUT ME"
+                data-ar="كارت بسيط عني "
+              >
+                SIMPLE CARD ABOUT ME
+              </h3>
+              <p
+                class="project-desc"
+                data-en="A personal card showcasing skills, projects, and a clean professional identity"
+                data-ar="كارت شخصي يعرض المهارات والمشاريع بهوية احترافية بسيطة."
+              >
+                A personal card showcasing skills, projects, and a clean
+                professional identity
+              </p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+              <div class="project-links">
+                <!-- 🔗 رابط الـ Demo للمشروع 6 -->
+                <a
+                  href="https://peteremad438-ux.github.io/petooo/"
+                  target="_blank"
+                  class="proj-btn proj-btn-primary"
+                >
+                  <i class="fa-solid fa-eye"></i>
+                  <span data-en="Live Demo" data-ar="عرض مباشر">Live Demo</span>
+                </a>
+                <!-- 🔗 رابط الـ GitHub للمشروع 6 -->
+                <a
+                  href="https://github.com/peteremad438-ux/card-about-me.git"
+                  target="_blank"
+                  class="proj-btn proj-btn-ghost"
+                >
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="srvices" class="section services-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-en="WHAT I OFFER" data-ar="ما أقدمه"
+            >WHAT I OFFER</span
+          >
+          <h2 class="section-title" data-en="Services" data-ar="خدماتي">
+            Services
+          </h2>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3
+              data-en="Frontend Development"
+              data-ar="تطوير الواجهات الأمامية"
+            >
+              Frontend Development
+            </h3>
+            <p
+              data-en="Building responsive, performant web apps using React, Next.js, and modern CSS frameworks."
+              data-ar="بناء تطبيقات ويب متجاوبة وعالية الأداء باستخدام React وNext.js وأطر CSS الحديثة."
+            >
+              Transforming designs into fast, responsive, and user-friendly web
+              experiences using modern frontend technologies.
+            </p>
+            <ul class="service-list">
+              <li>HTML5, CSS3, JavaScript</li>
+              <li>React.js & Bootstrap</li>
+              <li>Responsive & Mobile First Design</li>
+            </ul>
+          </div>
+          <div
+            class="service-card featured"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="service-badge"
+              data-en="Most Popular"
+              data-ar="الأكثر طلباً"
+            >
+              Most Popular
+            </div>
+            <div class="service-icon-wrap">
+              <i class="fa-solid fa-pen-ruler"></i>
+            </div>
+            <h3 data-en="React Development" data-ar="  مطور رياكت ">
+              React Development
+            </h3>
+            <p
+              data-en="Creating scalable and interactive user interfaces with React, focusing on performance, maintainability, and user experience."
+              data-ar="إنشاء تطبيقات ويب حديثة، ديناميكية، وعالية الأداء باستخدام React والنظام البيئي الخاص بها."
+            >
+              Creating scalable and interactive user interfaces with React,
+              focusing on performance, maintainability, and user experience.
+            </p>
+            <ul class="service-list">
+              <li>Component-Based Architecture</li>
+              <li>React Hooks & Context API</li>
+              <li>REST API Integration</li>
+              <li>Optimized Performance</li>
+            </ul>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon-wrap">
+              <i class="fa-brands fa-wordpress"></i>
+            </div>
+            <h3 data-en="Web Design" data-ar="تصميم المواقع">Web Design</h3>
+            <p
+              data-en="Creating stunning, conversion-focused websites and landing pages with pixel-perfect attention to detail."
+              data-ar="إنشاء مواقع ويب رائعة وصفحات هبوط تركز على التحويل باهتمام دقيق بالتفاصيل."
+            >
+              Creating stunning, conversion-focused websites and landing pages
+              with pixel-perfect attention to detail.
+            </p>
+            <ul class="service-list">
+              <li>Landing Pages</li>
+              <li>WordPress Sites</li>
+              <li>SEO Optimized</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag" data-en="GET IN TOUCH" data-ar="تواصل معي"
+            >GET IN TOUCH</span
+          >
+          <h2 class="section-title" data-en="Contact Me" data-ar="تواصل معي">
+            Contact Me
+          </h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <p
+              class="contact-intro"
+              data-en="Have a project in mind or want to collaborate? I'd love to hear from you. Drop me a message and I'll get back to you as soon as possible."
+              data-ar="هل لديك مشروع في الذهن أو تريد التعاون؟ يسعدني أن أسمع منك. أرسل لي رسالة وسأرد عليك في أقرب وقت."
+            >
+              Have a project in mind or want to collaborate? I'd love to hear
+              from you. Drop me a message and I'll get back to you as soon as
+              possible.
+            </p>
+            <div class="contact-cards">
+              <a href="mailto:Peteremad438@gmail.com" class="contact-card">
+                <div class="contact-card-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span
+                    class="contact-card-label"
+                    data-en="Email"
+                    data-ar="البريد الإلكتروني"
+                    >Email</span
+                  >
+                  <span class="contact-card-value">Peteremad438@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:01212713718" class="contact-card">
+                <div class="contact-card-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span
+                    class="contact-card-label"
+                    data-en="Phone"
+                    data-ar="الهاتف"
+                    >Phone</span
+                  >
+                  <span class="contact-card-value">+20 121 271 3718</span>
+                </div>
+              </a>
+              <a
+                href="https://wa.me/201212713718"
+                target="_blank"
+                class="contact-card"
+              >
+                <div class="contact-card-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                  <span class="contact-card-label">WhatsApp</span>
+                  <span class="contact-card-value">+20 121 271 3718</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <form
+            class="contact-form"
+            data-aos="fade-left"
+            onsubmit="handleSubmit(event)"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label data-en="Your Name" data-ar="اسمك">Your Name</label>
+                <input type="text" placeholder="Peter Emad" required />
+              </div>
+              <div class="form-group">
+                <label data-en="Your Email" data-ar="بريدك الإلكتروني"
+                  >Your Email</label
+                >
+                <input type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-en="Subject" data-ar="الموضوع">Subject</label>
+              <input type="text" placeholder="Project Inquiry" />
+            </div>
+            <div class="form-group">
+              <label data-en="Message" data-ar="رسالتك">Message</label>
+              <textarea
+                rows="5"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+            <div class="form-btns">
+              <button type="submit" class="btn btn-primary form-submit">
+                <span data-en="Send Message" data-ar="إرسال الرسالة"
+                  >Send Message</span
+                >
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <a href="mailto:Peteremad438@gmail.com" class="btn btn-outline">
+                <span data-en="Send Email" data-ar="إرسال بريد"
+                  >Send Email</span
+                >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              <span
+                data-en="Message sent! I'll get back to you soon."
+                data-ar="تم الإرسال! سأتواصل معك قريباً."
+                >Message sent! I'll get back to you soon.</span
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo"
+            ><span class="logo-dot"></span>portfolio</a
+          >
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/share/1ChHSu1Bxj/"
+              target="_blank"
+              class="social-icon"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/pepoo__emad"
+              target="_blank"
+              class="social-icon"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/peter-emad-057505361"
+              target="_blank"
+              class="social-icon"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/peteremad438-ux"
+              target="_blank"
+              class="social-icon"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://wa.me/201212713718"
+              target="_blank"
+              class="social-icon"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p
+            data-en="© 2025 Peter Emad. All rights reserved."
+            data-ar="© 2025 بيتر عماد. جميع الحقوق محفوظة."
+          >
+            © 2025 Peter Emad. All rights reserved.
+          </p>
+          <p
+            data-en="Built with peter emad & clean code."
+            data-ar="صنع بواسطة بيتر عماد."
+          >
+            Built with &amp; clean code.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js"></script>
+  </body>
+</html>
