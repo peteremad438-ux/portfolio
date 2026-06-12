@@ -48,9 +48,7 @@ langBtn.addEventListener("click", () => {
 });
 
 /* ── Typewriter ── */
-const phrases = [
-  "React Developer",
-];
+const phrases = ["React Developer"];
 let pIdx = 0,
   cIdx = 0,
   deleting = false;

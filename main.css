@@ -140,7 +140,7 @@ button {
 }
 .nav-logo {
   font-weight: 800;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--text);
   display: flex;
   align-items: center;
@@ -1509,6 +1509,6 @@ button {
     width: 100%;
   }
 }
-.logo-port{
+.logo-port {
   color: var(--green);
 }
