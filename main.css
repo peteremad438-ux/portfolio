@@ -144,7 +144,7 @@ button {
   color: var(--text);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 1px;
   letter-spacing: 1.5px;
 }
 .logo-dot {
@@ -154,6 +154,7 @@ button {
   border-radius: 50%;
   animation: pulse-dot 2.5s ease infinite;
   box-shadow: 0 0 0 3px var(--green-soft);
+  margin: 10px;
 }
 @keyframes pulse-dot {
   0%,
@@ -1507,4 +1508,7 @@ button {
     justify-content: center;
     width: 100%;
   }
+}
+.logo-port{
+  color: var(--green);
 }
