@@ -135,6 +135,7 @@ navLinks.forEach((l) =>
 
 /* ── Scroll to Top ── */
 const scrollTopBtn = document.getElementById("scrollTop");
+scrollTopBtn.classList.remove("visible");
 scrollTopBtn.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" }),
 );
