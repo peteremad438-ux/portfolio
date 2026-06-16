@@ -155,8 +155,17 @@ button:focus-visible {
   color: var(--text);
   display: flex;
   align-items: center;
-  gap: 1px;
-  letter-spacing: 1.5px;
+  gap: 0.35rem;
+  letter-spacing: 0.04rem;
+}
+.nav-logo .logo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  letter-spacing: normal;
+}
+[dir="rtl"] .nav-logo {
+  letter-spacing: normal;
 }
 .logo-dot {
   width: 9px;
@@ -1636,4 +1645,6 @@ button:focus-visible {
 }
 .logo-port {
   color: var(--green);
+  font-size: inherit;
+  line-height: inherit;
 }
