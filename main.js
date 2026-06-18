@@ -47,7 +47,7 @@
   function applyLang(ar) {
     html.setAttribute("lang", ar ? "ar" : "en");
     html.setAttribute("dir", ar ? "rtl" : "ltr");
-    if (langLabel) langLabel.textContent = ar ? "AR" : "EN";
+    if (langLabel) langLabel.textContent = ar ? "EN" : "AR";
 
     // Translate all [data-en] / [data-ar] elements
     document.querySelectorAll("[data-en]").forEach((el) => {
