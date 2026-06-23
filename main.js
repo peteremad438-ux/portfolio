@@ -182,15 +182,26 @@
     { passive: true },
   );
 
-  (function animRing() {
+  let ringRafId = null;
+  function animRing() {
     rx += (mx - rx) * 0.12;
     ry += (my - ry) * 0.12;
     if (cursorRing) {
       cursorRing.style.left = rx + "px";
       cursorRing.style.top = ry + "px";
     }
-    requestAnimationFrame(animRing);
-  })();
+    // Keep animating only while ring hasn't settled
+    const driftSq = (mx - rx) ** 2 + (my - ry) ** 2;
+    if (driftSq > 0.1) ringRafId = requestAnimationFrame(animRing);
+    else ringRafId = null;
+  }
+  document.addEventListener(
+    "mousemove",
+    () => {
+      if (!ringRafId) ringRafId = requestAnimationFrame(animRing);
+    },
+    { passive: true },
+  );
 
   document.addEventListener("mousedown", () => {
     cursorDot?.classList.add("clicking");
@@ -339,6 +350,7 @@
      3D TILT ON PROJECT CARDS
   ══════════════════════════════════════════════ */
   document.querySelectorAll(".project-card").forEach((card) => {
+    card.style.willChange = "transform"; // prevent repaint on hover
     card.addEventListener("mousemove", (e) => {
       const r = card.getBoundingClientRect();
       const rotX = ((e.clientY - r.top - r.height / 2) / (r.height / 2)) * -6;
@@ -391,10 +403,11 @@
       update() {
         const dx = pmx - this.x,
           dy = pmy - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 200) {
-          this.vx += (dx / dist) * 0.01;
-          this.vy += (dy / dist) * 0.01;
+        const distSq = dx * dx + dy * dy;
+        if (distSq < 200 * 200 && distSq > 0) {
+          const inv = 0.01 / Math.sqrt(distSq);
+          this.vx += dx * inv;
+          this.vy += dy * inv;
         }
         this.vx *= 0.98;
         this.vy *= 0.98;
@@ -413,23 +426,26 @@
       }
     }
 
-    const particles = Array.from({ length: 55 }, () => new P());
+    const particles = Array.from({ length: 35 }, () => new P()); // was 55
 
+    const CONN_SQ = 120 * 120; // squared distance — no sqrt needed
     function connect() {
-      for (let i = 0; i < particles.length; i++)
+      ctx.lineWidth = 0.5;
+      for (let i = 0; i < particles.length - 1; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
-          const d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 120) {
+          const dSq = dx * dx + dy * dy;
+          if (dSq < CONN_SQ) {
+            const alpha = (1 - dSq / CONN_SQ) * 0.12;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(79,116,255,${(1 - d / 120) * 0.12})`;
-            ctx.lineWidth = 0.5;
+            ctx.strokeStyle = `rgba(79,116,255,${alpha.toFixed(3)})`;
             ctx.stroke();
           }
         }
+      }
     }
 
     (function animP() {

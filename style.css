@@ -1445,6 +1445,7 @@ footer {
   gap: 1.3rem;
 }
 .skill-card {
+  will-change: transform;
   background: var(--bg3);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -1809,6 +1810,7 @@ footer {
   gap: 1.8rem;
 }
 .project-card {
+  will-change: transform;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 22px;
@@ -1827,7 +1829,7 @@ footer {
   height: 200px;
   overflow: hidden;
 }
-.section-title{
+.section-title {
   letter-spacing: 3px;
 }
 .project-img-wrap img {
@@ -1956,6 +1958,7 @@ footer {
   gap: 1.8rem;
 }
 .service-card {
+  will-change: transform;
   background: var(--bg3);
   border: 1px solid var(--border);
   border-radius: 22px;
