@@ -1942,6 +1942,116 @@ footer {
 }
 
 /* ═══════════════════════════════════════
+   PROJECT FILTER — Premium Segmented Control
+═══════════════════════════════════════ */
+.project-filter-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.project-filter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 6px;
+  border-radius: 9999px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.project-filter-indicator {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  height: calc(100% - 12px);
+  width: 0;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--accent), #6b46ff);
+  box-shadow: 0 8px 22px var(--accent-glow);
+  transition:
+    transform 0.3s var(--ease),
+    width 0.3s var(--ease);
+  z-index: 0;
+}
+
+.filter-btn {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  padding: 9px 24px;
+  border-radius: 9999px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color 0.3s var(--ease),
+    background 0.3s var(--ease),
+    transform 0.3s var(--ease);
+}
+[lang="ar"] .filter-btn {
+  font-family: "Cairo", sans-serif;
+}
+
+.filter-btn:hover:not(.active) {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+[data-theme="light"] .filter-btn:hover:not(.active) {
+  background: rgba(10, 22, 40, 0.05);
+}
+
+.filter-btn.active {
+  color: #fff;
+  font-weight: 600;
+  transform: scale(1.03);
+}
+
+/* Card filter animation */
+.project-card {
+  transition:
+    opacity 0.4s var(--ease),
+    transform 0.4s var(--ease),
+    box-shadow var(--trans),
+    border-color var(--trans);
+}
+.project-card.filter-hidden {
+  display: none;
+}
+.project-card.filter-enter {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.project-card.filter-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .project-filter {
+    width: 100%;
+    max-width: 380px;
+  }
+  .filter-btn {
+    flex: 1;
+    padding: 9px 10px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
+/* ═══════════════════════════════════════
    SERVICES
 ═══════════════════════════════════════ */
 .services-section {

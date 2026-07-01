@@ -876,9 +876,45 @@
           </h2>
         </div>
 
+        <!-- ═══ PROJECT FILTER — Segmented Control ═══ -->
+        <div class="project-filter-wrap" data-reveal="up">
+          <div class="project-filter" id="projectFilter">
+            <span class="project-filter-indicator" id="filterIndicator"></span>
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              data-en="All"
+              data-ar="الكل"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="freelance"
+              data-en="Freelance"
+              data-ar="عمل حر"
+            >
+              Freelance
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="personal"
+              data-en="Personal"
+              data-ar="شخصي"
+            >
+              Personal
+            </button>
+          </div>
+        </div>
+
         <div class="projects-grid">
           <!-- Project 1 -->
-          <div class="project-card" data-reveal="up" style="--d: 0ms">
+          <div
+            class="project-card"
+            data-reveal="up"
+            style="--d: 0ms"
+            data-category="freelance"
+          >
             <div class="project-img-wrap">
               <img src="Screenshot_29-5-2026_171232_.jpeg" alt="Engage Gym" />
               <div class="project-overlay">
@@ -931,7 +967,12 @@
             </div>
           </div>
 
-          <div class="project-card" data-reveal="up" style="--d: 0ms">
+          <div
+            class="project-card"
+            data-reveal="up"
+            style="--d: 0ms"
+            data-category="freelance"
+          >
             <div class="project-img-wrap">
               <img src="Screenshot_26-6-2026_171523_ .jpeg" alt="Electro Shop" />
               <div class="project-overlay">
@@ -986,7 +1027,12 @@
           </div>
 
           <!-- Project 2 -->
-          <div class="project-card" data-reveal="up" style="--d: 100ms">
+          <div
+            class="project-card"
+            data-reveal="up"
+            style="--d: 100ms"
+            data-category="personal"
+          >
             <div class="project-img-wrap">
               <img src="Screenshot_10-6-2026_142442_.jpeg" alt="FIFA" />
               <div class="project-overlay">
@@ -1040,7 +1086,12 @@
           </div>
 
           <!-- Project 3 -->
-          <div class="project-card" data-reveal="up" style="--d: 200ms">
+          <div
+            class="project-card"
+            data-reveal="up"
+            style="--d: 200ms"
+            data-category="freelance"
+          >
             <div class="project-img-wrap">
               <img
                 src="WhatsApp Image 2026-06-04 at 9.51.42 PM.jpeg"
@@ -1096,7 +1147,12 @@
             </div>
           </div>
           <!-- Project 7 -->
-          <div class="project-card" data-reveal="up" style="--d: 0ms">
+          <div
+            class="project-card"
+            data-reveal="up"
+            style="--d: 0ms"
+            data-category="personal"
+          >
             <div class="project-img-wrap">
               <img src="Screenshot_29-5-2026_171133_.jpeg" alt="Coptic Hymns" />
               <div class="project-overlay">
@@ -1151,7 +1207,12 @@
           </div>
 
           <!-- Project 8 -->
-          <div class="project-card" data-reveal="up" style="--d: 100ms">
+          <div
+            class="project-card"
+            data-reveal="up"
+            style="--d: 100ms"
+            data-category="personal"
+          >
             <div class="project-img-wrap">
               <img src="Screenshot_23-6-2026_23320_.jpeg" alt="Card" />
               <div class="project-overlay">
@@ -1637,5 +1698,6 @@
     <!-- JavaScript -->
     <script src="bj.js"></script>
     <script src="main.js"></script>
+    <script src="project-filter.js"></script>
   </body>
 </html>
