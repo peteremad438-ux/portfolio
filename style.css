@@ -1821,7 +1821,8 @@ footer {
   -webkit-tap-highlight-color: transparent;
   transition:
     opacity 0.4s var(--ease),
-    transform 0.4s var(--ease);
+    border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
 .project-card.featured {
   grid-column: 1 / -1;
@@ -1837,6 +1838,10 @@ footer {
   position: relative;
   border-radius: 22px;
   isolation: isolate;
+  border: 1px solid transparent;
+  transition:
+    border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
 
 /* soft accent-colored glow behind the browser */
@@ -1933,11 +1938,23 @@ footer {
   border-bottom-right-radius: 22px;
   aspect-ratio: 16 / 9;
   background: var(--bg3);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  transition: border-color 0.4s var(--ease);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+  transition:
+    border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
-.project-card:hover .browser-screen {
-  border-color: rgba(var(--proj-accent-rgb, 79, 116, 255), 0.32);
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .browser-frame {
+    border-color: rgba(var(--proj-accent-rgb, 79, 116, 255), 0.28);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+  }
+  .project-card:hover .browser-screen {
+    border-color: rgba(var(--proj-accent-rgb, 79, 116, 255), 0.28);
+    box-shadow: 0 28px 72px rgba(0, 0, 0, 0.3);
+  }
+  .project-card:hover .browser-screen img {
+    transform: scale(1.03);
+  }
 }
 .browser-screen img {
   position: absolute;
@@ -1947,9 +1964,6 @@ footer {
   object-fit: cover;
   object-position: top center;
   transition: transform 0.5s var(--ease);
-}
-.project-card:hover .browser-screen img {
-  transform: scale(1.03);
 }
 
 /* dark gradient overlay + floating action buttons on hover */
@@ -1967,19 +1981,31 @@ footer {
     transparent 75%
   );
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.4s var(--ease);
 }
-.project-card:hover .screen-overlay {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .screen-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .screen-actions {
+    display: flex;
+    gap: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.4s var(--ease);
+  }
+  .project-card:hover .screen-actions {
+    opacity: 1;
+  }
 }
-.screen-actions {
-  display: flex;
-  gap: 0.7rem;
-  transform: translateY(12px);
-  transition: transform 0.4s var(--ease);
-}
-.project-card:hover .screen-actions {
-  transform: translateY(0);
+@media (hover: none), (pointer: coarse) {
+  .screen-overlay {
+    display: none;
+  }
+  .screen-actions {
+    display: none;
+  }
 }
 .overlay-action {
   display: inline-flex;
@@ -1989,7 +2015,10 @@ footer {
   font-weight: 600;
   padding: 9px 18px;
   border-radius: 50px;
-  transition: all 0.3s var(--ease);
+  transition:
+    box-shadow 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
   backdrop-filter: blur(6px);
 }
 .overlay-action-primary {
@@ -1998,8 +2027,7 @@ footer {
   box-shadow: 0 8px 22px rgba(var(--proj-accent-rgb, 79, 116, 255), 0.4);
 }
 .overlay-action-primary:hover {
-  filter: brightness(1.1);
-  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(var(--proj-accent-rgb, 79, 116, 255), 0.48);
 }
 .overlay-action-ghost {
   background: rgba(255, 255, 255, 0.08);
@@ -2008,7 +2036,40 @@ footer {
 }
 .overlay-action-ghost:hover {
   background: rgba(255, 255, 255, 0.16);
-  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+.project-mobile-github {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 3;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: rgba(7, 17, 31, 0.78);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    border-color 0.3s var(--ease),
+    box-shadow 0.3s var(--ease),
+    transform 0.3s var(--ease),
+    background 0.3s var(--ease);
+}
+.project-mobile-github:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+@media (hover: none), (pointer: coarse) {
+  .project-mobile-github {
+    display: inline-flex;
+  }
 }
 
 /* ── Info block below the browser mockup ── */
@@ -2024,19 +2085,11 @@ footer {
   letter-spacing: 1.5px;
   color: var(--text);
   margin-bottom: 0.55rem;
-  transition: color 0.35s var(--ease);
-}
-.project-card:hover .project-title {
-  color: var(--proj-accent, var(--accent));
 }
 .title-arrow {
   font-size: 0.95rem;
   display: inline-block;
-  transition: transform 0.35s var(--ease);
   color: var(--proj-accent, var(--accent));
-}
-.project-card:hover .title-arrow {
-  transform: translate(3px, -3px);
 }
 .featured .project-title {
   font-size: 1.35rem;
