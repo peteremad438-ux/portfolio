@@ -347,22 +347,6 @@
   });
 
   /* ══════════════════════════════════════════════
-     3D TILT ON PROJECT CARDS
-  ══════════════════════════════════════════════ */
-  document.querySelectorAll(".project-card").forEach((card) => {
-    card.style.willChange = "transform"; // prevent repaint on hover
-    card.addEventListener("mousemove", (e) => {
-      const r = card.getBoundingClientRect();
-      const rotX = ((e.clientY - r.top - r.height / 2) / (r.height / 2)) * -6;
-      const rotY = ((e.clientX - r.left - r.width / 2) / (r.width / 2)) * 6;
-      card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
-    });
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
-    });
-  });
-
-  /* ══════════════════════════════════════════════
      MAGNETIC SOCIAL ICONS
   ══════════════════════════════════════════════ */
   document.querySelectorAll(".social-icon").forEach((icon) => {
