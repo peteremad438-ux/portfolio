@@ -1,11 +1,4 @@
-/* ══════════════════════════════════════════════════
-   PROJECT FILTER + CARD INTERACTION
-   Handles: All / Freelance / Personal filtering
-   with sliding indicator + fade-up card animation,
-   plus whole-card click/keyboard navigation to the
-   project's live demo (overlay buttons still work
-   independently and stop the card-level navigation).
-══════════════════════════════════════════════════ */
+
 (function () {
   "use strict";
 
@@ -69,12 +62,6 @@
     // Initial positioning (in case load event already fired)
     setTimeout(initIndicator, 50);
   }
-
-  /* ── Whole-card click / keyboard navigation ──
-     The overlay's Live Demo / GitHub links are real <a> tags,
-     so a click on either of them is left to navigate natively —
-     the card-level handler only fires for clicks elsewhere on
-     the card (image, title, description, chips, empty space). */
   projectCards.forEach((card) => {
     const demoUrl = card.getAttribute("data-demo");
     if (!demoUrl) return;
