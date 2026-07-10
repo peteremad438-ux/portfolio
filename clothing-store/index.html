@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>أناقة | متجر الملابس الفاخرة - Anaqah Clothing Store</title>
+    <meta name="description" content="متجر أناقة لبيع الملابس الفاخرة المصنوعة من أجود الخامات والتصاميم العالمية العصرية. تسوق الآن تشكيلتنا الجديدة.">
+    <meta name="keywords" content="ملابس, أزياء, فساتين, بدل رجالي, إكسسوارات, متجر ملابس, أناقة, تسوق">
+    <meta name="author" content="Anaqah Store">
+    
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header>
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#" class="logo" id="logo" data-trans="logoName">أناقة<span>.</span></a>
+            
+            <!-- Navbar Menu (Desktop) -->
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active" data-trans="home">الرئيسية</a>
+                <a href="#shop-catalog" class="nav-link" data-trans="shop">المتجر</a>
+                <a href="#footer" class="nav-link" data-trans="about">من نحن</a>
+                <a href="#footer" class="nav-link" data-trans="contact">اتصل بنا</a>
+            </nav>
+            
+            <!-- Navbar Actions -->
+            <div class="nav-actions">
+                <!-- Language switcher -->
+                <button class="lang-btn" id="lang-btn" aria-label="Toggle Language">EN</button>
+                
+                <!-- Cart Button -->
+                <button class="action-btn" id="cart-btn" aria-label="Open Shopping Bag">
+                    <span class="icon-cart"></span>
+                    <span class="cart-count" id="cart-count" style="display: none;">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Carousel Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop');"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="hero-subtitle">تشكيلة خريف وشتاء 2026</span>
+                        <h1 class="hero-title">مفهوم جديد للأناقة</h1>
+                        <p class="hero-desc">اكتشف الملابس المختارة بعناية والتي تمزج بين جماليات الموضة الكلاسيكية والراحة اليومية الفائقة.</p>
+                        <a href="#shop-catalog" class="btn-luxury">تسوق الآن</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600&auto=format&fit=crop');"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="hero-subtitle">تعاونات حصرية</span>
+                        <h1 class="hero-title">حرفة الفخامة والجمال</h1>
+                        <p class="hero-desc">تمت حياكة وتفصيل كل قطعة بدقة متناهية باستخدام خامات صوف وحرير أوروبية بالكامل.</p>
+                        <a href="#shop-catalog" class="btn-luxury">تسوق الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Go to slide 1"></button>
+            <button class="slider-dot" aria-label="Go to slide 2"></button>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section" id="shop-catalog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-trans="sectionSub">مجموعتنا المختارة بعناية</span>
+                <h2 class="section-title" data-trans="sectionTitle">أحدث الموديلات</h2>
+            </div>
+            
+            <!-- Catalog Controls (Filters & Search) -->
+            <div class="catalog-controls">
+                <!-- Tabs -->
+                <div class="filter-tabs" id="filter-tabs">
+                    <button class="filter-tab active" data-category="all" data-trans="catAll">الكل</button>
+                    <button class="filter-tab" data-category="men" data-trans="catMen">رجال</button>
+                    <button class="filter-tab" data-category="women" data-trans="catWomen">نساء</button>
+                    <button class="filter-tab" data-category="accessories" data-trans="catAcc">إكسسوارات</button>
+                </div>
+                
+                <!-- Search bar -->
+                <div class="search-bar">
+                    <input type="text" class="search-input" id="search-input" placeholder="ابحث عن المنتجات...">
+                    <span class="search-icon icon-search"></span>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Injected dynamically by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3 class="cart-title" data-trans="cartTitle">سلة المشتريات</h3>
+            <button class="close-btn" id="close-cart" aria-label="Close Shopping Bag">
+                <span class="icon-close"></span>
+            </button>
+        </div>
+        
+        <!-- Cart Items Container -->
+        <div class="cart-items" id="cart-items">
+            <!-- Injected dynamically by JS -->
+        </div>
+        
+        <!-- Cart Footer -->
+        <div class="cart-footer">
+            <div class="cart-summary-row">
+                <span class="cart-total-label" data-trans="subtotal">المجموع الفرعي</span>
+                <span class="cart-total-val" id="cart-total">0 ر.س</span>
+            </div>
+            <button class="btn-checkout" id="checkout-btn" data-trans="checkout">إتمـام عملية الشراء</button>
+        </div>
+    </div>
+
+    <!-- Modal Backdrop Overlay -->
+    <div class="modal-overlay" id="cart-overlay"></div>
+
+    <!-- Product Details Modal Dialog -->
+    <div class="modal-box" id="product-modal">
+        <button class="close-btn" id="close-product-modal" style="position: absolute; top: 15px; right: 15px; z-index: 10;" aria-label="Close details">
+            <span class="icon-close"></span>
+        </button>
+        <div class="product-modal-content" id="product-modal-content">
+            <!-- Injected dynamically by JS -->
+        </div>
+    </div>
+
+    <!-- Checkout Modal Dialog -->
+    <div class="modal-box checkout-box" id="checkout-modal">
+        <button class="close-btn" id="close-checkout-modal" style="position: absolute; top: 15px; right: 15px; z-index: 10;" aria-label="Close Checkout">
+            <span class="icon-close"></span>
+        </button>
+        <div class="checkout-header">
+            <h2 class="checkout-title" data-trans="checkoutTitle">معلومات الشحن والتوصيل</h2>
+        </div>
+        
+        <form class="checkout-form" id="checkout-form">
+            <div class="form-group">
+                <label class="form-label" for="check-name" data-trans="fullName">الاسم الكامل</label>
+                <input type="text" id="check-name" class="form-input" required>
+            </div>
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label class="form-label" for="check-phone" data-trans="phone">رقم الهاتف</label>
+                    <input type="tel" id="check-phone" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="check-city" data-trans="city">المدينة</label>
+                    <input type="text" id="check-city" class="form-input" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="check-address" data-trans="address">عنوان الشحن</label>
+                <input type="text" id="check-address" class="form-input" required>
+            </div>
+            
+            <button type="submit" class="btn-submit-order" data-trans="orderBtn">تأكيد الطلب</button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div>
+                    <h3 class="footer-col-title" data-trans="logoName">أناقة<span>.</span></h3>
+                    <p class="footer-about">نحن نسعى لتقديم أفضل تجربة تسوق إلكتروني للأزياء الفاخرة والراقية في الشرق الأوسط. ملابسنا تعبر عن شخصيتك وتمنحك التميز الذي تستحقه.</p>
+                </div>
+                <!-- Col 2: Categories -->
+                <div>
+                    <h3 class="footer-col-title">الأقسام</h3>
+                    <div class="footer-links">
+                        <a href="#shop-catalog" class="footer-link">ملابس رجالية</a>
+                        <a href="#shop-catalog" class="footer-link">ملابس نسائية</a>
+                        <a href="#shop-catalog" class="footer-link">إكسسوارات فاخرة</a>
+                    </div>
+                </div>
+                <!-- Col 3: Support -->
+                <div>
+                    <h3 class="footer-col-title">الدعم والمساعدة</h3>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">الشحن والتوصيل</a>
+                        <a href="#" class="footer-link">سياسة الاسترجاع والتبديل</a>
+                        <a href="#" class="footer-link">الأسئلة الشائعة</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 متجر أناقة للملابس الفاخرة. جميع الحقوق محفوظة.</p>
+                <p>صنع بكل حب لأجل الأناقة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
