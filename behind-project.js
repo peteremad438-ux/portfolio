@@ -1124,25 +1124,7 @@
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="btp-hero">
-        <img src="${d.hero}" alt="${tr(d.title)}" />
-        <div class="btp-hero-fade"></div>
-        <div class="btp-hero-content">
-          <span class="btp-hero-tag">${tr(d.tag)}</span>
-          <h2 class="btp-hero-title">${tr(d.title)}</h2>
-          <p class="btp-hero-summary">${tr(d.summary)}</p>
-          <div class="btp-hero-actions">
-            <a href="${d.demo}" target="_blank" rel="noopener" class="btp-cta btp-cta-primary">
-              <i class="fa-solid fa-eye"></i> ${ar ? "عرض مباشر" : "Live Demo"}
-            </a>
-            <a href="${d.github}" target="_blank" rel="noopener" class="btp-cta btp-cta-outline">
-              <i class="fa-brands fa-github"></i> ${ar ? "المستودع" : "Repository"}
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="btp-body">
+      <div class="btp-body btp-body--no-hero">
         <section class="btp-section" data-reveal="up">
           <span class="btp-section-eyebrow">01 · ${ar ? "نظرة عامة" : "Overview"}</span>
           <h3>${ar ? "نظرة عامة على المشروع" : "Project Overview"}</h3>

@@ -258,6 +258,20 @@ body::after {
   height: 52px;
   opacity: 0.28;
 }
+/* Touch devices have no real cursor — hide regardless of viewport width.
+   The old rule only hid these under 768px, so tablets/large-screen touch
+   devices could show a frozen cursor dot/ring floating on screen. */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none !important;
+  }
+}
+/* Never let the custom cursor float above modal content / the close button */
+body.btp-lock .cursor-dot,
+body.btp-lock .cursor-ring {
+  display: none !important;
+}
 
 /* ═══════════════════════════════════════
    SCROLL PROGRESS
@@ -3729,9 +3743,9 @@ body.btp-lock {
 
 .btp-close {
   position: fixed;
-  top: max(16px, env(safe-area-inset-top, 16px));
+  top: calc(var(--nav-h) + max(16px, env(safe-area-inset-top, 16px)));
   inset-inline-end: max(16px, env(safe-area-inset-right, 16px));
-  z-index: 30;
+  z-index: 1001;
   width: 38px;
   height: 38px;
   flex-shrink: 0;
@@ -3871,6 +3885,9 @@ body.btp-lock {
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 4vw, 2.75rem);
+}
+.btp-body--no-hero {
+  padding-top: clamp(4rem, 8vw, 5.5rem);
 }
 .btp-section {
   opacity: 0;
@@ -4178,7 +4195,7 @@ body.btp-lock {
     min-height: 220px;
   }
   .btp-close {
-    top: max(12px, env(safe-area-inset-top, 12px));
+    top: calc(var(--nav-h) + max(12px, env(safe-area-inset-top, 12px)));
     inset-inline-end: max(12px, env(safe-area-inset-right, 12px));
   }
   .btp-hero-content {
@@ -4194,6 +4211,9 @@ body.btp-lock {
   .btp-body {
     padding: 1.25rem 1.25rem 2.5rem;
     gap: 1.75rem;
+  }
+  .btp-body--no-hero {
+    padding-top: 4rem;
   }
   .btp-features-grid {
     grid-template-columns: 1fr;
