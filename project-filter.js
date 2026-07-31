@@ -1,4 +1,3 @@
-
 (function () {
   "use strict";
 
@@ -68,11 +67,13 @@
 
     card.addEventListener("click", (e) => {
       if (e.target.closest("a")) return; // let overlay links handle themselves
+      if (e.target.closest(".btp-btn")) return; // let "Behind the Project" open the case-study modal
       window.open(demoUrl, "_blank", "noopener");
     });
 
     card.addEventListener("keydown", (e) => {
       if (e.target.closest("a")) return;
+      if (e.target.closest(".btp-btn")) return;
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         window.open(demoUrl, "_blank", "noopener");
