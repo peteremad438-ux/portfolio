@@ -1,10 +1,4 @@
-/* ══════════════════════════════════════════════════
-   ANIMATED BACKGROUND — bg.js  (OPTIMIZED)
-   Fixes: O(n²) nodes loop → spatial grid skip
-          sqrt → squared distance comparisons
-          reduced node/star counts for perf
-          visibilitychange pause
-══════════════════════════════════════════════════ */
+
 
 (function () {
   "use strict";
@@ -17,7 +11,8 @@
     H,
     mouseX = 0,
     mouseY = 0;
-  let animId;
+  let animId = null;
+  let modalPaused = false; // true while the Behind-the-Project modal is open
 
   function resize() {
     W = canvas.width = window.innerWidth;
@@ -335,10 +330,28 @@
     animId = requestAnimationFrame(loop);
   }
 
-  requestAnimationFrame(loop);
+  function stopLoop() {
+    if (animId) cancelAnimationFrame(animId);
+    animId = null;
+  }
+  function startLoop() {
+    if (!animId && !modalPaused && !document.hidden) {
+      animId = requestAnimationFrame(loop);
+    }
+  }
+
+  startLoop();
 
   document.addEventListener("visibilitychange", () => {
-    if (document.hidden) cancelAnimationFrame(animId);
-    else requestAnimationFrame(loop);
+    if (document.hidden) stopLoop();
+    else startLoop();
+  });
+  window.addEventListener("btp:modalopen", () => {
+    modalPaused = true;
+    stopLoop();
+  });
+  window.addEventListener("btp:modalclose", () => {
+    modalPaused = false;
+    startLoop();
   });
 })();

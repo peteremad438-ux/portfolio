@@ -1,13 +1,6 @@
-/* ══════════════════════════════════════════════════════
-   BEHIND THE PROJECT — premium case-study modal engine
-   Self-contained: data + renderer + interactions.
-   Reads document.documentElement.lang ("ar" | "en") for copy,
-   and reacts live to the existing #langToggle button.
-══════════════════════════════════════════════════════ */
 (function () {
   "use strict";
 
-  /* ── 1. PROJECT DATA ───────────────────────────────── */
   const P = {
     "made-care": {
       accent: "#4f8bff",
@@ -1266,6 +1259,10 @@
 
     document.getElementById("btpClose")?.addEventListener("click", closeBTP);
     requestAnimationFrame(setupReveal);
+
+    // Pause the animated background canvas while the modal (which has a
+    // blurred backdrop) is open — this is what was causing the page to hang.
+    window.dispatchEvent(new Event("btp:modalopen"));
   }
 
   function closeBTP() {
@@ -1282,6 +1279,9 @@
     setTimeout(() => {
       if (!backdrop.classList.contains("open")) modal.innerHTML = "";
     }, 450);
+
+    // Resume the animated background canvas now that the modal is closed.
+    window.dispatchEvent(new Event("btp:modalclose"));
   }
 
   window.openBehindProject = openBTP;

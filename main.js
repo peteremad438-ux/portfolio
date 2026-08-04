@@ -232,22 +232,33 @@
   const navLinkEls = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll("section[id],header[id]");
 
+  let scrollTicking = false;
+  function handleScroll() {
+    const pct =
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+      100;
+    if (progressBar) progressBar.style.width = pct + "%";
+    navbar?.classList.toggle("scrolled", window.scrollY > 20);
+    scrollTopBtn?.classList.toggle("visible", window.scrollY > 400);
+    let cur = "";
+    sections.forEach((s) => {
+      if (window.scrollY >= s.offsetTop - 130) cur = s.id;
+    });
+    navLinkEls.forEach((l) =>
+      l.classList.toggle("active", l.getAttribute("href") === "#" + cur),
+    );
+    scrollTicking = false;
+  }
   window.addEventListener(
     "scroll",
     () => {
-      const pct =
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
-        100;
-      if (progressBar) progressBar.style.width = pct + "%";
-      navbar?.classList.toggle("scrolled", window.scrollY > 20);
-      scrollTopBtn?.classList.toggle("visible", window.scrollY > 400);
-      let cur = "";
-      sections.forEach((s) => {
-        if (window.scrollY >= s.offsetTop - 130) cur = s.id;
-      });
-      navLinkEls.forEach((l) =>
-        l.classList.toggle("active", l.getAttribute("href") === "#" + cur),
-      );
+      // Batch scroll work into a single rAF per frame instead of running it
+      // (with layout reads like offsetTop) on every single scroll event —
+      // was causing extra jank while scrolling the whole site.
+      if (!scrollTicking) {
+        scrollTicking = true;
+        requestAnimationFrame(handleScroll);
+      }
     },
     { passive: true },
   );
@@ -311,16 +322,33 @@
   ══════════════════════════════════════════════ */
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector(".form-submit");
+    const form = e.target;
+    const btn = form.querySelector(".form-submit");
     const success = document.getElementById("formSuccess");
     if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
-    setTimeout(() => {
-      if (btn)
-        btn.innerHTML = `<span>${isAr ? "إرسال الرسالة" : "Send Message"}</span><i class="fa-solid fa-paper-plane"></i>`;
-      success?.classList.add("show");
-      e.target.reset();
-      setTimeout(() => success?.classList.remove("show"), 4000);
-    }, 1200);
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    fetch(form.action, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Submit failed");
+        if (btn)
+          btn.innerHTML = `<span>${isAr ? "إرسال الرسالة" : "Send Message"}</span><i class="fa-solid fa-paper-plane"></i>`;
+        success?.classList.add("show");
+        form.reset();
+        setTimeout(() => success?.classList.remove("show"), 4000);
+      })
+      .catch(() => {
+        if (btn)
+          btn.innerHTML = `<span>${isAr ? "حدث خطأ، حاول مرة أخرى" : "Error, try again"}</span><i class="fa-solid fa-paper-plane"></i>`;
+      });
   }
   window.handleSubmit = handleSubmit;
 
