@@ -1,18 +1,4 @@
-/* ══════════════════════════════════════════════════
-   ANIMATED BACKGROUND — bg-three.js (Three.js nebula)
-   Drop-in replacement for the old 2D canvas background.
-   Same soft, slow-drifting particle nebula + floating
-   wireframe shapes look as the reference site, using the
-   same blue palette (#3b82f6 / #60a5fa) as that site.
 
-   Keeps the two behaviors the old bg.js relied on:
-     - prefers-reduced-motion → render one static frame
-     - btp:modalopen / btp:modalclose → pause/resume the
-       render loop while the "Behind the Project" modal's
-       backdrop-blur is open (that blur has to reprocess
-       every animated frame otherwise, which is what made
-       things feel laggy)
-══════════════════════════════════════════════════ */
 (function () {
   "use strict";
 
