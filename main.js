@@ -333,36 +333,36 @@
   /* ══════════════════════════════════════════════
      CONTACT FORM
   ══════════════════════════════════════════════ */
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const btn = form.querySelector(".form-submit");
-    const success = document.getElementById("formSuccess");
-    if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector(".form-submit");
+  const success = document.getElementById("formSuccess");
+  
+  if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
 
-    const data = Object.fromEntries(new FormData(form).entries());
+  const formData = new FormData(form);
 
-    fetch(form.action, {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+  fetch(form.action, {
+    method: "POST",
+    body: formData,                    
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Submit failed");
+      if (btn)
+        btn.innerHTML = `<span>${isAr ? "إرسال الرسالة" : "Send Message"}</span><i class="fa-solid fa-paper-plane"></i>`;
+      success?.classList.add("show");
+      form.reset();
+      setTimeout(() => success?.classList.remove("show"), 4000);
     })
-      .then((res) => {
-        if (!res.ok) throw new Error("Submit failed");
-        if (btn)
-          btn.innerHTML = `<span>${isAr ? "إرسال الرسالة" : "Send Message"}</span><i class="fa-solid fa-paper-plane"></i>`;
-        success?.classList.add("show");
-        form.reset();
-        setTimeout(() => success?.classList.remove("show"), 4000);
-      })
-      .catch(() => {
-        if (btn)
-          btn.innerHTML = `<span>${isAr ? "حدث خطأ، حاول مرة أخرى" : "Error, try again"}</span><i class="fa-solid fa-paper-plane"></i>`;
-      });
-  }
+    .catch(() => {
+      if (btn)
+        btn.innerHTML = `<span>${isAr ? "حدث خطأ، حاول مرة أخرى" : "Error, try again"}</span><i class="fa-solid fa-paper-plane"></i>`;
+    });
+}
   window.handleSubmit = handleSubmit;
 
   // Availability badge → scroll to contact
