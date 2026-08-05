@@ -276,9 +276,10 @@
     { passive: true },
   );
 
-  scrollTopBtn?.addEventListener("click", () =>
-    window.scrollTo({ top: 0, behavior: "smooth" }),
-  );
+  scrollTopBtn?.addEventListener("click", () => {
+    if (window.__lenis) window.__lenis.scrollTo(0, { duration: 1.2 });
+    else window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   /* ══════════════════════════════════════════════
      MOBILE MENU
@@ -325,7 +326,8 @@
       const t = document.querySelector(this.getAttribute("href"));
       if (t) {
         e.preventDefault();
-        t.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (window.__lenis) window.__lenis.scrollTo(t, { offset: -70 });
+        else t.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   });
@@ -338,16 +340,16 @@
     const form = e.target;
     const btn = form.querySelector(".form-submit");
     const success = document.getElementById("formSuccess");
+
     if (btn) btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
 
-    const data = Object.fromEntries(new FormData(form).entries());
+    const formData = new FormData(form);
 
     fetch(form.action, {
       method: "POST",
-      body: JSON.stringify(data),
+      body: formData,
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json",
       },
     })
       .then((res) => {
@@ -367,7 +369,10 @@
 
   // Availability badge → scroll to contact
   document.getElementById("availBadge")?.addEventListener("click", () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    const contact = document.querySelector("#contact");
+    if (!contact) return;
+    if (window.__lenis) window.__lenis.scrollTo(contact, { offset: -70 });
+    else contact.scrollIntoView({ behavior: "smooth" });
   });
 
   /* ══════════════════════════════════════════════
@@ -446,7 +451,7 @@
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(79,116,255,${this.a})`;
+        ctx.fillStyle = `rgba(59,130,246,${this.a})`;
         ctx.fill();
       }
     }
@@ -466,7 +471,7 @@
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(79,116,255,${alpha.toFixed(3)})`;
+            ctx.strokeStyle = `rgba(59,130,246,${alpha.toFixed(3)})`;
             ctx.stroke();
           }
         }
@@ -929,9 +934,10 @@
 
   function scrollToSection(id) {
     closeCmdPalette();
-    document
-      .querySelector(id)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const target = document.querySelector(id);
+    if (!target) return;
+    if (window.__lenis) window.__lenis.scrollTo(target, { offset: -70 });
+    else target.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function openCmdPalette() {
@@ -1050,10 +1056,10 @@
   ══════════════════════════════════════════════ */
   const ACCENTS = {
     blue: {
-      "--accent": "#4f74ff",
-      "--accent-glow": "rgba(79,116,255,0.28)",
-      "--accent-soft": "rgba(79,116,255,0.1)",
-      "--accent-mid": "rgba(79,116,255,0.18)",
+      "--accent": "#3b82f6",
+      "--accent-glow": "rgba(59,130,246,0.28)",
+      "--accent-soft": "rgba(59,130,246,0.1)",
+      "--accent-mid": "rgba(59,130,246,0.18)",
     },
     purple: {
       "--accent": "#8b5cf6",

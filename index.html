@@ -163,7 +163,6 @@
       <div class="hero-bg">
         <div class="hero-orb orb-1"></div>
         <div class="hero-orb orb-2"></div>
-        <div class="hero-grid"></div>
       </div>
 
       <div class="hero-container">
@@ -2320,7 +2319,7 @@
                     data-ar="البريد الإلكتروني"
                     >Email</span
                   >
-                  <span class="contact-card-value">Peteremad438@gmail.com</span>
+                  <span class="contact-card-value">peteremad438@gmail.com</span>
                 </div>
               </a>
               <a href="tel:01212713718" class="contact-card">
@@ -2366,6 +2365,7 @@
                 <label data-en="Your Name" data-ar="اسمك">Your Name</label>
                 <input
                   type="text"
+                  name="name"
                   id="nameInput"
                   placeholder="Ex. Ahmed"
                   required
@@ -2377,6 +2377,7 @@
                 >
                 <input
                   type="email"
+                  name="email"
                   id="emailInput"
                   placeholder="Ex. ahmed@gmail.com"
                   required
@@ -2384,9 +2385,20 @@
               </div>
             </div>
             <div class="form-group">
+              <label data-en="Phone" data-ar="رقم التليفون">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phoneInput"
+                placeholder="Ex. +20 121 271 3718"
+                required
+              />
+            </div>
+            <div class="form-group">
               <label data-en="Subject" data-ar="الموضوع">Subject</label>
               <input
                 type="text"
+                name="Subject"
                 id="subjectInput"
                 placeholder="Project Inquiry"
               />
@@ -2395,6 +2407,7 @@
               <label data-en="Message" data-ar="رسالتك">Message</label>
               <textarea
                 rows="5"
+                name="message"
                 id="msgInput"
                 placeholder="Tell me about your project..."
                 required
@@ -2410,15 +2423,6 @@
                 >
                 <i class="fa-solid fa-paper-plane"></i>
               </button>
-              <a
-                href="mailto:Peteremad438@gmail.com"
-                class="btn btn-outline btn-ripple"
-              >
-                <span data-en="Send Email" data-ar="إرسال بريد"
-                  >Send Email</span
-                >
-                <i class="fa-solid fa-envelope"></i>
-              </a>
             </div>
             <div class="form-success" id="formSuccess">
               <i class="fa-solid fa-circle-check"></i>
@@ -2610,7 +2614,13 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="bj.js"></script>
+    <!-- Lenis smooth scroll (adds the buttery inertia-scroll feel) -->
+    <script src="lenis.min.js"></script>
+    <script src="lenis-init.js"></script>
+
+    <!-- Three.js nebula background (replaces the old 2D canvas bg) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="bg-three.js"></script>
     <script src="main.js"></script>
     <script src="project-filter.js"></script>
     <script src="behind-project.js"></script>
