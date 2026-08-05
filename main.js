@@ -109,9 +109,22 @@
     if (window._cmdOpen) renderCmdItems("");
   }
 
+  // How long the crossfade-out takes before we swap the text/direction —
+  // kept in one place so behind-project.js can match it exactly.
+  const LANG_FADE_MS = 220;
+
+  function switchLangSmooth(ar) {
+    document.body.classList.add("lang-fade");
+    setTimeout(() => {
+      applyLang(ar);
+      document.body.classList.remove("lang-fade");
+    }, LANG_FADE_MS);
+  }
+  window.__LANG_FADE_MS = LANG_FADE_MS;
+
   langBtn?.addEventListener("click", () => {
     isAr = !isAr;
-    applyLang(isAr);
+    switchLangSmooth(isAr);
   });
 
   /* ══════════════════════════════════════════════

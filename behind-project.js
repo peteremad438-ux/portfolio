@@ -1330,7 +1330,9 @@
           .getElementById("btpClose")
           ?.addEventListener("click", closeBTP);
         setupReveal();
-      }, 30);
+        // Match main.js's language crossfade duration so the modal content
+        // swap happens while the page is faded out, not as a visible flash.
+      }, window.__LANG_FADE_MS || 220);
     }
   });
 

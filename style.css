@@ -69,7 +69,16 @@ body {
   overflow-x: hidden;
   transition:
     background var(--trans),
-    color var(--trans);
+    color var(--trans),
+    opacity 0.22s ease,
+    filter 0.22s ease;
+}
+
+/* Soft crossfade used while the language (EN/AR + LTR/RTL) is switching,
+   so the text/direction swap doesn't happen as an abrupt jump-cut. */
+body.lang-fade {
+  opacity: 0;
+  filter: blur(4px);
 }
 
 [lang="ar"] body,

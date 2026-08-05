@@ -1,4 +1,10 @@
-
+/* ══════════════════════════════════════════════════
+   ANIMATED BACKGROUND — bg.js  (OPTIMIZED)
+   Fixes: O(n²) nodes loop → spatial grid skip
+          sqrt → squared distance comparisons
+          reduced node/star counts for perf
+          visibilitychange pause
+══════════════════════════════════════════════════ */
 
 (function () {
   "use strict";
@@ -346,6 +352,11 @@
     if (document.hidden) stopLoop();
     else startLoop();
   });
+
+  /* Pause the (expensive, blurred-behind-a-fullscreen-backdrop) canvas
+     animation while the "Behind the Project" modal is open — the modal's
+     backdrop-filter: blur() has to re-blur every animated frame otherwise,
+     which is the main cause of the modal feeling laggy/hung. */
   window.addEventListener("btp:modalopen", () => {
     modalPaused = true;
     stopLoop();
