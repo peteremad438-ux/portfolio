@@ -74,6 +74,15 @@
           </li>
           <li>
             <a
+              href="#certificates"
+              class="nav-link"
+              data-en="Certificates"
+              data-ar="الشهادات"
+              >Certificates</a
+            >
+          </li>
+          <li>
+            <a
               href="#skills"
               class="nav-link"
               data-en="Skills"
@@ -443,70 +452,164 @@
     </section>
 
     <!-- ════════════════════════════════════
-         TERMINAL
+         CERTIFICATES
     ════════════════════════════════════ -->
     <div class="glow-divider"></div>
-    <section id="terminal" class="terminal-section">
+    <section id="certificates" class="section certificates-section">
       <div class="container">
         <div class="section-header" data-reveal="up">
           <span
             class="section-tag"
-            data-en="INTERACTIVE CLI"
-            data-ar="واجهة سطر الأوامر"
-            >INTERACTIVE CLI</span
+            data-en="VERIFIED CREDENTIALS"
+            data-ar="شهادات موثقة"
+            >VERIFIED CREDENTIALS</span
           >
-          <h2 class="section-title" data-en="Terminal" data-ar="التيرمنال">
-            Terminal
+          <h2
+            class="section-title"
+            data-en="Certificates"
+            data-ar="الشهادات"
+          >
+            Certificates
           </h2>
-          <p
-            style="
-              color: var(--text-sub);
-              font-size: 0.9rem;
-              margin-top: 0.5rem;
-            "
-          >
-            <span data-en="Type" data-ar="اكتب">Type</span>
-            <code
-              style="
-                color: var(--accent);
-                background: var(--bg3);
-                padding: 2px 8px;
-                border-radius: 6px;
-              "
-              >help</code
-            >
-            <span data-en="to explore" data-ar="للاستكشاف">to explore</span>
+          <p class="cert-hint" data-en="Click a card to flip it" data-ar="اضغط على الكارت لقلبه">
+            Click a card to flip it
           </p>
         </div>
 
-        <div class="terminal-window" data-reveal="scale">
-          <div class="terminal-topbar">
-            <div class="terminal-dots">
-              <div class="terminal-dot dot-red"></div>
-              <div class="terminal-dot dot-yellow"></div>
-              <div class="terminal-dot dot-green"></div>
+        <div class="certificates-grid">
+          <div class="cert-card" data-reveal="scale" style="--d: 0ms" tabindex="0" role="button" aria-pressed="false">
+            <div class="cert-card-inner">
+              <div class="cert-face cert-front">
+                <img
+                  src="WhatsApp Image 2026-08-06 at 4.20.44 PM.jpeg"
+                  alt="UI Developer Certificate"
+                  loading="lazy"
+                />
+                <div class="cert-front-overlay">
+                  <span class="cert-role" data-en="UI Developer" data-ar="مطوّر واجهات">UI Developer</span>
+                  <span class="cert-flip-hint"><i class="fa-solid fa-arrows-rotate"></i></span>
+                </div>
+              </div>
+              <div class="cert-face cert-back">
+                <div class="cert-back-top">
+                  <i class="fa-solid fa-certificate cert-back-icon"></i>
+                  <span class="cert-org">Intern2Grow</span>
+                </div>
+                <h3 class="cert-back-title" data-en="UI Developer" data-ar="مطوّر واجهات">
+                  UI Developer
+                </h3>
+                <p
+                  class="cert-back-desc"
+                  data-en="Virtual internship program completion certificate"
+                  data-ar="شهادة إتمام برنامج التدريب الافتراضي"
+                >
+                  Virtual internship program completion certificate
+                </p>
+                <div class="cert-back-meta">
+                  <span><i class="fa-regular fa-calendar"></i> 28/04/2026</span>
+                </div>
+                <a
+                  href="https://intern2grow.pages.dev/certificate?id=68c04ca4-7f35-4d54-bad5-8c845bbbef7a"
+                  target="_blank"
+                  rel="noopener"
+                  class="cert-verify-btn"
+                  onclick="event.stopPropagation()"
+                >
+                  <span data-en="Verify Certificate" data-ar="تحقق من الشهادة">Verify Certificate</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
             </div>
-            <div class="terminal-title">peter@portfolio: ~</div>
           </div>
-          <div class="terminal-body" id="termBody"></div>
-          <div class="terminal-input-row">
-            <span class="t-prompt">peter@portfolio:~$</span>
-            <input
-              class="terminal-input"
-              id="termInput"
-              type="text"
-              autocomplete="off"
-              spellcheck="false"
-              placeholder="Type a command..."
-            />
+
+          <div class="cert-card" data-reveal="scale" style="--d: 90ms" tabindex="0" role="button" aria-pressed="false">
+            <div class="cert-card-inner">
+              <div class="cert-face cert-front">
+                <img
+                  src="WhatsApp Image 2026-08-06 at 4.20.43 PM.jpeg"
+                  alt="JavaScript Frontend Developer Certificate"
+                  loading="lazy"
+                />
+                <div class="cert-front-overlay">
+                  <span class="cert-role" data-en="JS Frontend Developer" data-ar="مطوّر جافاسكريبت">JS Frontend Developer</span>
+                  <span class="cert-flip-hint"><i class="fa-solid fa-arrows-rotate"></i></span>
+                </div>
+              </div>
+              <div class="cert-face cert-back">
+                <div class="cert-back-top">
+                  <i class="fa-solid fa-certificate cert-back-icon"></i>
+                  <span class="cert-org">Intern2Grow</span>
+                </div>
+                <h3 class="cert-back-title" data-en="JavaScript Frontend Developer" data-ar="مطوّر جافاسكريبت">
+                  JavaScript Frontend Developer
+                </h3>
+                <p
+                  class="cert-back-desc"
+                  data-en="Virtual internship program completion certificate"
+                  data-ar="شهادة إتمام برنامج التدريب الافتراضي"
+                >
+                  Virtual internship program completion certificate
+                </p>
+                <div class="cert-back-meta">
+                  <span><i class="fa-regular fa-calendar"></i> 06/08/2026</span>
+                </div>
+                <a
+                  href="https://intern2grow.pages.dev/certificate?id=31452b4b-64c0-4376-86a3-3df3515b3f54"
+                  target="_blank"
+                  rel="noopener"
+                  class="cert-verify-btn"
+                  onclick="event.stopPropagation()"
+                >
+                  <span data-en="Verify Certificate" data-ar="تحقق من الشهادة">Verify Certificate</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="terminal-suggestions" id="termSuggestions">
-            <button class="t-suggest" data-cmd="help">help</button>
-            <button class="t-suggest" data-cmd="about">about</button>
-            <button class="t-suggest" data-cmd="skills">skills</button>
-            <button class="t-suggest" data-cmd="projects">projects</button>
-            <button class="t-suggest" data-cmd="hire">hire</button>
-            <button class="t-suggest" data-cmd="contact">contact</button>
+
+          <div class="cert-card" data-reveal="scale" style="--d: 180ms" tabindex="0" role="button" aria-pressed="false">
+            <div class="cert-card-inner">
+              <div class="cert-face cert-front">
+                <img
+                  src="IMG-20260806-WA0012.jpg"
+                  alt="React.js Developer Certificate"
+                  loading="lazy"
+                />
+                <div class="cert-front-overlay">
+                  <span class="cert-role" data-en="React.js Developer" data-ar="مطوّر React.js">React.js Developer</span>
+                  <span class="cert-flip-hint"><i class="fa-solid fa-arrows-rotate"></i></span>
+                </div>
+              </div>
+              <div class="cert-face cert-back">
+                <div class="cert-back-top">
+                  <i class="fa-solid fa-certificate cert-back-icon"></i>
+                  <span class="cert-org">Intern2Grow</span>
+                </div>
+                <h3 class="cert-back-title" data-en="React.js Developer" data-ar="مطوّر React.js">
+                  React.js Developer
+                </h3>
+                <p
+                  class="cert-back-desc"
+                  data-en="Virtual internship program completion certificate"
+                  data-ar="شهادة إتمام برنامج التدريب الافتراضي"
+                >
+                  Virtual internship program completion certificate
+                </p>
+                <div class="cert-back-meta">
+                  <span><i class="fa-regular fa-calendar"></i> 20/09/2026</span>
+                </div>
+                <a
+                  href="https://intern2grow.pages.dev/certificate?id=a15d04aa-62e4-42fe-ac4c-fcc0a908ae46"
+                  target="_blank"
+                  rel="noopener"
+                  class="cert-verify-btn"
+                  onclick="event.stopPropagation()"
+                >
+                  <span data-en="Verify Certificate" data-ar="تحقق من الشهادة">Verify Certificate</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

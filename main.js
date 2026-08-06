@@ -95,10 +95,7 @@
         ? "أخبرني عن مشروعك..."
         : "Tell me about your project...";
 
-    // Terminal / CMD inputs
-    const termInput = document.getElementById("termInput");
-    if (termInput)
-      termInput.placeholder = ar ? "اكتب أمراً..." : "Type a command...";
+    // CMD palette input
     const cmdInputEl = document.getElementById("cmdInput");
     if (cmdInputEl)
       cmdInputEl.placeholder = ar
@@ -507,317 +504,6 @@
   }
 
   /* ══════════════════════════════════════════════
-     TERMINAL
-  ══════════════════════════════════════════════ */
-  const termBody = document.getElementById("termBody");
-  const termInput = document.getElementById("termInput");
-  let cmdHistory = [],
-    histIdx = -1;
-
-  function getCommands() {
-    const ar = isAr;
-    return {
-      help: () =>
-        ar
-          ? [
-              { type: "info", text: "الأوامر المتاحة:" },
-              { type: "accent", text: "  about      — من هو بيتر عماد؟" },
-              { type: "accent", text: "  skills     — عرض المهارات التقنية" },
-              { type: "accent", text: "  projects   — عرض جميع المشاريع" },
-              { type: "accent", text: "  contact    — بيانات التواصل" },
-              { type: "accent", text: "  hire       — لماذا توظفني؟" },
-              {
-                type: "accent",
-                text: "  social     — روابط التواصل الاجتماعي",
-              },
-              { type: "accent", text: "  theme      — تبديل الثيم" },
-              { type: "accent", text: "  clear      — مسح التيرمنال" },
-            ]
-          : [
-              { type: "info", text: "Available commands:" },
-              { type: "accent", text: "  about      — Who is Peter Emad?" },
-              { type: "accent", text: "  skills     — List technical skills" },
-              { type: "accent", text: "  projects   — Show all projects" },
-              { type: "accent", text: "  contact    — Get contact info" },
-              { type: "accent", text: "  hire       — Why hire me?" },
-              { type: "accent", text: "  social     — Social links" },
-              { type: "accent", text: "  theme      — Toggle dark/light mode" },
-              { type: "accent", text: "  clear      — Clear terminal" },
-              { type: "info", text: "Tip: Press ↑↓ for command history" },
-            ],
-
-      about: () =>
-        ar
-          ? [
-              { type: "success", text: "بيتر عماد — مطور واجهات أمامية" },
-              { type: "output", text: "📍 مقيم في مصر" },
-              { type: "output", text: "🎓 أكثر من سنة خبرة فعلية" },
-              {
-                type: "output",
-                text: "⚡ متخصص في React.js والفرونت إند الحديث",
-              },
-              { type: "output", text: "🎯 15+ مشروع مُسلَّم باحترافية" },
-              { type: "output", text: "💬 عربي + إنجليزي" },
-            ]
-          : [
-              { type: "success", text: "Peter Emad — Frontend Developer" },
-              { type: "output", text: "📍 Based in Egypt" },
-              { type: "output", text: "🎓 1+ year hands-on experience" },
-              {
-                type: "output",
-                text: "⚡ React.js & modern frontend specialist",
-              },
-              { type: "output", text: "🎯 15+ projects delivered" },
-              { type: "output", text: "💬 Bilingual: Arabic + English" },
-            ],
-
-      skills: () =>
-        ar
-          ? [
-              { type: "info", text: "[ المهارات الأساسية ]" },
-              { type: "success", text: "  ✔ HTML5  ✔ CSS3  ✔ JavaScript ES6+" },
-              {
-                type: "success",
-                text: "  ✔ React.js  ✔ Next.js  ✔ TypeScript",
-              },
-              { type: "info", text: "[ الأدوات ]" },
-              {
-                type: "accent",
-                text: "  Git / GitHub  •  Tailwind CSS  •  Bootstrap",
-              },
-            ]
-          : [
-              { type: "info", text: "[ Core Stack ]" },
-              { type: "success", text: "  ✔ HTML5  ✔ CSS3  ✔ JavaScript ES6+" },
-              {
-                type: "success",
-                text: "  ✔ React.js  ✔ Next.js  ✔ TypeScript",
-              },
-              { type: "info", text: "[ Tools ]" },
-              {
-                type: "accent",
-                text: "  Git / GitHub  •  Tailwind CSS  •  Bootstrap",
-              },
-            ],
-
-      projects: () =>
-        ar
-          ? [
-              { type: "info", text: "[ المشاريع المميزة ]" },
-              {
-                type: "link",
-                text: "  🏋 إنجيج جيم  → modern-gym-eight.vercel.app",
-              },
-              {
-                type: "link",
-                text: "  ⚽ فيفا        → fifa-world-cup-ashen.vercel.app",
-              },
-              {
-                type: "link",
-                text: "  🏥 ميد كير    → made-care-lake.vercel.app",
-              },
-              { type: "link", text: "  ⛪ الألحان    → mot5ss.vercel.app" },
-              {
-                type: "link",
-                text: "  🍣 كينجدم     → kingdom2026.netlify.app",
-              },
-              { type: "link", text: "  ☕ كافيين     → spreso.netlify.app" },
-            ]
-          : [
-              { type: "info", text: "[ Featured Projects ]" },
-              {
-                type: "link",
-                text: "  🏋 ENGAGE GYM → modern-gym-eight.vercel.app",
-              },
-              {
-                type: "link",
-                text: "  ⚽ FIFA HUB   → fifa-world-cup-ashen.vercel.app",
-              },
-              {
-                type: "link",
-                text: "  🏥 MADE CARE  → made-care-lake.vercel.app",
-              },
-              { type: "link", text: "  ⛪ COPTIC     → mot5ss.vercel.app" },
-              {
-                type: "link",
-                text: "  🍣 KINGDOM    → kingdom2026.netlify.app",
-              },
-              { type: "link", text: "  ☕ CAFFEINE   → spreso.netlify.app" },
-            ],
-
-      contact: () =>
-        ar
-          ? [
-              { type: "success", text: "لنبني شيئاً رائعاً معاً!" },
-              { type: "output", text: "📧 Peteremad438@gmail.com" },
-              { type: "output", text: "📱 +20 121 271 3718" },
-              { type: "output", text: "💬 واتساب: wa.me/201212713718" },
-              { type: "output", text: "🟢 متاح للعمل الحر" },
-            ]
-          : [
-              { type: "success", text: "Let's build something great!" },
-              { type: "output", text: "📧 Peteremad438@gmail.com" },
-              { type: "output", text: "📱 +20 121 271 3718" },
-              { type: "output", text: "💬 WhatsApp: wa.me/201212713718" },
-              { type: "output", text: "🟢 Available for freelance" },
-            ],
-
-      hire: () =>
-        ar
-          ? [
-              { type: "success", text: "لماذا توظف بيتر؟" },
-              { type: "accent", text: "  01. كود نظيف وسهل القراءة" },
-              { type: "accent", text: "  02. عين حادة على تفاصيل التصميم" },
-              { type: "accent", text: "  03. تسليم سريع يحترم المواعيد" },
-              { type: "accent", text: "  04. تواصل ثنائي اللغة" },
-              { type: "accent", text: "  05. يتعلم باستمرار تقنيات جديدة" },
-              { type: "success", text: "  → اكتب 'contact' للتواصل الآن!" },
-            ]
-          : [
-              { type: "success", text: "Why hire Peter?" },
-              {
-                type: "accent",
-                text: "  01. Clean, readable, well-commented code",
-              },
-              { type: "accent", text: "  02. Pixel-perfect design attention" },
-              { type: "accent", text: "  03. Fast — respects deadlines" },
-              { type: "accent", text: "  04. Bilingual communication" },
-              { type: "accent", text: "  05. Always learning new tech" },
-              { type: "success", text: "  → Run 'contact' to reach out!" },
-            ],
-
-      social: () => [
-        {
-          type: "link",
-          text: "  🐙 GitHub:    https://github.com/peteremad438-ux",
-        },
-        {
-          type: "link",
-          text: "  💼 LinkedIn:  https://www.linkedin.com/in/peter-emad-057505361/",
-        },
-        {
-          type: "link",
-          text: "  📸 Instagram: https://www.instagram.com/pepoo__emad",
-        },
-        {
-          type: "link",
-          text: "  📘 Facebook:  https://www.facebook.com/share/1ChHSu1Bxj/",
-        },
-      ],
-
-      theme: () => {
-        document.getElementById("themeToggle")?.click();
-        return [
-          {
-            type: "success",
-            text: isAr ? "تم تغيير الثيم! 🎨" : "Theme toggled! 🎨",
-          },
-        ];
-      },
-
-      clear: () => {
-        if (termBody) termBody.innerHTML = "";
-        return [];
-      },
-
-      matrix: () => {
-        triggerMatrixEgg();
-        return [{ type: "success", text: isAr ? "تشغيل..." : "Initiating..." }];
-      },
-
-      secret: () =>
-        ar
-          ? [
-              { type: "error", text: "🕹️ تلميح كنز مخفي:" },
-              { type: "accent", text: "  جرب كود كوناميـ: ↑↑↓↓←→←→BA" },
-            ]
-          : [
-              { type: "error", text: "🕹️ Easter egg hint:" },
-              { type: "accent", text: "  Try the Konami Code: ↑↑↓↓←→←→BA" },
-            ],
-    };
-  }
-
-  function esc(s) {
-    return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  }
-
-  function addTermLine(html) {
-    if (!termBody) return;
-    const div = document.createElement("div");
-    div.innerHTML = html;
-    termBody.appendChild(div);
-    termBody.scrollTop = termBody.scrollHeight;
-  }
-
-  function processCmd(raw) {
-    const cmd = raw.trim().toLowerCase();
-    if (!cmd) return;
-    cmdHistory.unshift(cmd);
-    histIdx = -1;
-    addTermLine(
-      `<div class="terminal-line"><span class="t-prompt">peter@portfolio:~$</span><span class="t-cmd"> ${esc(raw)}</span></div>`,
-    );
-
-    const fn = getCommands()[cmd];
-    if (fn) {
-      fn().forEach((line) => {
-        const el = document.createElement("div");
-        el.className =
-          line.type === "link" ? "t-output link" : `t-output ${line.type}`;
-        el.textContent = line.text;
-        if (line.type === "link") {
-          const url = line.text.split("→ ")[1]?.trim().replace("https://", "");
-          if (url)
-            el.addEventListener("click", () =>
-              window.open("https://" + url, "_blank"),
-            );
-        }
-        termBody?.appendChild(el);
-      });
-    } else {
-      addTermLine(
-        `<div class="t-output error">${isAr ? "أمر غير معروف: '" : "Command not found: '"}${esc(cmd)}${isAr ? "'. اكتب 'help'." : "'. Type 'help'."}</div>`,
-      );
-    }
-    if (termBody) termBody.scrollTop = termBody.scrollHeight;
-  }
-
-  termInput?.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      processCmd(termInput.value);
-      termInput.value = "";
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      histIdx = Math.min(histIdx + 1, cmdHistory.length - 1);
-      termInput.value = cmdHistory[histIdx] || "";
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      histIdx = Math.max(histIdx - 1, -1);
-      termInput.value = histIdx === -1 ? "" : cmdHistory[histIdx];
-    }
-  });
-
-  document.querySelectorAll(".t-suggest").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (termInput) termInput.value = btn.getAttribute("data-cmd");
-      termInput?.focus();
-    });
-  });
-
-  // Boot message
-  setTimeout(() => {
-    if (!termBody) return;
-    addTermLine(
-      `<div class="t-output success">Portfolio OS v3.0 — Peter Emad's Interactive Shell</div>`,
-    );
-    addTermLine(
-      `<div class="t-output info">Type 'help' to see available commands.</div>`,
-    );
-    addTermLine(`<div class="t-output output">Ready. ✨</div>`);
-  }, 400);
-
-  /* ══════════════════════════════════════════════
      COMMAND PALETTE  ← FIXED
   ══════════════════════════════════════════════ */
   const cmdBackdrop = document.getElementById("cmdBackdrop");
@@ -870,11 +556,11 @@
         action: () => scrollToSection("#contact"),
       },
       {
-        group: ar ? "إجراءات" : "Actions",
-        icon: "fa-terminal",
-        label: ar ? "الطرفية" : "Open Terminal",
-        sub: ar ? "واجهة سطر الأوامر" : "Interactive CLI",
-        action: () => scrollToSection("#terminal"),
+        group: ar ? "تنقل" : "Navigate",
+        icon: "fa-certificate",
+        label: ar ? "الشهادات" : "Certificates",
+        sub: ar ? "شهاداتي الموثقة" : "Verified credentials",
+        action: () => scrollToSection("#certificates"),
       },
       {
         group: ar ? "إجراءات" : "Actions",
@@ -975,12 +661,6 @@
       closeCmdPalette();
       window.closeCaseStudy?.();
     }
-    if (
-      (e.key === "~" || e.key === "`") &&
-      document.activeElement?.tagName !== "INPUT" &&
-      document.activeElement?.tagName !== "TEXTAREA"
-    )
-      scrollToSection("#terminal");
   });
 
   cmdBackdrop?.addEventListener("click", (e) => {
@@ -1155,6 +835,23 @@
   function getCaseStudies() {
     return {};
   } // extend as needed
+
+  /* ══════════════════════════════════════════════
+     CERTIFICATES — flip cards
+  ══════════════════════════════════════════════ */
+  document.querySelectorAll(".cert-card").forEach((card) => {
+    function toggleFlip() {
+      const flipped = card.classList.toggle("flipped");
+      card.setAttribute("aria-pressed", flipped ? "true" : "false");
+    }
+    card.addEventListener("click", toggleFlip);
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggleFlip();
+      }
+    });
+  });
 
   /* ══════════════════════════════════════════════
      KONAMI EASTER EGG
