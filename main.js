@@ -456,7 +456,7 @@
       }
     }
 
-    const particles = Array.from({ length: 35 }, () => new P()); // was 55
+    const particles = Array.from({ length: 80 }, () => new P()); // increased for more stars
 
     const CONN_SQ = 120 * 120; // squared distance — no sqrt needed
     function connect() {

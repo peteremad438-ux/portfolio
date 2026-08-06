@@ -36,7 +36,7 @@
   );
 
   /* ══ 1. STARS ══ */
-  const STAR_COUNT = 90; // was 140
+  const STAR_COUNT = 200; // was 140
   const stars = Array.from({ length: STAR_COUNT }, () => ({
     x: Math.random() * 2000,
     y: Math.random() * 2000,
