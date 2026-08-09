@@ -2203,6 +2203,90 @@ footer {
   border: 1px solid rgba(var(--proj-accent-rgb, 59, 130, 246), 0.24);
 }
 
+/* ═══════════════════════════════════════
+   PLACEHOLDER PROJECT CARD
+═══════════════════════════════════════ */
+.placeholder-project .browser-screen {
+  background: linear-gradient(
+    135deg,
+    rgba(var(--proj-accent-rgb, 139, 92, 246), 0.18),
+    rgba(255, 255, 255, 0.06)
+  );
+}
+.placeholder-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+.placeholder-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: min(74%, 280px);
+}
+.placeholder-line {
+  display: block;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+}
+.placeholder-line.long {
+  width: 100%;
+}
+.placeholder-line:not(.long) {
+  width: 78%;
+}
+.placeholder-line.short {
+  width: 54%;
+}
+.placeholder-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.85rem;
+}
+.placeholder-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition:
+    transform 0.3s var(--ease),
+    background 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+.placeholder-link-primary {
+  background: var(--proj-accent, var(--accent));
+  color: #fff;
+}
+.placeholder-link-ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.placeholder-link:hover {
+  transform: translateY(-2px);
+}
+
 /* ══════════════════════════════════════════════
    DESKTOP-ONLY HOVER STATE
    Gated to devices with a real hover-capable
@@ -3360,20 +3444,6 @@ footer {
   pointer-events: none;
   z-index: 0;
   opacity: 1;
-}
-
-/* ═══════════════════════════════════════
-   PARTICLES CANVAS
-═══════════════════════════════════════ */
-.particle-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.35;
 }
 
 /* ═══════════════════════════════════════

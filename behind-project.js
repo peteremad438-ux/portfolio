@@ -132,6 +132,136 @@
       },
     },
 
+    "tony-romany": {
+      accent: "#fbbf24",
+      rgb: "251,191,36",
+      icon: "fa-palette",
+      hero: "Screenshot_9-8-2026_13117_.jpeg",
+      gallery: ["Screenshot_9-8-2026_13117_.jpeg"],
+      title: { en: "Tony Romany Portfolio", ar: "بورتفوليو توني رماني" },
+      tag: {
+        en: "Graphic Design · Freelance Project",
+        ar: "تصميم جرافيك · مشروع فريلانس",
+      },
+      summary: {
+        en: "A cinematic dark-themed portfolio for a graphic designer, built around bold typography, an animated starfield hero, and a story-driven case-study flow.",
+        ar: "بورتفوليو سينمائي بخلفية داكنة لمصمم جرافيك، مبني على خطوط جريئة وخلفية نجوم متحركة وعرض مشاريع بأسلوب قصصي.",
+      },
+      demo: "https://portfolio-tony-gilt.vercel.app/",
+      github: "https://github.com/peteremad438-ux/portfolio-tony.git",
+      overview: {
+        en: "Tony is a graphic designer who works with founders and small brands on identity, packaging, and print. His portfolio needed to sell that craft on first scroll — a dramatic hero, a confident type scale, and a warm ember palette against a deep near-black background.",
+        ar: "توني مصمم جرافيك يتعامل مع مؤسسين وبراندات صغيرة في الهوية البصرية والتغليف والمطبوعات. البورتفوليو كان لازم يعبّر عن هذا المستوى من أول سكرول، بهيرو درامي وخط طباعي واثق ولوحة ألوان دافئة على خلفية شبه سوداء.",
+      },
+      challenge: {
+        en: "A designer's own portfolio is judged harder than any client site — it has to look art-directed, not templated, while still loading fast and reading clearly on mobile where most visitors land first.",
+        ar: "بورتفوليو أي مصمم بيتحكم فيه أعلى معايير نقد لأنه بيمثله شخصيًا، فكان لازم يبان بإخراج فني حقيقي مش قالب جاهز، مع سرعة تحميل وقراءة واضحة على الموبايل لأن أغلب الزوار بيدخلوا منه.",
+      },
+      approach: {
+        en: "I built a full-bleed hero with a subtle animated starfield and floating accent lines behind oversized serif headlines, then paired it with a warm orange accent used sparingly so it always draws the eye to the call-to-action.",
+        ar: "بنيت هيرو بيغطي الشاشة كاملة بخلفية نجوم متحركة خفيفة وخطوط زخرفية عائمة خلف عناوين بخط serif كبير، مع لون برتقالي دافئ مستخدم بحرص عشان يوجّه العين دايمًا لزرار الدعوة للإجراء.",
+      },
+      features: [
+        {
+          icon: "fa-stars",
+          title: { en: "Animated Starfield Hero", ar: "هيرو بنجوم متحركة" },
+          desc: {
+            en: "A lightweight canvas/CSS starfield behind the headline that adds depth without hurting performance.",
+            ar: "خلفية نجوم خفيفة خلف العنوان الرئيسي بتدي إحساس بالعمق من غير ما تأثر على الأداء.",
+          },
+        },
+        {
+          icon: "fa-swatchbook",
+          title: { en: "Identity-Led Sections", ar: "أقسام تعكس الهوية" },
+          desc: {
+            en: "About, Services, Work, Process, and Pricing sections built as a coherent brand story.",
+            ar: "أقسام About وServices وWork وProcess وPricing متبنية كقصة براند واحدة متكاملة.",
+          },
+        },
+        {
+          icon: "fa-arrow-pointer",
+          title: { en: "Dual CTA Header", ar: "هيدر بدعوتين للإجراء" },
+          desc: {
+            en: "A pinned 'Start a Project' button alongside 'View My Work' and 'Let's Talk' for clear next steps.",
+            ar: "زرار Start a Project ثابت في الهيدر بجانب View My Work وLet's Talk عشان الخطوة التالية تبقى واضحة.",
+          },
+        },
+        {
+          icon: "fa-mobile-screen",
+          title: { en: "Responsive Typography", ar: "طباعة متجاوبة" },
+          desc: {
+            en: "Fluid, oversized headline scale that stays readable and balanced from phone to ultra-wide.",
+            ar: "مقياس عناوين كبير ومرن يفضل مقروء ومتزن من الموبايل لحد الشاشات العريضة.",
+          },
+        },
+      ],
+      tech: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+      process: [
+        {
+          title: { en: "Brand Direction", ar: "تحديد الاتجاه البصري" },
+          desc: {
+            en: "Set the near-black / ember palette and serif-forward type pairing first.",
+            ar: "حددت اللوحة اللونية شبه السوداء مع البرتقالي الدافئ وتوليفة الخطوط قبل أي حاجة تانية.",
+          },
+        },
+        {
+          title: { en: "Hero Prototyping", ar: "تجربة الهيرو" },
+          desc: {
+            en: "Iterated on the starfield density and headline sizing until it felt cinematic, not busy.",
+            ar: "جربت كثافة النجوم وحجم العنوان أكتر من مرة لحد ما حسيت إن الشكل سينمائي مش مزدحم.",
+          },
+        },
+        {
+          title: { en: "Section Build-Out", ar: "بناء الأقسام" },
+          desc: {
+            en: "Built About, Services, Work, Process, and Pricing as isolated, reusable blocks.",
+            ar: "بنيت الأقسام كوحدات مستقلة قابلة لإعادة الاستخدام حتى يسهل تعديل المحتوى بعدين.",
+          },
+        },
+        {
+          title: { en: "Polish & Deploy", ar: "التلميع والنشر" },
+          desc: {
+            en: "Cross-device QA on animation performance, then shipped to Vercel.",
+            ar: "اختبار أداء الحركات على أجهزة مختلفة ثم النشر على Vercel.",
+          },
+        },
+      ],
+      problems: [
+        {
+          problem: {
+            en: "The starfield background risked competing with the headline for attention.",
+            ar: "خلفية النجوم كانت ممكن تسحب الانتباه من العنوان الرئيسي.",
+          },
+          solution: {
+            en: "Dimmed and slowed the star motion, and kept it fixed behind a solid text layer with strong contrast.",
+            ar: "خفّفت وبطّأت حركة النجوم وثبّتها خلف طبقة نص بتباين لوني قوي.",
+          },
+        },
+        {
+          problem: {
+            en: "Large serif headlines were clipping awkwardly on small screens.",
+            ar: "العناوين الكبيرة بخط serif كانت بتتقص بشكل غير مريح على الشاشات الصغيرة.",
+          },
+          solution: {
+            en: "Switched to fluid clamp()-based sizing so the headline scales smoothly at every breakpoint.",
+            ar: "استخدمت أحجام مرنة بـ clamp() عشان العنوان يتناسق تلقائيًا في كل حجم شاشة.",
+          },
+        },
+      ],
+      performance: {
+        en: "The starfield and glow effects rely on transform/opacity and are throttled so they stay smooth on mid-range phones without draining battery.",
+        ar: "تأثيرات النجوم والتوهج بتعتمد على transform/opacity ومحكومة بمعدل مناسب عشان تفضل ناعمة على الأجهزة المتوسطة من غير استهلاك بطارية زيادة.",
+      },
+      lessons: {
+        en: "Designing a portfolio for a designer taught me to let the content breathe — restraint in motion and color did more to signal craft than any extra effect would have.",
+        ar: "تصميم بورتفوليو لمصمم علّمني إني أسيب المحتوى ياخد مساحته؛ البساطة في الحركة واللون أثبتت احترافية أكتر من أي إضافات زيادة.",
+      },
+      result: {
+        en: "A confident, art-directed portfolio that makes Tony's design sense obvious from the first scroll, while staying fast and fully responsive.",
+        ar: "بورتفوليو واثق ومُخرَج فنيًا بيوضّح حس توني التصميمي من أول سكرول، مع سرعة تحميل وتجاوب كامل مع كل الشاشات.",
+      },
+    },
+
     "electro-shop": {
       accent: "#f97316",
       rgb: "249,115,22",
