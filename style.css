@@ -193,7 +193,7 @@ body::after {
   /* Scales continuously with viewport width: small on phones,
      medium on tablets, large on laptops/desktops — no hard jumps. */
   font-size: clamp(1.65rem, 7.2vw, 4.5rem);
-  letter-spacing: 0.03em;
+  letter-spacing: 2px;
   color: #fff;
   white-space: nowrap;
   padding: 0 1.25rem;
@@ -231,9 +231,7 @@ body::after {
 .ln-letter:nth-child(9) {
   animation-delay: 0.6s;
 }
-/* Icon sized relative (em) to the word's own font-size, so it always
-   stays proportional to the text at every breakpoint instead of
-   rendering oversized on mobile / undersized on desktop. */
+
 .ln-dot {
   color: var(--accent);
   font-size: 0.6em;
@@ -3840,10 +3838,11 @@ body.btp-lock {
   justify-content: center;
   padding: 4vh 20px;
   background: rgba(3, 8, 16, 0.88);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   opacity: 0;
   visibility: hidden;
+  will-change: opacity;
   transition:
     opacity 0.4s var(--ease),
     visibility 0.4s;
@@ -3879,14 +3878,19 @@ body.btp-lock {
   border-radius: 26px;
   background: rgba(10, 20, 34, 0.98);
   border: 1px solid var(--border);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: translateY(36px) scale(0.97);
+  will-change: transform, opacity;
   transition:
     opacity 0.45s var(--ease),
     transform 0.45s var(--ease);
   scrollbar-width: thin;
   scrollbar-color: rgba(var(--btp-accent-rgb, 59, 130, 246), 0.5) transparent;
+  /* Isolate this from the backdrop's blur layer so its own scale/opacity
+     transition doesn't force the browser to keep re-computing the
+     full-viewport blur behind it every frame. */
+  contain: layout paint;
 }
 .btp-backdrop.open .btp-modal {
   opacity: 1;

@@ -1369,11 +1369,6 @@
     lastFocused = document.activeElement;
     modal.innerHTML = render(key);
     modal.scrollTop = 0;
-    backdrop.classList.add("open");
-    const lockScrollY = window.scrollY || window.pageYOffset || 0;
-    document.body.dataset.btpScrollY = String(lockScrollY);
-    document.body.style.top = `-${lockScrollY}px`;
-    document.body.classList.add("btp-lock");
 
     modal.querySelectorAll(".btp-gallery-item").forEach((item) => {
       const open = () =>
@@ -1388,11 +1383,27 @@
     });
 
     document.getElementById("btpClose")?.addEventListener("click", closeBTP);
-    requestAnimationFrame(setupReveal);
 
-    // Pause the animated background canvas while the modal (which has a
-    // blurred backdrop) is open — this is what was causing the page to hang.
-    window.dispatchEvent(new Event("btp:modalopen"));
+    // Let the browser finish the (fairly large) layout/paint of the modal
+    // content BEFORE starting the backdrop blur + scale-in transition.
+    // Doing both in the same frame is what made opening feel like a
+    // freeze: a big synchronous layout landing on top of an expensive
+    // full-viewport backdrop-filter animation.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        backdrop.classList.add("open");
+        const lockScrollY = window.scrollY || window.pageYOffset || 0;
+        document.body.dataset.btpScrollY = String(lockScrollY);
+        document.body.style.top = `-${lockScrollY}px`;
+        document.body.classList.add("btp-lock");
+        setupReveal();
+
+        // Pause the animated background canvas while the modal (which has
+        // a blurred backdrop) is open — this is what was causing the page
+        // to hang.
+        window.dispatchEvent(new Event("btp:modalopen"));
+      });
+    });
   }
 
   function closeBTP() {

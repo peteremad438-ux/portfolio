@@ -180,64 +180,74 @@
   ══════════════════════════════════════════════ */
   const cursorDot = document.getElementById("cursorDot");
   const cursorRing = document.getElementById("cursorRing");
-  let mx = 0,
-    my = 0,
-    rx = 0,
-    ry = 0;
 
-  document.addEventListener(
-    "mousemove",
-    (e) => {
-      mx = e.clientX;
-      my = e.clientY;
-      if (cursorDot) {
-        cursorDot.style.left = mx + "px";
-        cursorDot.style.top = my + "px";
+  // Touch/coarse-pointer devices never show this cursor (see CSS), so
+  // don't even attach the listeners - no point paying for mousemove work
+  // that will never visibly run.
+  const hasFinePointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine)",
+  ).matches;
+
+  if (hasFinePointer && (cursorDot || cursorRing)) {
+    let mx = 0,
+      my = 0,
+      rx = 0,
+      ry = 0;
+
+    document.addEventListener(
+      "mousemove",
+      (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        // transform-only (no left/top) keeps this on the compositor
+        // instead of triggering layout on every mousemove tick.
+        if (cursorDot) {
+          cursorDot.style.transform = `translate3d(${mx}px, ${my}px, 0) translate(-50%, -50%)`;
+        }
+      },
+      { passive: true },
+    );
+
+    let ringRafId = null;
+    function animRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      if (cursorRing) {
+        cursorRing.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
       }
-    },
-    { passive: true },
-  );
-
-  let ringRafId = null;
-  function animRing() {
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    if (cursorRing) {
-      cursorRing.style.left = rx + "px";
-      cursorRing.style.top = ry + "px";
+      // Keep animating only while ring hasn't settled
+      const driftSq = (mx - rx) ** 2 + (my - ry) ** 2;
+      if (driftSq > 0.1) ringRafId = requestAnimationFrame(animRing);
+      else ringRafId = null;
     }
-    // Keep animating only while ring hasn't settled
-    const driftSq = (mx - rx) ** 2 + (my - ry) ** 2;
-    if (driftSq > 0.1) ringRafId = requestAnimationFrame(animRing);
-    else ringRafId = null;
-  }
-  document.addEventListener(
-    "mousemove",
-    () => {
-      if (!ringRafId) ringRafId = requestAnimationFrame(animRing);
-    },
-    { passive: true },
-  );
+    document.addEventListener(
+      "mousemove",
+      () => {
+        if (!ringRafId) ringRafId = requestAnimationFrame(animRing);
+      },
+      { passive: true },
+    );
 
-  document.addEventListener("mousedown", () => {
-    cursorDot?.classList.add("clicking");
-    cursorRing?.classList.add("clicking");
-  });
-  document.addEventListener("mouseup", () => {
-    cursorDot?.classList.remove("clicking");
-    cursorRing?.classList.remove("clicking");
-  });
-
-  document
-    .querySelectorAll("a,button,.btn,.skill-card,.project-card,.service-card")
-    .forEach((el) => {
-      el.addEventListener("mouseenter", () =>
-        cursorRing?.classList.add("hovering"),
-      );
-      el.addEventListener("mouseleave", () =>
-        cursorRing?.classList.remove("hovering"),
-      );
+    document.addEventListener("mousedown", () => {
+      cursorDot?.classList.add("clicking");
+      cursorRing?.classList.add("clicking");
     });
+    document.addEventListener("mouseup", () => {
+      cursorDot?.classList.remove("clicking");
+      cursorRing?.classList.remove("clicking");
+    });
+
+    document
+      .querySelectorAll("a,button,.btn,.skill-card,.project-card,.service-card")
+      .forEach((el) => {
+        el.addEventListener("mouseenter", () =>
+          cursorRing?.classList.add("hovering"),
+        );
+        el.addEventListener("mouseleave", () =>
+          cursorRing?.classList.remove("hovering"),
+        );
+      });
+  }
 
   /* ══════════════════════════════════════════════
      SCROLL PROGRESS & NAVBAR & SCROLL TOP

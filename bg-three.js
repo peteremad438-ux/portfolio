@@ -1,4 +1,3 @@
-
 (function () {
   "use strict";
 
@@ -9,12 +8,24 @@
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
+  // Treat small screens / low core-count / low memory devices as "low power"
+  // so we don't push a full nebula + wireframe scene through dozens of
+  // backdrop-filter blurs on hardware that can't afford it.
+  const isMobile = window.innerWidth < 760;
+  const lowPower =
+    isMobile ||
+    (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) ||
+    (navigator.deviceMemory && navigator.deviceMemory <= 4);
+
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
-    antialias: true,
+    antialias: !lowPower,
+    powerPreference: "high-performance",
   });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setPixelRatio(
+    Math.min(window.devicePixelRatio, lowPower ? 1.25 : 2),
+  );
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   const scene = new THREE.Scene();
@@ -27,8 +38,7 @@
   camera.position.z = 12;
 
   /* ---------- Particle nebula ---------- */
-  const isMobile = window.innerWidth < 760;
-  const particleCount = isMobile ? 260 : 650;
+  const particleCount = lowPower ? 130 : 650;
   const positions = new Float32Array(particleCount * 3);
 
   for (let i = 0; i < particleCount; i++) {
@@ -56,12 +66,28 @@
   scene.add(particles);
 
   /* ---------- Floating wireframe shapes ---------- */
+  // Skip on low-power devices: they sit behind heavy blur anyway (barely
+  // visible) but still cost a rotation update + draw call every frame.
   const shapesGroup = new THREE.Group();
-  const shapeDefs = [
-    { geo: new THREE.IcosahedronGeometry(1.4, 0), pos: [-4.2, 1.4, -2], color: 0x3b82f6 },
-    { geo: new THREE.TorusGeometry(1, 0.32, 8, 32), pos: [4.4, -1.1, -3], color: 0x60a5fa },
-    { geo: new THREE.OctahedronGeometry(1, 0), pos: [2.6, 2.4, -4], color: 0x3b82f6 },
-  ];
+  const shapeDefs = lowPower
+    ? []
+    : [
+        {
+          geo: new THREE.IcosahedronGeometry(1.4, 0),
+          pos: [-4.2, 1.4, -2],
+          color: 0x3b82f6,
+        },
+        {
+          geo: new THREE.TorusGeometry(1, 0.32, 8, 32),
+          pos: [4.4, -1.1, -3],
+          color: 0x60a5fa,
+        },
+        {
+          geo: new THREE.OctahedronGeometry(1, 0),
+          pos: [2.6, 2.4, -4],
+          color: 0x3b82f6,
+        },
+      ];
 
   shapeDefs.forEach((def) => {
     const mat = new THREE.MeshBasicMaterial({
@@ -87,14 +113,18 @@
   let targetRotX = 0,
     targetRotY = 0;
 
-  window.addEventListener(
-    "mousemove",
-    (e) => {
-      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
-      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
-    },
-    { passive: true },
-  );
+  // Parallax only makes sense with a real mouse - skip the listener
+  // entirely on touch devices instead of wiring it up for nothing.
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    window.addEventListener(
+      "mousemove",
+      (e) => {
+        mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+        mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+      },
+      { passive: true },
+    );
+  }
 
   window.addEventListener("resize", () => {
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -130,7 +160,16 @@
     renderer.render(scene, camera);
   }
 
-  function loop() {
+  // Cap low-power devices to ~30fps instead of chasing the full refresh
+  // rate - halves the render/blur-recomposite cost for a background layer.
+  const frameInterval = lowPower ? 1000 / 30 : 0;
+  let lastFrameTime = 0;
+  function loop(now) {
+    if (frameInterval && now - lastFrameTime < frameInterval) {
+      animId = requestAnimationFrame(loop);
+      return;
+    }
+    lastFrameTime = now;
     renderFrame();
     animId = requestAnimationFrame(loop);
   }
