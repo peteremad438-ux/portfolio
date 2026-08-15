@@ -172,52 +172,101 @@ body::after {
   background: #07111f;
   z-index: 99999;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   transition:
-    opacity 0.6s ease,
-    visibility 0.6s ease;
+    opacity 0.65s var(--ease),
+    transform 0.65s var(--ease),
+    visibility 0.65s var(--ease);
 }
 .loading-screen.hide {
   opacity: 0;
+  transform: translateY(-24px);
   visibility: hidden;
 }
-.loading-logo {
+.loading-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Clash Display", sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
+  /* Scales continuously with viewport width: small on phones,
+     medium on tablets, large on laptops/desktops — no hard jumps. */
+  font-size: clamp(1.65rem, 7.2vw, 4.5rem);
+  letter-spacing: 0.03em;
   color: #fff;
-  letter-spacing: 3px;
-  margin-bottom: 2rem;
+  white-space: nowrap;
+  padding: 0 1.25rem;
 }
-.loading-logo span {
+.ln-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: ln-reveal 0.5s var(--ease) forwards;
+}
+.ln-letter:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.ln-letter:nth-child(2) {
+  animation-delay: 0.11s;
+}
+.ln-letter:nth-child(3) {
+  animation-delay: 0.18s;
+}
+.ln-letter:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.ln-letter:nth-child(5) {
+  animation-delay: 0.32s;
+}
+.ln-letter:nth-child(6) {
+  animation-delay: 0.39s;
+}
+.ln-letter:nth-child(7) {
+  animation-delay: 0.46s;
+}
+.ln-letter:nth-child(8) {
+  animation-delay: 0.53s;
+}
+.ln-letter:nth-child(9) {
+  animation-delay: 0.6s;
+}
+/* Icon sized relative (em) to the word's own font-size, so it always
+   stays proportional to the text at every breakpoint instead of
+   rendering oversized on mobile / undersized on desktop. */
+.ln-dot {
   color: var(--accent);
+  font-size: 0.6em;
+  margin-left: 0.28em;
+  display: inline-flex;
+  align-items: center;
+  animation-delay: 0.68s;
 }
-.loading-bar-wrap {
-  width: 180px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
-  overflow: hidden;
-}
-.loading-bar {
-  height: 100%;
-  background: linear-gradient(90deg, var(--accent), #60a5fa);
-  border-radius: 2px;
-  width: 0;
-  animation: loading-fill 1.6s var(--ease) 0.2s forwards;
-}
-@keyframes loading-fill {
+@keyframes ln-reveal {
   to {
-    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-.loading-pct {
-  margin-top: 1rem;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.35);
-  font-family: monospace;
+@media (max-width: 420px) {
+  .loading-name {
+    letter-spacing: 0.015em;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ln-letter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .loading-screen {
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+  .loading-screen.hide {
+    transform: none;
+  }
 }
 
 /* ═══════════════════════════════════════

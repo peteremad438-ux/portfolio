@@ -5,17 +5,23 @@
      LOADING SCREEN
   ══════════════════════════════════════════════ */
   const loadingScreen = document.getElementById("loadingScreen");
-  const pctEl = document.getElementById("loadingPct");
-  let loadPct = 0;
-  const pctInterval = setInterval(() => {
-    loadPct += Math.random() * 18 + 5;
-    if (loadPct >= 100) {
-      loadPct = 100;
-      clearInterval(pctInterval);
-      setTimeout(() => loadingScreen?.classList.add("hide"), 150);
-    }
-    if (pctEl) pctEl.textContent = Math.floor(loadPct) + "%";
-  }, 110);
+
+  // Letters reveal via CSS (fires as soon as the screen is painted).
+  // Last letter animation finishes ~1.05s in; hold briefly, then fade/slide
+  // the whole screen away to reveal the Hero underneath.
+  function dismissLoadingScreen() {
+    if (!loadingScreen) return;
+    loadingScreen.classList.add("hide");
+    setTimeout(() => loadingScreen.remove(), 700);
+  }
+
+  if (document.readyState === "complete") {
+    setTimeout(dismissLoadingScreen, 1550);
+  } else {
+    window.addEventListener("load", () => {
+      setTimeout(dismissLoadingScreen, 1550);
+    });
+  }
 
   /* ══════════════════════════════════════════════
      THEME (dark / light)
