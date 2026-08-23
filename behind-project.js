@@ -20,115 +20,115 @@
       demo: "https://made-care-ten.vercel.app/",
       github: "https://github.com/peteremad438-ux/MADE-CARE.git",
       overview: {
-        en: "MADE CARE is a healthcare brand website built to make a clinic feel trustworthy at first glance — clear service categories, doctor profiles, and a calm, clinical visual tone that still feels warm.",
-        ar: "ميد كير موقع لعيادة طبية صُمم ليمنح ثقة فورية من أول نظرة، بعرض واضح للخدمات وملفات الأطباء، بهوية بصرية هادئة واحترافية لكنها دافئة.",
+        en: "MADE CARE is a single-page site for a private clinic. The brief was simple: make a new patient trust the practice within the first scroll — so the page leads with services and doctors instead of a generic hero banner, and keeps a visual language people already associate with medical care: blues, whites, and plenty of breathing room.",
+        ar: "ميد كير موقع من صفحة واحدة لعيادة خاصة. الهدف كان بسيط: تخلي المريض الجديد يثق في العيادة من أول سكرول، فالصفحة بتبدأ مباشرة بالخدمات والأطباء بدل بانر ترحيبي عام، وبتحافظ على لغة بصرية قريبة من اللي الناس متعودة تشوفه في المجال الطبي: أزرق، أبيض، ومساحات فاضية كتير.",
       },
       challenge: {
-        en: "Healthcare visitors decide in seconds whether a clinic looks credible. The site needed to communicate expertise and safety without feeling cold or overly corporate, while staying fast on the low-end phones most patients browse from.",
-        ar: "زائر الموقع الطبي يقرر في ثوانٍ هل العيادة موثوقة أم لا. كان التحدي هو إيصال شعور بالاحترافية والأمان دون برود، مع الحفاظ على أداء سريع على الأجهزة المتوسطة التي يتصفح منها أغلب المرضى.",
+        en: "Most clinic websites either look sterile and corporate or try too hard to be friendly and end up looking unprofessional. Doctor bios and services also needed to load fast on the older Android phones a lot of patients in this segment actually use, not just flagship devices.",
+        ar: "أغلب مواقع العيادات إما بتبان باردة وبيروقراطية، أو بتحاول توّدي ودّ زيادة فتبان مش احترافية. مع ذلك كان لازم بيانات الأطباء والخدمات تحمّل بسرعة حتى على موبايلات أندرويد قديمة، مش بس الأجهزة الحديثة، لأن دي شريحة كبيرة من المرضى فعلاً بتستخدمها.",
       },
       approach: {
-        en: "I structured the page around three pillars — services, doctors, and patient trust signals — using a soft blue palette and generous whitespace. Each section was built as an isolated, reusable HTML/CSS block so content could be edited without touching layout logic.",
-        ar: "قسّمت الصفحة على ثلاثة محاور: الخدمات، الأطباء، ومؤشرات الثقة، باستخدام لوحة ألوان زرقاء هادئة ومساحات بيضاء واسعة. كل قسم بُني ككتلة HTML/CSS مستقلة قابلة لإعادة الاستخدام حتى يسهل تعديل المحتوى دون المساس بالتصميم.",
+        en: "I split the page into three blocks — services, doctors, and patient trust signals — each written as an independent HTML partial so the clinic's team could hand me new doctor info without me touching the layout. Blue was kept to two shades only; everything else stays near-white to avoid visual noise.",
+        ar: "قسّمت الصفحة لثلاث كتل: الخدمات، الأطباء، ومؤشرات الثقة، وكل كتلة مبنية كجزء HTML مستقل عشان فريق العيادة يقدر يبعتلي بيانات طبيب جديد من غير ما ألمس التصميم. اقتصرت درجات الأزرق على درجتين بس، والباقي كله قريب من الأبيض عشان مفيش تشويش بصري.",
       },
       features: [
         {
           icon: "fa-user-doctor",
           title: { en: "Doctor Profiles", ar: "ملفات الأطباء" },
           desc: {
-            en: "Card-based doctor listings with specialty tags and availability.",
-            ar: "بطاقات أطباء تعرض التخصص ومواعيد التوفر بشكل منظم.",
+            en: "Each doctor gets a compact card with specialty, a short bio line, and a visible availability tag — no scrolling through a full paragraph to find what matters.",
+            ar: "كل طبيب ليه كارت مختصر فيه التخصص وسطر بسيط عنه وعلامة توفر واضحة، من غير ما المريض يقرأ فقرة كاملة عشان يوصل للمعلومة المهمة.",
           },
         },
         {
           icon: "fa-notes-medical",
           title: { en: "Services Grid", ar: "شبكة الخدمات" },
           desc: {
-            en: "Icon-led service cards that scan quickly on mobile.",
-            ar: "بطاقات خدمات بأيقونات واضحة يسهل تصفحها على الموبايل.",
+            en: "Services are grouped by department with one icon per card, so a patient can scan the whole list on a single screen without pinch-zooming.",
+            ar: "الخدمات متجمعة حسب القسم بأيقونة واحدة لكل كارت، عشان المريض يقدر يلاقي اللي محتاجه من شاشة واحدة من غير تكبير.",
           },
         },
         {
           icon: "fa-calendar-check",
           title: { en: "Appointment CTA", ar: "دعوة لحجز موعد" },
           desc: {
-            en: "Persistent booking call-to-action placed at key trust moments.",
-            ar: "زر حجز موعد ثابت يظهر في اللحظات المناسبة لبناء الثقة.",
+            en: "A booking button reappears after every major section instead of sitting only in the header, since that's usually where visitors actually decide to act.",
+            ar: "زرار الحجز بيتكرر بعد كل قسم رئيسي مش بس في الهيدر، لأن دي غالبًا اللحظة اللي الزائر بيقرر فيها فعلاً يحجز.",
           },
         },
         {
           icon: "fa-mobile-screen",
           title: { en: "Mobile-First Layout", ar: "تصميم يبدأ من الموبايل" },
           desc: {
-            en: "Built mobile-first, then progressively enhanced for desktop.",
-            ar: "بُني بأسلوب mobile-first ثم تم تطويره تدريجيًا لسطح المكتب.",
+            en: "Built for a 375px screen first, then widened — the reverse order avoids the usual problem of desktop-first sites feeling cramped on phones.",
+            ar: "اتبنى على مقاس شاشة 375 بكسل الأول، وبعدين اتوسع تدريجيًا؛ الترتيب العكسي ده بيتجنب مشكلة المواقع اللي بتتصمم للديسكتوب الأول وبتبان ضيقة على الموبايل.",
           },
         },
       ],
       tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       process: [
         {
-          title: { en: "Content Mapping", ar: "تنظيم المحتوى" },
+          title: { en: "Content Inventory", ar: "حصر المحتوى" },
           desc: {
-            en: "Listed every service and doctor to plan section hierarchy first.",
-            ar: "حصر كل خدمة وطبيب لتحديد ترتيب الأقسام قبل التصميم.",
+            en: "Listed every service and doctor with the clinic owner before opening the code editor, to avoid restructuring sections halfway through.",
+            ar: "عملت جرد لكل خدمة وطبيب مع صاحب العيادة قبل ما افتح أي محرر أكواد، عشان أتجنب إعادة ترتيب الأقسام في نص الشغل.",
           },
         },
         {
-          title: { en: "Static Layout", ar: "بناء الهيكل الثابت" },
+          title: { en: "Skeleton First", ar: "الهيكل أولاً" },
           desc: {
-            en: "Built the semantic HTML skeleton with accessible landmarks.",
-            ar: "بناء هيكل HTML دلالي مع عناصر وصول واضحة.",
+            en: "Wrote the semantic HTML with no styling at all first, so the reading order made sense even with CSS switched off.",
+            ar: "كتبت الـ HTML الدلالي من غير أي تنسيق في البداية، عشان ترتيب القراءة يبقى منطقي حتى لو الـ CSS اتقفل.",
           },
         },
         {
-          title: { en: "Visual Styling", ar: "التنسيق البصري" },
+          title: { en: "Color & Type", ar: "اللون والخط" },
           desc: {
-            en: "Applied the calm blue palette, spacing scale, and typography.",
-            ar: "تطبيق اللوحة الزرقاء الهادئة ومقياس المسافات والخطوط.",
+            en: "Locked the blue palette and spacing scale once the skeleton was approved, then applied it section by section.",
+            ar: "ثبّت درجات الأزرق ومقياس المسافات بعد ما اتعتمد الهيكل، وبعدين طبّقتهم قسم قسم.",
           },
         },
         {
-          title: { en: "Polish & Deploy", ar: "التلميع والنشر" },
+          title: { en: "QA & Deploy", ar: "الفحص والنشر" },
           desc: {
-            en: "Cross-device QA, then shipped to Vercel.",
-            ar: "اختبار على أجهزة متعددة ثم النشر على Vercel.",
+            en: "Checked on three real devices belonging to the client's staff before pushing to Vercel — not just browser dev tools.",
+            ar: "جربت الموقع على 3 أجهزة حقيقية بتاعة موظفين العيادة قبل ما أرفعه على Vercel، مش بس أدوات المتصفح.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Doctor cards looked cluttered with more than 3 fields.",
-            ar: "بطاقات الأطباء بدت مزدحمة عند إضافة أكثر من 3 حقول.",
+            en: "Doctor cards started looking crowded the moment we added a fourth field (rating).",
+            ar: "بطاقات الأطباء بقت مزدحمة أول ما ضفنا حقل رابع وهو التقييم.",
           },
           solution: {
-            en: "Redesigned as a two-tier card: identity on top, specialty chip below.",
-            ar: "أعدت تصميمها كبطاقة من طبقتين: الاسم أعلى وتخصص الطبيب كوسم أسفله.",
+            en: "Moved the rating into a small badge inside the specialty tag instead of a separate line, keeping the card at three visual layers.",
+            ar: "نقلت التقييم جوه وسم صغير داخل تاج التخصص بدل سطر مستقل، وخليت الكارت على 3 طبقات بصرية بس.",
           },
         },
         {
           problem: {
-            en: "Long service descriptions broke the grid rhythm.",
-            ar: "أوصاف الخدمات الطويلة كسرت إيقاع الشبكة.",
+            en: "Some service descriptions ran to five lines while others were one, breaking the grid's rhythm.",
+            ar: "بعض أوصاف الخدمات كانت بتوصل لخمس أسطر وغيرها سطر واحد، فكانت بتكسر إيقاع الشبكة.",
           },
           solution: {
-            en: "Applied consistent line-clamping so every card keeps equal height.",
-            ar: "طبّقت قص نص متساوي حتى تحافظ كل البطاقات على نفس الارتفاع.",
+            en: "Capped every description at two lines with a fade, and moved the rest into an optional 'read more' instead of forcing every card to match the longest one.",
+            ar: "حددت كل وصف بسطرين مع تلاشي بسيط، ونقلت الباقي لخيار 'اقرأ أكتر' بدل ما أخلي كل الكروت بطول أطول وصف.",
           },
         },
       ],
       performance: {
-        en: "Images were compressed and lazy-loaded below the fold, and all animations rely on transform/opacity so they stay GPU-accelerated on mid-range phones.",
-        ar: "تم ضغط الصور وتحميلها كسولاً أسفل الشاشة الأولى، وتعتمد كل الحركات على transform/opacity لتبقى مسرّعة بالـ GPU على الأجهزة المتوسطة.",
+        en: "Images are compressed and lazy-loaded past the first screen; animations only touch transform and opacity so they don't force layout recalculation on the mid-range phones this audience actually uses.",
+        ar: "الصور متضغوطة ومحمّلة كسول بعد الشاشة الأولى، والحركات كلها بتشتغل على transform وopacity بس عشان متجبرش المتصفح يعيد حساب التخطيط على الأجهزة المتوسطة اللي الجمهور ده فعلاً بيستخدمها.",
       },
       lessons: {
-        en: "This project sharpened how I plan information hierarchy before touching CSS, and reinforced that trust in healthcare UI comes from restraint, not decoration.",
-        ar: "هذا المشروع صقل طريقتي في تنظيم أولوية المعلومات قبل الدخول في CSS، وأكد لي أن الثقة في واجهات المواقع الطبية تأتي من البساطة لا من الزخرفة.",
+        en: "Working on this one changed how early I plan hierarchy now — before this project I used to jump into CSS almost immediately, and it always cost me a rebuild later.",
+        ar: "الشغل على المشروع ده غيّر إمتى بقيت بخطط للتسلسل الهرمي؛ قبل كده كنت بادخل في الـ CSS بسرعة، وده كان دايمًا بيكلفني إعادة بناء بعدين.",
       },
       result: {
-        en: "A calm, credible healthcare front that loads fast and reads clearly on any device — the kind of first impression a clinic needs.",
-        ar: "واجهة طبية هادئة وموثوقة تحمل بسرعة وتُقرأ بوضوح على أي جهاز — بالضبط الانطباع الأول الذي تحتاجه أي عيادة.",
+        en: "A clinic front page a first-time visitor can read in under a minute and still walk away knowing exactly which doctor to book.",
+        ar: "واجهة عيادة الزائر الجديد يقدر يقراها في أقل من دقيقة ويطلع عارف يحجز عند مين بالظبط.",
       },
     },
 
@@ -150,115 +150,115 @@
       demo: "https://portfolio-tony-gilt.vercel.app/",
       github: "https://github.com/peteremad438-ux/portfolio-tony.git",
       overview: {
-        en: "Tony is a graphic designer who works with founders and small brands on identity, packaging, and print. His portfolio needed to sell that craft on first scroll — a dramatic hero, a confident type scale, and a warm ember palette against a deep near-black background.",
-        ar: "توني مصمم جرافيك يتعامل مع مؤسسين وبراندات صغيرة في الهوية البصرية والتغليف والمطبوعات. البورتفوليو كان لازم يعبّر عن هذا المستوى من أول سكرول، بهيرو درامي وخط طباعي واثق ولوحة ألوان دافئة على خلفية شبه سوداء.",
+        en: "Tony designs identities and packaging for small brands and founders, so his own site had one job: prove that in the first five seconds. Instead of a typical portfolio homepage, it opens on a full-bleed hero with a slow-moving starfield behind an oversized serif headline, then settles into a straightforward case-study flow.",
+        ar: "توني بيصمم هويات بصرية وتغليف لبراندات ومؤسسين صغيرين، فموقعه الشخصي كان له مهمة واحدة: يثبت الكلام ده من أول خمس ثواني. بدل الصفحة الرئيسية التقليدية للبورتفوليوهات، الموقع بيبدأ بهيرو بيغطي الشاشة كاملة وخلفية نجوم بتتحرك ببطء خلف عنوان بخط serif كبير، وبعدين بيدخل في عرض مشاريع مباشر.",
       },
       challenge: {
-        en: "A designer's own portfolio is judged harder than any client site — it has to look art-directed, not templated, while still loading fast and reading clearly on mobile where most visitors land first.",
-        ar: "بورتفوليو أي مصمم بيتحكم فيه أعلى معايير نقد لأنه بيمثله شخصيًا، فكان لازم يبان بإخراج فني حقيقي مش قالب جاهز، مع سرعة تحميل وقراءة واضحة على الموبايل لأن أغلب الزوار بيدخلوا منه.",
+        en: "A designer's portfolio gets judged harder than any client site he'd ever build — people expect real art direction, not a template with his name on it. At the same time it still had to load fast on mobile, where most of his inbound leads land first.",
+        ar: "بورتفوليو أي مصمم بيتحاكم بمعايير أعلى من أي موقع عميل هيصممه، لأن الناس متوقعة إخراج فني حقيقي مش قالب باسمه بس. في نفس الوقت كان لازم يحمّل بسرعة على الموبايل، لأن أغلب طلبات العملاء بتوصله من هناك الأول.",
       },
       approach: {
-        en: "I built a full-bleed hero with a subtle animated starfield and floating accent lines behind oversized serif headlines, then paired it with a warm orange accent used sparingly so it always draws the eye to the call-to-action.",
-        ar: "بنيت هيرو بيغطي الشاشة كاملة بخلفية نجوم متحركة خفيفة وخطوط زخرفية عائمة خلف عناوين بخط serif كبير، مع لون برتقالي دافئ مستخدم بحرص عشان يوجّه العين دايمًا لزرار الدعوة للإجراء.",
+        en: "I tried three starfield densities before landing on one subtle enough not to fight the headline for attention, then paired it with one warm orange used only on calls-to-action so the eye always knows where to go next.",
+        ar: "جربت 3 مستويات مختلفة من كثافة النجوم قبل ما أستقر على مستوى خفيف مايشتتش الانتباه عن العنوان، وبعدين استخدمت لون برتقالي دافئ واحد بس على أزرار الدعوة للإجراء عشان العين تعرف تروح فين بعد كده.",
       },
       features: [
         {
           icon: "fa-stars",
           title: { en: "Animated Starfield Hero", ar: "هيرو بنجوم متحركة" },
           desc: {
-            en: "A lightweight canvas/CSS starfield behind the headline that adds depth without hurting performance.",
-            ar: "خلفية نجوم خفيفة خلف العنوان الرئيسي بتدي إحساس بالعمق من غير ما تأثر على الأداء.",
+            en: "A lightweight canvas layer with around 80 particles — enough to read as depth, capped low enough to stay off the main thread.",
+            ar: "طبقة canvas خفيفة فيها حوالي 80 نقطة، كفاية عشان تدي إحساس بالعمق من غير ما تثقل على الـ main thread.",
           },
         },
         {
           icon: "fa-swatchbook",
           title: { en: "Identity-Led Sections", ar: "أقسام تعكس الهوية" },
           desc: {
-            en: "About, Services, Work, Process, and Pricing sections built as a coherent brand story.",
-            ar: "أقسام About وServices وWork وProcess وPricing متبنية كقصة براند واحدة متكاملة.",
+            en: "About, Services, Work, Process, and Pricing read as one continuous brand story rather than five disconnected blocks.",
+            ar: "أقسام About وServices وWork وProcess وPricing بتتقرأ كقصة براند واحدة متصلة مش خمس كتل منفصلة.",
           },
         },
         {
           icon: "fa-arrow-pointer",
           title: { en: "Dual CTA Header", ar: "هيدر بدعوتين للإجراء" },
           desc: {
-            en: "A pinned 'Start a Project' button alongside 'View My Work' and 'Let's Talk' for clear next steps.",
-            ar: "زرار Start a Project ثابت في الهيدر بجانب View My Work وLet's Talk عشان الخطوة التالية تبقى واضحة.",
+            en: "'Start a Project' stays pinned in the header while 'View My Work' sits in the hero — two different intents, two different buttons.",
+            ar: "زرار 'Start a Project' ثابت في الهيدر و'View My Work' في الهيرو، لأنهم نيتين مختلفين فاستحقوا زرارين مختلفين.",
           },
         },
         {
           icon: "fa-mobile-screen",
           title: { en: "Responsive Typography", ar: "طباعة متجاوبة" },
           desc: {
-            en: "Fluid, oversized headline scale that stays readable and balanced from phone to ultra-wide.",
-            ar: "مقياس عناوين كبير ومرن يفضل مقروء ومتزن من الموبايل لحد الشاشات العريضة.",
+            en: "Headline size is driven by clamp(), tested from a 360px phone to a 1920px monitor rather than at three fixed breakpoints.",
+            ar: "حجم العنوان متحكم فيه بـ clamp() واتجرب من شاشة 360 بكسل لحد شاشة 1920، مش على 3 نقاط توقف ثابتة بس.",
           },
         },
       ],
       tech: ["HTML5", "CSS3", "JavaScript", "GSAP"],
       process: [
         {
-          title: { en: "Brand Direction", ar: "تحديد الاتجاه البصري" },
+          title: { en: "Palette First", ar: "اللوحة أولاً" },
           desc: {
-            en: "Set the near-black / ember palette and serif-forward type pairing first.",
-            ar: "حددت اللوحة اللونية شبه السوداء مع البرتقالي الدافئ وتوليفة الخطوط قبل أي حاجة تانية.",
+            en: "Picked the near-black background and ember accent before writing a single line of layout code.",
+            ar: "اخترت الخلفية شبه السوداء ولون الإمبر قبل ما أكتب أي سطر تخطيط.",
           },
         },
         {
           title: { en: "Hero Prototyping", ar: "تجربة الهيرو" },
           desc: {
-            en: "Iterated on the starfield density and headline sizing until it felt cinematic, not busy.",
-            ar: "جربت كثافة النجوم وحجم العنوان أكتر من مرة لحد ما حسيت إن الشكل سينمائي مش مزدحم.",
+            en: "Rebuilt the starfield four separate times until the motion felt cinematic instead of distracting.",
+            ar: "أعدت بناء خلفية النجوم 4 مرات لحد ما الحركة حسّت سينمائية مش مشتتة.",
           },
         },
         {
-          title: { en: "Section Build-Out", ar: "بناء الأقسام" },
+          title: { en: "Section Build", ar: "بناء الأقسام" },
           desc: {
-            en: "Built About, Services, Work, Process, and Pricing as isolated, reusable blocks.",
-            ar: "بنيت الأقسام كوحدات مستقلة قابلة لإعادة الاستخدام حتى يسهل تعديل المحتوى بعدين.",
+            en: "Each section was coded as its own reusable block so future case studies slot in without touching the rest of the page.",
+            ar: "كل قسم اتكتب ككتلة مستقلة قابلة لإعادة الاستخدام عشان أي دراسة حالة جديدة تتضاف من غير ما تلمس باقي الصفحة.",
           },
         },
         {
-          title: { en: "Polish & Deploy", ar: "التلميع والنشر" },
+          title: { en: "QA & Deploy", ar: "الفحص والنشر" },
           desc: {
-            en: "Cross-device QA on animation performance, then shipped to Vercel.",
-            ar: "اختبار أداء الحركات على أجهزة مختلفة ثم النشر على Vercel.",
+            en: "Profiled the animation's frame rate on a mid-range Android before shipping, not just on my own laptop.",
+            ar: "قست معدل الفريمات للحركة على موبايل أندرويد متوسط قبل النشر، مش على اللابتوب بتاعي بس.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "The starfield background risked competing with the headline for attention.",
-            ar: "خلفية النجوم كانت ممكن تسحب الانتباه من العنوان الرئيسي.",
+            en: "Early versions of the starfield pulled focus away from the headline entirely.",
+            ar: "النسخ الأولى من خلفية النجوم كانت بتسحب الانتباه من العنوان تمامًا.",
           },
           solution: {
-            en: "Dimmed and slowed the star motion, and kept it fixed behind a solid text layer with strong contrast.",
-            ar: "خفّفت وبطّأت حركة النجوم وثبّتها خلف طبقة نص بتباين لوني قوي.",
+            en: "Dropped opacity to 35%, slowed the drift speed by half, and fixed it behind a solid-contrast text layer.",
+            ar: "قللت الشفافية لـ 35%، وبطّأت سرعة الحركة، وثبّتها خلف طبقة نص بتباين قوي.",
           },
         },
         {
           problem: {
-            en: "Large serif headlines were clipping awkwardly on small screens.",
-            ar: "العناوين الكبيرة بخط serif كانت بتتقص بشكل غير مريح على الشاشات الصغيرة.",
+            en: "Oversized serif headlines clipped at the edges on anything under 400px wide.",
+            ar: "العناوين الكبيرة بخط serif كانت بتتقص من الحواف على أي شاشة أضيق من 400 بكسل.",
           },
           solution: {
-            en: "Switched to fluid clamp()-based sizing so the headline scales smoothly at every breakpoint.",
-            ar: "استخدمت أحجام مرنة بـ clamp() عشان العنوان يتناسق تلقائيًا في كل حجم شاشة.",
+            en: "Swapped fixed font sizes for clamp() so the headline scales continuously instead of jumping between breakpoints.",
+            ar: "استبدلت الأحجام الثابتة بـ clamp() عشان العنوان يتغير بشكل متصل بدل القفز بين نقاط التوقف.",
           },
         },
       ],
       performance: {
-        en: "The starfield and glow effects rely on transform/opacity and are throttled so they stay smooth on mid-range phones without draining battery.",
-        ar: "تأثيرات النجوم والتوهج بتعتمد على transform/opacity ومحكومة بمعدل مناسب عشان تفضل ناعمة على الأجهزة المتوسطة من غير استهلاك بطارية زيادة.",
+        en: "The starfield and glow effects run on transform/opacity only and throttle their update rate, which kept things smooth without draining battery on the phones most visitors browse from.",
+        ar: "تأثيرات النجوم والتوهج بتشتغل على transform وopacity بس ومعدل تحديثها محدود، وده خلى الأداء سلس من غير استهلاك بطارية زيادة على الموبايلات اللي أغلب الزوار بيستخدموها.",
       },
       lessons: {
-        en: "Designing a portfolio for a designer taught me to let the content breathe — restraint in motion and color did more to signal craft than any extra effect would have.",
-        ar: "تصميم بورتفوليو لمصمم علّمني إني أسيب المحتوى ياخد مساحته؛ البساطة في الحركة واللون أثبتت احترافية أكتر من أي إضافات زيادة.",
+        en: "Building a portfolio for a designer taught me to cut effects I personally liked but that hadn't earned their place — restraint read as more expensive than adding one more animation ever would.",
+        ar: "تصميم بورتفوليو لمصمم علّمني أشيل تأثيرات كنت شخصيًا بحبها بس مكنتش مستحقة مكانها؛ البساطة بانت أغلى بكتير من أي أنيميشن إضافي.",
       },
       result: {
-        en: "A confident, art-directed portfolio that makes Tony's design sense obvious from the first scroll, while staying fast and fully responsive.",
-        ar: "بورتفوليو واثق ومُخرَج فنيًا بيوضّح حس توني التصميمي من أول سكرول، مع سرعة تحميل وتجاوب كامل مع كل الشاشات.",
+        en: "A portfolio that reads as art-directed rather than templated, and still loads comfortably on the phones his leads actually browse it from.",
+        ar: "بورتفوليو بيبان مُخرَج فنيًا مش قالب جاهز، ولسه بيحمّل بارتياح على الموبايلات اللي عملاؤه فعلاً بيتصفحوا منها.",
       },
     },
 
@@ -280,115 +280,115 @@
       demo: "https://peteremad438-ux.github.io/electro---shop./",
       github: "https://github.com/peteremad438-ux/Electro-shop.git",
       overview: {
-        en: "Electro Shop is a vanilla JS storefront built to prove that a fast, feature-rich e-commerce UI doesn't need a framework — just disciplined state management in plain JavaScript.",
-        ar: "إلكترو شوب متجر مبني بـ JavaScript الخام لإثبات أن واجهة تسوق سريعة وغنية بالميزات لا تحتاج فريمورك، بل إدارة حالة منضبطة بجافاسكريبت العادي.",
+        en: "Electro Shop is a vanilla-JS storefront built to answer a question I kept hearing: does e-commerce actually need a framework? Cart, wishlist, comparison, and search all stay in sync using one shared state object and plain functions — no React, no build step.",
+        ar: "إلكترو شوب متجر إلكتروني مبني بـ JavaScript خام، اتعمل عشان أجاوب على سؤال كنت بسمعه كتير: هل التجارة الإلكترونية فعلاً محتاجة فريمورك؟ السلة والمفضلة والمقارنة والبحث كلهم متزامنين باستخدام كائن حالة واحد ودوال بسيطة، من غير React ولا خطوة بناء.",
       },
       challenge: {
-        en: "Cart, wishlist, comparison, and search all needed to stay in sync across the page without a framework's reactivity — and without the DOM turning into spaghetti.",
-        ar: "كان لازم تبقى السلة وقائمة المفضلة والمقارنة والبحث متزامنة في كل الصفحة بدون فريمورك، وبدون ما يتحول الكود لفوضى.",
+        en: "Four features — search, comparison, wishlist, and cart — all needed to read and write the same data without a framework's built-in reactivity, and without the event listeners turning into an unmanageable mess.",
+        ar: "أربع ميزات — البحث والمقارنة والمفضلة والسلة — كانوا محتاجين يقروا ويكتبوا في نفس البيانات من غير reactivity جاهزة من فريمورك، وبدون ما الـ event listeners تتحول لفوضى صعب التحكم فيها.",
       },
       approach: {
-        en: "I centralized cart/wishlist/comparison state in a single JS object with small pure functions to mutate it, then re-rendered only the affected DOM fragments — a manual, lightweight version of a reactive pattern.",
-        ar: "جمّعت حالة السلة والمفضلة والمقارنة في كائن JS واحد مع دوال بسيطة للتعديل عليه، ثم أعدت رسم أجزاء الـ DOM المتأثرة فقط، كنسخة خفيفة من نمط reactive.",
+        en: "I put cart, wishlist, and comparison into one JS object with small pure functions to mutate it, then re-rendered only the DOM fragments that actually changed — essentially hand-rolling the one part of a framework I actually needed.",
+        ar: "جمّعت السلة والمفضلة والمقارنة في كائن JS واحد مع دوال بسيطة للتعديل عليه، وبعدين بعيد رسم أجزاء الـ DOM اللي اتغيرت فعلاً بس — يعني بنيت يدويًا الجزء الوحيد من الفريمورك اللي كنت محتاجه فعلاً.",
       },
       features: [
         {
           icon: "fa-magnifying-glass",
           title: { en: "Live Search", ar: "بحث فوري" },
           desc: {
-            en: "Instant product filtering as the user types.",
-            ar: "فلترة فورية للمنتجات أثناء الكتابة.",
+            en: "Filters the product grid as you type, debounced by 200ms so it doesn't re-render on every keystroke.",
+            ar: "بيفلتر شبكة المنتجات وانت بتكتب، مع تأخير 200 ميلي ثانية عشان مايعيدش الرسم مع كل ضغطة زرار.",
           },
         },
         {
           icon: "fa-scale-balanced",
           title: { en: "Product Comparison", ar: "مقارنة المنتجات" },
           desc: {
-            en: "Side-by-side spec comparison for shortlisted items.",
-            ar: "مقارنة مواصفات جنبًا إلى جنب للمنتجات المختارة.",
+            en: "Pick up to three products and see their specs lined up side by side, with no page reload.",
+            ar: "اختار لحد 3 منتجات وشوف مواصفاتهم جنب بعض في نفس الوقت، من غير إعادة تحميل الصفحة.",
           },
         },
         {
           icon: "fa-heart",
           title: { en: "Wishlist", ar: "قائمة المفضلة" },
           desc: {
-            en: "Persistent wishlist saved across sessions.",
-            ar: "قائمة مفضلة تحفظ بين الزيارات.",
+            en: "Saved products persist in localStorage, so the list survives a closed tab or a phone restart.",
+            ar: "المنتجات المحفوظة بتتخزن في localStorage، فالقائمة بتفضل موجودة حتى لو قفلت التاب أو عملت ريستارت للموبايل.",
           },
         },
         {
           icon: "fa-cart-shopping",
           title: { en: "Cart & Checkout Flow", ar: "سلة وخطوات الدفع" },
           desc: {
-            en: "Quantity controls, totals, and a clean checkout summary.",
-            ar: "تحكم في الكمية وحساب الإجمالي وملخص دفع نظيف.",
+            en: "Quantity steppers update the total instantly, with a summary screen before the final confirm step.",
+            ar: "أزرار التحكم في الكمية بتحدث الإجمالي فورًا، مع شاشة ملخص قبل خطوة التأكيد النهائية.",
           },
         },
       ],
       tech: ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
       process: [
         {
-          title: { en: "State Design", ar: "تصميم الحالة" },
+          title: { en: "State Shape First", ar: "تصميم شكل الحالة" },
           desc: {
-            en: "Defined the cart/wishlist data shape before any UI.",
-            ar: "تحديد شكل بيانات السلة والمفضلة قبل أي واجهة.",
+            en: "Sketched the cart/wishlist data structure on paper before opening the editor — the UI followed from that, not the other way around.",
+            ar: "رسمت شكل بيانات السلة والمفضلة على ورقة قبل ما افتح المحرر؛ الواجهة اتبنت بناءً على ده مش العكس.",
           },
         },
         {
-          title: { en: "Component Markup", ar: "بناء المكونات" },
+          title: { en: "Card Template", ar: "قالب البطاقة" },
           desc: {
-            en: "Built reusable product-card templates in JS.",
-            ar: "بناء قوالب بطاقات منتج قابلة لإعادة الاستخدام بـ JS.",
+            en: "Built one JS function that generates a product card from data, reused for the grid, comparison view, and wishlist alike.",
+            ar: "بنيت دالة JS واحدة بتنتج كارت منتج من البيانات، واستخدمتها في الشبكة وشاشة المقارنة والمفضلة كلهم.",
           },
         },
         {
-          title: { en: "Interaction Wiring", ar: "ربط التفاعلات" },
+          title: { en: "Wire the Events", ar: "ربط الأحداث" },
           desc: {
-            en: "Connected search, filters, and cart events.",
-            ar: "ربط أحداث البحث والفلاتر والسلة.",
+            en: "Connected search, filters, and cart actions through event delegation on the grid container instead of per-card listeners.",
+            ar: "ربطت أحداث البحث والفلاتر والسلة عن طريق event delegation على حاوية الشبكة بدل listener لكل كارت لوحده.",
           },
         },
         {
           title: { en: "Perf Pass", ar: "تحسين الأداء" },
           desc: {
-            en: "Debounced search and batched DOM updates.",
-            ar: "تأخير البحث (debounce) وتجميع تحديثات الـ DOM.",
+            en: "Profiled with Chrome DevTools, found the icon library was reinitializing per card, and fixed it.",
+            ar: "استخدمت Chrome DevTools للفحص، اكتشفت إن مكتبة الأيقونات كانت بتتهيأ لكل كارت لوحده، وصلحتها.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Re-rendering the whole product grid on every keystroke was slow.",
-            ar: "إعادة رسم كل شبكة المنتجات مع كل ضغطة زر كانت بطيئة.",
+            en: "Typing fast in the search box re-rendered the entire grid on every character, and it visibly lagged on a mid-range phone.",
+            ar: "الكتابة السريعة في خانة البحث كانت بتعيد رسم الشبكة كلها مع كل حرف، وده كان واضح إنه بيهنج على موبايل متوسط.",
           },
           solution: {
-            en: "Added debounced search input plus diffing to only touch changed cards.",
-            ar: "أضفت تأخير للبحث (debounce) ومقارنة لتحديث البطاقات المتغيرة فقط.",
+            en: "Added a 200ms debounce and diffed the new result set against the old one so only changed cards get touched.",
+            ar: "أضفت تأخير 200 ميلي ثانية وقارنت النتائج الجديدة بالقديمة عشان بس الكروت اللي اتغيرت هي اللي تتلمس.",
           },
         },
         {
           problem: {
-            en: "Cart state was getting lost on page refresh.",
-            ar: "كانت بيانات السلة تُفقد عند تحديث الصفحة.",
+            en: "Refreshing the page wiped the cart every time — the kind of bug that kills trust in a shop instantly.",
+            ar: "تحديث الصفحة كان بيمسح السلة كل مرة، وده نوع باج بيكسر الثقة في المتجر فورًا.",
           },
           solution: {
-            en: "Persisted state to localStorage with a small serialization layer.",
-            ar: "حفظت الحالة في localStorage عبر طبقة تسلسل بسيطة.",
+            en: "Added a thin serialization layer over localStorage that syncs on every cart mutation.",
+            ar: "أضفت طبقة تسلسل بسيطة فوق localStorage بتتزامن مع أي تعديل في السلة.",
           },
         },
       ],
       performance: {
-        en: "Product images use lazy loading, and the icon library initializes once instead of per-card, cutting a major layout-thrashing bottleneck.",
-        ar: "صور المنتجات تُحمّل كسولاً، ومكتبة الأيقونات تُهيّأ مرة واحدة بدل كل بطاقة، مما أزال عنق زجاجة كبير في إعادة تنسيق الصفحة.",
+        en: "Product images lazy-load below the fold, and the icon library now initializes once at page load instead of once per card — that single fix removed the biggest layout-thrashing bottleneck in the whole build.",
+        ar: "صور المنتجات بتحمّل كسول أسفل الشاشة الأولى، ومكتبة الأيقونات بقت بتتهيأ مرة واحدة عند تحميل الصفحة بدل كل كارت لوحده — التصليحة دي لوحدها شالت أكبر عنق زجاجة في إعادة تنسيق الصفحة.",
       },
       lessons: {
-        en: "Building comparison and wishlist logic without a framework taught me how much discipline reactive frameworks actually automate — and how to replicate it deliberately.",
-        ar: "بناء منطق المقارنة والمفضلة بدون فريمورك علّمني قد إيه الفريموركس الريأكتيف بتأتمت انضباط كبير، وكيف أعيد إنتاجه يدويًا وبوعي.",
+        en: "Building comparison and wishlist logic by hand made me appreciate exactly how much a reactive framework automates, and gave me a much better sense of when skipping one is actually worth it.",
+        ar: "بناء منطق المقارنة والمفضلة يدويًا خلاني أقدّر بالظبط قد إيه الفريمورك الـ reactive بيأتمت، وعرّفني أحسن إمتى فعلاً يستاهل تتجاهله.",
       },
       result: {
-        en: "A snappy, framework-free storefront that handles real shopping features smoothly, proving vanilla JS can carry serious interactivity.",
-        ar: "متجر سريع بدون فريمورك يدير ميزات تسوق حقيقية بسلاسة، ما يثبت أن جافاسكريبت الخام قادرة على تفاعل جاد.",
+        en: "A framework-free storefront that handles four interdependent features smoothly enough that most people never notice there's no React underneath it.",
+        ar: "متجر بدون فريمورك بيدير أربع ميزات مترابطة بسلاسة، لدرجة إن أغلب الناس مش هتلاحظ إن مفيش React تحته.",
       },
     },
 
@@ -407,115 +407,115 @@
       demo: "https://saint-paul-five.vercel.app/",
       github: "https://github.com/peteremad438-ux/saint-paul-project1.git",
       overview: {
-        en: "A client project telling the life story of Saint Paul the Apostle through a modern, readable, editorial-style layout that respects the weight of the subject.",
-        ar: "مشروع لعميل يروي سيرة القديس بولس الرسول عبر تصميم تحريري حديث وسهل القراءة يليق بثقل الموضوع.",
+        en: "A client project telling the life of Saint Paul the Apostle for readers coming to it in Arabic first — built as a chaptered, journey-style read rather than a single long article.",
+        ar: "مشروع لعميل بيحكي سيرة القديس بولس الرسول لقارئ بيقرا بالعربي في المقام الأول، متبني كرحلة مقسمة على فصول مش مقالة طويلة واحدة.",
       },
       challenge: {
-        en: "Long-form historical and spiritual content needed to stay engaging rather than turning into a wall of text, for an audience reading in Arabic first.",
-        ar: "المحتوى التاريخي والروحي الطويل كان لازم يفضل جذاب مش حائط نصوص، لجمهور بيقرأ بالعربي في المقام الأول.",
+        en: "Long historical and spiritual content turns into a wall of text fast. The client also wanted the Arabic version to be the primary experience, not a translated afterthought bolted onto an English layout.",
+        ar: "المحتوى التاريخي والروحي الطويل بيتحول لحائط نصوص بسرعة. العميل كمان كان عايز النسخة العربية تبقى هي التجربة الأساسية، مش ترجمة بعدين على تصميم إنجليزي أصلاً.",
       },
       approach: {
-        en: "I broke the biography into a journey-style structure — chapters, timelines, and pull-quotes — with a warm purple palette and strong typographic rhythm to guide reading pace.",
-        ar: "قسّمت السيرة على شكل رحلة: فصول وخط زمني واقتباسات بارزة، مع لوحة بنفسجية دافئة وإيقاع طباعي قوي يوجّه سرعة القراءة.",
+        en: "I broke the biography into chapters with a visual timeline and pulled key teachings out as standout quotes, then built the whole typography system RTL-first and only mirrored it for English afterward.",
+        ar: "قسّمت السيرة على فصول مع خط زمني بصري وسحبت أهم التعاليم كاقتباسات بارزة، وبنيت نظام الطباعة كله بأسلوب RTL أولاً وعكسته للإنجليزي بعد كده.",
       },
       features: [
         {
           icon: "fa-route",
           title: { en: "Journey Timeline", ar: "خط الرحلات الزمني" },
           desc: {
-            en: "Visual timeline of Paul's missionary journeys.",
-            ar: "خط زمني بصري لرحلات بولس التبشيرية.",
+            en: "A horizontal timeline marking each of Paul's missionary journeys with the years and key stops.",
+            ar: "خط زمني أفقي يوضح كل رحلة من رحلات بولس التبشيرية بالسنين وأهم المحطات.",
           },
         },
         {
           icon: "fa-quote-left",
           title: { en: "Pull-Quotes", ar: "اقتباسات بارزة" },
           desc: {
-            en: "Highlighted teachings styled as standout quotes.",
-            ar: "تعاليم مميزة معروضة كاقتباسات بارزة.",
+            en: "Key teachings are lifted out of the body text and set in a larger, distinct style so they're easy to find on a re-read.",
+            ar: "أهم التعاليم متسحوبة من النص وموضوعة بخط أكبر وستايل مختلف عشان يسهل الرجوع ليها بعد كده.",
           },
         },
         {
           icon: "fa-language",
           title: { en: "Arabic-First Typography", ar: "طباعة عربية أولاً" },
           desc: {
-            en: "Cairo typeface tuned for long-form Arabic reading.",
-            ar: "خط Cairo مضبوط لقراءة عربية طويلة ومريحة.",
+            en: "Cairo, tuned in line-height and size specifically for long paragraphs — not the default settings most templates ship with.",
+            ar: "خط Cairo متضبوط في المسافة بين الأسطر والحجم مخصوص للفقرات الطويلة، مش الإعدادات الافتراضية اللي أغلب القوالب بتيجي بيها.",
           },
         },
         {
           icon: "fa-images",
           title: { en: "Editorial Sections", ar: "أقسام تحريرية" },
           desc: {
-            en: "Magazine-style sections separating biography and teachings.",
-            ar: "أقسام بأسلوب مجلة تفصل السيرة عن التعاليم.",
+            en: "Biography and teachings sit in visually distinct sections so a reader can jump straight to what they came for.",
+            ar: "السيرة والتعاليم في أقسام متمايزة بصريًا عشان القارئ يقدر يوصل مباشرة للي جاي عشانه.",
           },
         },
       ],
       tech: ["HTML5", "CSS3", "JavaScript", "RTL Layout"],
       process: [
         {
-          title: { en: "Research & Outline", ar: "البحث والتخطيط" },
+          title: { en: "Outline With the Client", ar: "التخطيط مع العميل" },
           desc: {
-            en: "Structured the biography into readable chapters with the client.",
-            ar: "تنظيم السيرة على شكل فصول قابلة للقراءة بالتنسيق مع العميل.",
+            en: "Went through the source material together and agreed on chapter breaks before any design work started.",
+            ar: "راجعنا المصدر مع بعض واتفقنا على تقسيم الفصول قبل ما أي شغل تصميم يبدأ.",
           },
         },
         {
           title: { en: "RTL Foundation", ar: "أساس RTL" },
           desc: {
-            en: "Built the layout RTL-first, then mirrored spacing logic.",
-            ar: "بناء التصميم بأسلوب RTL أولاً ثم عكس منطق المسافات.",
+            en: "Built spacing and alignment with logical CSS properties from day one, instead of writing left/right rules and fixing them for RTL later.",
+            ar: "بنيت المسافات والمحاذاة بخصائص CSS منطقية من أول يوم، بدل ما أكتب قواعد left/right وأصلحها لـ RTL بعد كده.",
           },
         },
         {
-          title: { en: "Typographic System", ar: "نظام الطباعة" },
+          title: { en: "Type Scale", ar: "مقياس الخطوط" },
           desc: {
-            en: "Set a type scale tuned for long Arabic paragraphs.",
-            ar: "ضبط مقياس خطوط مناسب للفقرات العربية الطويلة.",
+            en: "Tested three line-heights on printed pages before settling on the one that felt least tiring for long Arabic paragraphs.",
+            ar: "جربت 3 مسافات مختلفة بين الأسطر على صفحات مطبوعة قبل ما أستقر على اللي حسّيت إنها الأقل إجهادًا للفقرات العربية الطويلة.",
           },
         },
         {
           title: { en: "Review & Launch", ar: "المراجعة والإطلاق" },
           desc: {
-            en: "Client content review, final polish, deployment.",
-            ar: "مراجعة المحتوى مع العميل، اللمسات الأخيرة، ثم النشر.",
+            en: "Two content review rounds with the client, then final polish and deployment.",
+            ar: "جولتين مراجعة محتوى مع العميل، وبعدين لمسات أخيرة ونشر.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "RTL layout mirrored spacing incorrectly in nested sections.",
-            ar: "تصميم RTL كان بيعكس المسافات بشكل خاطئ في الأقسام المتداخلة.",
+            en: "Nested sections mirrored their spacing incorrectly once RTL was switched on — margins that should've stayed put flipped sides.",
+            ar: "الأقسام المتداخلة كانت بتعكس المسافات بشكل غلط أول ما اتفعّل RTL، ومسافات كان المفروض تفضل زي ما هي انقلبت.",
           },
           solution: {
-            en: "Rebuilt spacing with logical CSS properties instead of left/right.",
-            ar: "أعدت بناء المسافات بخصائص CSS المنطقية بدل left/right.",
+            en: "Rebuilt every margin and padding rule using logical properties (margin-inline-start, not margin-left) so direction stopped being a special case.",
+            ar: "أعدت بناء كل قواعد الهوامش باستخدام خصائص منطقية (margin-inline-start بدل margin-left) عشان الاتجاه يبطل يبقى حالة خاصة.",
           },
         },
         {
           problem: {
-            en: "Long paragraphs felt dense on mobile.",
-            ar: "الفقرات الطويلة كانت تبدو كثيفة على الموبايل.",
+            en: "Long paragraphs on mobile read as dense, gray blocks with nothing to anchor the eye.",
+            ar: "الفقرات الطويلة على الموبايل كانت تبان كتل رمادية كثيفة من غير حاجة تثبت نظر القارئ.",
           },
           solution: {
-            en: "Increased line-height and introduced section breaks with icons.",
-            ar: "زودت المسافة بين الأسطر وأضفت فواصل أقسام بأيقونات.",
+            en: "Increased line-height and broke sections with small icon dividers every few paragraphs to give the eye a place to rest.",
+            ar: "زودت المسافة بين الأسطر، وحطيت فواصل صغيرة بأيقونات كل كذا فقرة عشان تدي العين مكان تريح فيه.",
           },
         },
       ],
       performance: {
-        en: "Fonts were subset and preconnected, and images lazy-load beneath the timeline to keep first paint fast on 3G connections.",
-        ar: "تم تحميل الخطوط بشكل مسبق ومحدود، والصور تُحمّل كسولاً أسفل الخط الزمني للحفاظ على سرعة أول عرض على شبكات 3G.",
+        en: "Fonts are subset and preconnected, and images below the timeline load lazily — the goal was a fast first paint even on the 3G most readers of this kind of content browse on.",
+        ar: "الخطوط متحملة جزئيًا ومربوطة مسبقًا، والصور أسفل الخط الزمني بتحمّل كسول؛ الهدف كان أول عرض سريع حتى على شبكة 3G اللي أغلب قراء المحتوى ده بيستخدموها.",
       },
       lessons: {
-        en: "This project taught me to design typography for Arabic reading rhythm first, not as an afterthought translation of an English layout.",
-        ar: "هذا المشروع علّمني تصميم الطباعة لإيقاع القراءة العربي أولاً، مش كترجمة لاحقة لتصميم إنجليزي.",
+        en: "This one taught me to design the Arabic typography first and treat English as the derived version — every previous project I'd done it the other way around, and it always showed.",
+        ar: "المشروع ده علّمني أصمم الطباعة العربية أولاً وأتعامل مع الإنجليزي كنسخة مشتقة منها؛ كل مشروع فاتني كنت بعمل العكس، وده كان دايمًا باين في النتيجة.",
       },
       result: {
-        en: "A respectful, readable editorial site that turns a long biography into an engaging, easy-to-follow journey.",
-        ar: "موقع تحريري محترم وسهل القراءة يحوّل سيرة طويلة إلى رحلة جذابة وسهلة المتابعة.",
+        en: "A long biography that reads as a paced journey instead of an assignment, in the language most of its actual readers think in.",
+        ar: "سيرة طويلة بتتقرأ كرحلة متزنة مش كواجب مدرسي، باللغة اللي أغلب القراء الفعليين بيفكروا بيها.",
       },
     },
 
@@ -534,48 +534,48 @@
       demo: "https://modern-gym-eight.vercel.app",
       github: "https://github.com/peteremad438-ux/Modern-gym.git",
       overview: {
-        en: "ENGAGE GYM is a high-energy fitness brand site designed to make membership plans and programs feel exciting rather than transactional.",
-        ar: "إنجيج جيم موقع رياضي عالي الطاقة صُمم ليخلي خطط الاشتراك والبرامج تحس إنها مشوقة مش مجرد عملية بيع.",
+        en: "ENGAGE GYM had to sell memberships without leaning on the usual stock-photo gym-website formula. The plan was to make the interface itself feel energetic — bold red, high contrast, sharp dividers — so the design carries the motivation, not just the photography.",
+        ar: "إنجيج جيم كان محتاج يبيع اشتراكات من غير ما يعتمد على قالب صور الجيم الجاهزة المعتادة. الخطة كانت خلي الواجهة نفسها تحس بالحماس: أحمر جريء وتباين عالي وفواصل حادة، عشان التحفيز يجي من التصميم نفسه مش الصور بس.",
       },
       challenge: {
-        en: "Fitness sites easily fall into generic stock-photo templates. The goal was to make membership tiers and programs feel bold and motivating through pure UI, not just imagery.",
-        ar: "مواقع الجيم بتقع بسهولة في قالب صور جاهزة عام. الهدف كان يخلي خطط الاشتراك والبرامج تحس بالحماس والتحفيز من خلال الواجهة نفسها مش الصور بس.",
+        en: "Fitness sites collapse into the same template fast — generic photos, generic red-on-black, nothing that says this particular gym. The membership tiers also needed to feel like a genuine comparison, not a pricing table copy-pasted from somewhere else.",
+        ar: "مواقع الجيم بتقع بسهولة في نفس القالب: صور عامة، أحمر على أسود بشكل نمطي، مفيش حاجة بتقول إن ده الجيم ده تحديدًا. خطط الاشتراك كمان كان لازم تحس كمقارنة حقيقية، مش جدول أسعار متنسخ من مكان تاني.",
       },
       approach: {
-        en: "I leaned into a bold red accent with high-contrast dark sections, sharp angular dividers, and punchy CTAs to make the page feel as energetic as a workout.",
-        ar: "اعتمدت على لون أحمر جريء مع أقسام داكنة عالية التباين وفواصل زاوية حادة وأزرار دعوة قوية، عشان الصفحة تحس بنفس طاقة التمرين.",
+        en: "I kept the red to one accent used sparingly against dark sections, added angular dividers between blocks instead of straight lines, and built the pricing cards on equal-height grid rows so no plan looks like an afterthought.",
+        ar: "خليت الأحمر لون واحد مستخدم بحرص فوق أقسام داكنة، وحطيت فواصل زاوية بين الكتل بدل خطوط مستقيمة، وبنيت كروت الأسعار على صفوف شبكة متساوية الارتفاع عشان ولا خطة تحس إنها إضافة متأخرة.",
       },
       features: [
         {
           icon: "fa-list-check",
           title: { en: "Membership Tiers", ar: "خطط الاشتراك" },
           desc: {
-            en: "Clear pricing cards comparing plan benefits.",
-            ar: "بطاقات أسعار واضحة تقارن مزايا كل خطة.",
+            en: "Three plans laid out with matching feature rows so the difference between them is obvious at a glance, not buried in fine print.",
+            ar: "3 خطط معروضة بصفوف مزايا متطابقة عشان الفرق بينهم يبان من نظرة واحدة مش مدفون في خط صغير.",
           },
         },
         {
           icon: "fa-dumbbell",
           title: { en: "Program Showcase", ar: "عرض البرامج" },
           desc: {
-            en: "Visual program cards for strength, cardio, and classes.",
-            ar: "بطاقات مرئية لبرامج القوة والكارديو والحصص.",
+            en: "Strength, cardio, and class programs each get their own visual card instead of a shared list.",
+            ar: "برامج القوة والكارديو والحصص كل واحد ليه كارت بصري مستقل بدل قائمة مشتركة.",
           },
         },
         {
           icon: "fa-user-group",
           title: { en: "Trainer Highlights", ar: "أبرز المدربين" },
           desc: {
-            en: "Spotlighted trainer profiles to build credibility.",
-            ar: "ملفات مدربين بارزة لبناء المصداقية.",
+            en: "Trainer profiles sit right after the programs section, on the theory that seeing who's coaching you matters as much as the program itself.",
+            ar: "ملفات المدربين موضوعة مباشرة بعد قسم البرامج، على أساس إن تشوف مين هيدربك بيهم بقد ما البرنامج نفسه بيهم.",
           },
         },
         {
           icon: "fa-bolt",
           title: { en: "Bold Micro-Interactions", ar: "تفاعلات دقيقة قوية" },
           desc: {
-            en: "Hover and scroll effects that keep energy high.",
-            ar: "تأثيرات hover وسكرول تحافظ على الحماس.",
+            en: "Hover states and scroll-triggered emphasis keep momentum going without needing autoplay video anywhere on the page.",
+            ar: "حالات hover وتأثيرات عند التمرير بتحافظ على الزخم من غير الحاجة لفيديو تشغيل تلقائي في أي مكان بالصفحة.",
           },
         },
       ],
@@ -584,65 +584,65 @@
         {
           title: { en: "Mood & Palette", ar: "المزاج واللوحة" },
           desc: {
-            en: "Locked the bold red-on-dark identity early.",
-            ar: "تحديد الهوية الحمراء على خلفية داكنة من البداية.",
+            en: "Locked red-on-dark early and tested it against three alternative color pairs before committing.",
+            ar: "ثبّت الأحمر على الداكن بدري وجربته مقابل 3 توليفات ألوان تانية قبل ما أستقر عليه.",
           },
         },
         {
           title: { en: "Section Rhythm", ar: "إيقاع الأقسام" },
           desc: {
-            en: "Alternated light/dark sections for visual pacing.",
-            ar: "تبديل بين أقسام فاتحة وداكنة لضبط الإيقاع البصري.",
+            en: "Alternated light and dark sections deliberately so the page has a visual beat instead of one flat scroll.",
+            ar: "بدّلت بين أقسام فاتحة وداكنة بشكل مقصود عشان الصفحة يكون ليها إيقاع بصري مش سكرول مسطح واحد.",
           },
         },
         {
           title: { en: "Interaction Layer", ar: "طبقة التفاعل" },
           desc: {
-            en: "Added hover states and scroll-triggered emphasis.",
-            ar: "إضافة حالات hover وتأثيرات عند التمرير.",
+            en: "Added hover and scroll effects last, after the static layout was already approved — motion should support structure, not fix a weak one.",
+            ar: "أضفت تأثيرات hover والسكرول في الآخر بعد ما التصميم الثابت اتعتمد؛ الحركة المفروض تدعم الهيكل مش تصلح واحد ضعيف.",
           },
         },
         {
           title: { en: "QA & Ship", ar: "الفحص والنشر" },
           desc: {
-            en: "Tested across breakpoints, then deployed.",
-            ar: "اختبار على كل أحجام الشاشات ثم النشر.",
+            en: "Tested the angular dividers on five different screen widths, since that's exactly the kind of detail that breaks first.",
+            ar: "جربت الفواصل الزاوية على 5 أحجام شاشة مختلفة، لأن ده بالظبط نوع التفاصيل اللي بتتكسر الأول.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Angular divider shapes broke on narrow screens.",
-            ar: "أشكال الفواصل الزاوية كانت تنكسر على الشاشات الضيقة.",
+            en: "Angular dividers built with fixed clip-path values snapped in odd ways on narrow screens.",
+            ar: "الفواصل الزاوية اللي كانت مبنية بقيم clip-path ثابتة كانت بتتكسر بشكل غريب على الشاشات الضيقة.",
           },
           solution: {
-            en: "Swapped fixed-angle clip-paths for viewport-relative units.",
-            ar: "استبدلت clip-path بزاوية ثابتة بوحدات نسبية لعرض الشاشة.",
+            en: "Rewrote them with viewport-relative units so the angle stays proportional at any width.",
+            ar: "أعدت كتابتهم بوحدات نسبية للشاشة عشان الزاوية تفضل متناسبة على أي عرض.",
           },
         },
         {
           problem: {
-            en: "Pricing cards misaligned when plan features differed in count.",
-            ar: "بطاقات الأسعار كانت تختل عند اختلاف عدد المزايا لكل خطة.",
+            en: "Pricing cards with a different feature count per plan didn't line up, so the cheapest plan looked oddly short.",
+            ar: "كروت الأسعار باختلاف عدد المزايا لكل خطة كانت مش متساوية، فالخطة الأرخص كانت بتبان قصيرة بشكل غريب.",
           },
           solution: {
-            en: "Used CSS Grid with equal-height rows and a sticky CTA footer per card.",
-            ar: "استخدمت CSS Grid بارتفاع صفوف متساوٍ وزر دعوة ثابت أسفل كل بطاقة.",
+            en: "Switched to CSS Grid with equal-height rows and pinned each card's CTA to the bottom regardless of content length.",
+            ar: "استخدمت CSS Grid بصفوف متساوية الارتفاع وثبّت زرار كل كارت في الأسفل بغض النظر عن طول المحتوى.",
           },
         },
       ],
       performance: {
-        en: "Heavy gradients were limited to above-the-fold sections only, keeping scroll performance smooth on mobile GPUs.",
-        ar: "التدرجات الثقيلة اقتصرت على الأقسام الأولى فقط للحفاظ على سلاسة السكرول على معالجات الرسوميات بالموبايل.",
+        en: "Heavy gradients are limited to the first two sections only — everything below the fold uses flat colors, which kept scroll performance smooth on mobile GPUs without any visible quality loss.",
+        ar: "التدرجات الثقيلة مقتصرة على أول قسمين بس، والباقي كله ألوان مسطحة، وده خلى السكرول سلس على معالجات الموبايل من غير أي فرق في الجودة يتلاحظ.",
       },
       lessons: {
-        en: "Learned how much tone can be carried by color and pacing alone — a valuable lesson in restraint versus decoration.",
-        ar: "اتعلمت قد إيه اللون وإيقاع الأقسام لوحدهم ممكن ينقلوا إحساس كامل، درس مهم في الفرق بين البساطة والزخرفة.",
+        en: "Realized how much tone a page can carry through color and pacing alone once I stopped reaching for an extra effect every time something felt flat.",
+        ar: "لاحظت قد إيه اللون وإيقاع الصفحة لوحدهم ممكن ينقلوا إحساس كامل، أول ما بطلت أضيف تأثير كل ما حسيت إن حاجة بانت مسطحة.",
       },
       result: {
-        en: "A bold, motivating gym site that makes membership decisions feel exciting rather than like a form to fill.",
-        ar: "موقع جيم جريء ومحفّز يخلي قرار الاشتراك يحس بالحماس مش مجرد فورم هتملاه.",
+        en: "A gym site where scrolling through membership options feels closer to hyping yourself up for a workout than filling out a form.",
+        ar: "موقع جيم السكرول فيه بين خطط الاشتراك حاسس أقرب لتحميس نفسك للتمرين مش ملء فورم.",
       },
     },
 
@@ -664,48 +664,48 @@
       demo: "https://classic-egyption-movies.vercel.app/",
       github: "https://github.com/peteremad438-ux/Classic-Egyption-movies.git",
       overview: {
-        en: "A personal archive project celebrating golden-era Egyptian cinema — built to feel like flipping through a vintage film catalogue on the web.",
-        ar: "مشروع شخصي أرشيفي يحتفي بالعصر الذهبي للسينما المصرية، مبني ليحس المستخدم إنه بيقلّب في كتالوج أفلام قديم لكن على الويب.",
+        en: "A personal archive project celebrating golden-era Egyptian cinema. The live site itself is Arabic-only by design, built to feel like flipping through a vintage film catalogue rather than a Wikipedia-style list.",
+        ar: "مشروع شخصي أرشيفي يحتفي بالعصر الذهبي للسينما المصرية، والموقع الفعلي عربي بالكامل بشكل مقصود، مبني ليحس المستخدم إنه بيقلّب في كتالوج أفلام قديم مش قائمة أشبه بويكيبيديا.",
       },
       challenge: {
-        en: "Presenting dozens of films with posters, casts, and summaries without the page turning into an overwhelming, disorganized list.",
-        ar: "عرض عشرات الأفلام مع البوسترات والكاست والملخصات من غير ما تتحول الصفحة لقائمة مرهقة وغير منظمة.",
+        en: "Dozens of films, each with a poster, cast list, and summary, needed a browsing structure that doesn't turn into an overwhelming scroll. And since the content is entirely in Arabic, the layout had to be RTL-native from the first line of CSS, not adapted from an English draft.",
+        ar: "عشرات الأفلام، كل واحد بالبوستر والكاست والملخص، كانوا محتاجين هيكل تصفح مايتحولش لسكرول مرهق، وبما إن المحتوى كله بالعربي، كان لازم التصميم يكون RTL من أول سطر CSS مش متكيف من مسودة إنجليزية.",
       },
       approach: {
-        en: "I used a gold-on-dark cinema palette with a poster-first grid, letting large thumbnails carry the browsing experience and details unfold on demand.",
-        ar: "استخدمت لوحة ذهبية على خلفية داكنة بروح السينما، مع شبكة تعتمد على البوستر أولاً، وتفاصيل الفيلم تظهر عند الطلب.",
+        en: "I used a gold-on-dark cinema palette with a poster-first grid — large thumbnails carry the browsing, and cast/summary details unfold only when a poster is opened, so the grid itself stays clean no matter how many films get added.",
+        ar: "استخدمت لوحة ذهبية على خلفية داكنة بروح السينما، مع شبكة تعتمد على البوستر أولاً؛ الصور المصغرة الكبيرة هي اللي بتحمل التصفح، وتفاصيل الكاست والملخص بتظهر بس لما البوستر يتفتح، عشان الشبكة نفسها تفضل نضيفة مهما زاد عدد الأفلام.",
       },
       features: [
         {
           icon: "fa-clapperboard",
           title: { en: "Poster Grid", ar: "شبكة البوسترات" },
           desc: {
-            en: "Large, scannable poster grid inspired by film catalogues.",
-            ar: "شبكة بوسترات كبيرة وسهلة التصفح مستوحاة من كتالوجات الأفلام.",
+            en: "A large, scannable grid where posters do the heavy lifting instead of text labels.",
+            ar: "شبكة بوسترات كبيرة سهلة التصفح، البوستر نفسه هو اللي بيوصل المعلومة مش النص.",
           },
         },
         {
           icon: "fa-users",
           title: { en: "Cast Details", ar: "تفاصيل الكاست" },
           desc: {
-            en: "Cast and crew info surfaced per film.",
-            ar: "معلومات الكاست وطاقم العمل لكل فيلم.",
+            en: "Cast and crew appear the moment a film is opened, kept out of the grid view to avoid clutter.",
+            ar: "الكاست وطاقم العمل بيظهروا فور فتح الفيلم، بعيد عن عرض الشبكة عشان يتجنب الازدحام.",
           },
         },
         {
           icon: "fa-record-vinyl",
           title: { en: "Vintage Sound Accent", ar: "لمسة صوتية قديمة" },
           desc: {
-            en: "A nostalgic vinyl-style sound cue on key interactions.",
-            ar: "تأثير صوتي بروح أسطوانات الفينيل عند التفاعلات الرئيسية.",
+            en: "A short vinyl-crackle sound cue plays on key interactions — a small, deliberate nod to the era the films are from.",
+            ar: "تأثير صوتي قصير بروح خشخشة أسطوانات الفينيل بيشتغل عند التفاعلات الرئيسية، لمسة صغيرة ومقصودة بتحاكي عصر الأفلام نفسها.",
           },
         },
         {
           icon: "fa-language",
-          title: { en: "Bilingual Archive", ar: "أرشيف ثنائي اللغة" },
+          title: { en: "Arabic Native Layout", ar: "تصميم عربي أصيل" },
           desc: {
-            en: "Full Arabic/English support with RTL layout.",
-            ar: "دعم كامل للعربي والإنجليزي مع تصميم RTL.",
+            en: "Built RTL-first from the ground up, not an Arabic translation layered on top of an English template.",
+            ar: "مبني بأسلوب RTL من الأساس، مش ترجمة عربية فوق قالب إنجليزي جاهز.",
           },
         },
       ],
@@ -714,65 +714,65 @@
         {
           title: { en: "Content Curation", ar: "تنظيم المحتوى" },
           desc: {
-            en: "Selected and organized films by era and genre.",
-            ar: "اختيار وتنظيم الأفلام حسب العصر والنوع.",
+            en: "Picked and grouped films by era and genre before touching any grid code.",
+            ar: "اخترت ونظمت الأفلام حسب العصر والنوع قبل ما ألمس أي كود شبكة.",
           },
         },
         {
           title: { en: "Poster Grid Build", ar: "بناء شبكة البوسترات" },
           desc: {
-            en: "Built a responsive CSS Grid gallery for posters.",
-            ar: "بناء معرض CSS Grid متجاوب للبوسترات.",
+            en: "Built a responsive CSS Grid gallery, tuned specifically for the mixed poster aspect ratios I actually had.",
+            ar: "بنيت معرض CSS Grid متجاوب، متضبوط خصيصًا لاختلاف نسب أبعاد البوسترات اللي كانت متاحة فعلاً.",
           },
         },
         {
           title: { en: "Detail Views", ar: "شاشات التفاصيل" },
           desc: {
-            en: "Added expandable detail sections per film.",
-            ar: "إضافة أقسام تفاصيل قابلة للتوسيع لكل فيلم.",
+            en: "Added expandable detail panels per film that load in place instead of navigating to a new page.",
+            ar: "أضفت لوحات تفاصيل قابلة للتوسيع لكل فيلم بتفتح في نفس المكان بدل الانتقال لصفحة جديدة.",
           },
         },
         {
           title: { en: "RTL & Sound Polish", ar: "تلميع RTL والصوت" },
           desc: {
-            en: "Finalized Arabic layout and the vinyl sound cue.",
-            ar: "إتمام التصميم العربي والتأثير الصوتي.",
+            en: "Final pass on RTL spacing edge cases, then added the vinyl sound cue.",
+            ar: "مراجعة أخيرة لحالات المسافات في RTL، وبعدين أضفت التأثير الصوتي للفينيل.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Poster aspect ratios varied and broke the grid alignment.",
-            ar: "نسب أبعاد البوسترات كانت مختلفة وبتكسر تناسق الشبكة.",
+            en: "Posters came in wildly different aspect ratios and kept breaking the grid's alignment.",
+            ar: "البوسترات كانت بنسب أبعاد مختلفة جدًا وكانت بتكسر تناسق الشبكة باستمرار.",
           },
           solution: {
-            en: "Enforced a consistent aspect-ratio container with object-fit cropping.",
-            ar: "فرضت حاوية بنسبة أبعاد ثابتة مع قص object-fit.",
+            en: "Forced a consistent aspect-ratio container with object-fit cropping, so every poster fills its slot the same way.",
+            ar: "فرضت حاوية بنسبة أبعاد ثابتة مع قص object-fit، عشان كل بوستر يملأ مكانه بنفس الطريقة.",
           },
         },
         {
           problem: {
-            en: "The archive felt static without any tactile detail.",
-            ar: "الأرشيف كان يحس ثابت وناقصه لمسة حسية.",
+            en: "The archive felt flat and static — accurate information, but nothing that made it feel like an actual collection.",
+            ar: "الأرشيف كان حاسس ثابت ومسطح، معلومات صح بس مفيش حاجة بتخليه يحس بمجموعة فعلية.",
           },
           solution: {
-            en: "Added a subtle vinyl-record sound button to add nostalgic texture.",
-            ar: "أضفت زر صوت أسطوانة فينيل بلمسة نوستالجية.",
+            en: "Added the vinyl sound cue and a slight hover lift on posters — small, but it's the detail people mention first.",
+            ar: "أضفت التأثير الصوتي وحركة رفع خفيفة عند الـ hover على البوسترات، تفصيلة صغيرة بس هي أول حاجة الناس بتذكرها.",
           },
         },
       ],
       performance: {
-        en: "Poster images are lazy-loaded and served at grid-appropriate sizes so the catalogue scrolls smoothly even with dozens of films.",
-        ar: "صور البوسترات تُحمّل كسولاً وبأحجام مناسبة للشبكة حتى يفضل السكرول سلس حتى مع عشرات الأفلام.",
+        en: "Posters are lazy-loaded and served at grid-appropriate sizes, so the archive scrolls smoothly even once it passes fifty films.",
+        ar: "البوسترات بتحمّل كسول وبأحجام مناسبة للشبكة، فالأرشيف بيفضل بيتصفح بسلاسة حتى لو عدى الخمسين فيلم.",
       },
       lessons: {
-        en: "Working on a cultural archive taught me how to balance nostalgia-driven design choices with modern usability standards.",
-        ar: "العمل على أرشيف ثقافي علّمني إزاي أوازن بين خيارات تصميم نوستالجية ومعايير سهولة استخدام حديثة.",
+        en: "Working in Arabic-only from the start, with no bilingual toggle to fall back on, forced me to get RTL details right the first time instead of patching them in later.",
+        ar: "الشغل بالعربي بس من البداية، من غير خيار تبديل لغة أرجع له، خلاني أظبط تفاصيل RTL صح من أول مرة بدل ما أرقعها بعدين.",
       },
       result: {
-        en: "A living tribute to Egyptian classic cinema that's genuinely enjoyable to browse, in Arabic or English.",
-        ar: "تحية حية للسينما المصرية الكلاسيكية، ممتعة فعلاً للتصفح بالعربي أو الإنجليزي.",
+        en: "A living, browsable tribute to Egyptian classic cinema that reads naturally to the audience it was actually built for.",
+        ar: "تحية حية وقابلة للتصفح للسينما المصرية الكلاسيكية، بتتقرأ بشكل طبيعي للجمهور اللي اتبنت عشانه فعلاً.",
       },
     },
 
@@ -794,48 +794,48 @@
       demo: "https://fifa-world-cup-ashen.vercel.app/",
       github: "https://github.com/peteremad438-ux/fifa-world-cup.git",
       overview: {
-        en: "A tribute editorial site walking through World Cup history — built as a fast, scrollable story rather than a data-heavy stats page.",
-        ar: "موقع تحريري تحية لتاريخ كأس العالم، مبني كقصة سريعة قابلة للتصفح مش صفحة إحصائيات ثقيلة.",
+        en: "A tribute site walking through World Cup history as a fast, scrollable story, built to feel like a highlight reel rather than a stats database.",
+        ar: "موقع تحية لتاريخ كأس العالم بيتصفح كقصة سريعة، اتبنى ليحس كملخص لحظات مش قاعدة بيانات إحصائية.",
       },
       challenge: {
-        en: "World Cup history spans decades of moments — the challenge was picking a narrative thread and pacing that feels like a highlight reel, not an encyclopedia.",
-        ar: "تاريخ كأس العالم ممتد عبر عقود من اللحظات، والتحدي كان اختيار خط سردي وإيقاع يحس كأنه ملخص لحظات لا موسوعة جافة.",
+        en: "World Cup history spans nearly a century of moments. The real challenge wasn't finding content, it was cutting most of it: picking a narrative thread and a pace that feels curated rather than exhaustive.",
+        ar: "تاريخ كأس العالم ممتد لقرب قرن من اللحظات. التحدي الحقيقي مكانش إني ألاقي محتوى، كان إني أشيل أغلبه، وأختار خط سردي وإيقاع يحس منتقى مش شامل لكل حاجة.",
       },
       approach: {
-        en: "I structured content chronologically with a green pitch-inspired palette, using scroll-reveal sections timed like a highlight montage.",
-        ar: "نظّمت المحتوى زمنيًا بلوحة خضراء مستوحاة من الملعب، مع أقسام تظهر عند السكرول بإيقاع أشبه بمونتاج لحظات بارزة.",
+        en: "Content is structured chronologically with a green, pitch-inspired palette, and each era reveals itself on scroll, timed like a montage rather than all appearing at once.",
+        ar: "المحتوى منظم زمنيًا بلوحة خضراء مستوحاة من الملعب، وكل عصر بيظهر مع السكرول بتوقيت أشبه بمونتاج مش كله بيظهر مرة واحدة.",
       },
       features: [
         {
           icon: "fa-trophy",
           title: { en: "Iconic Editions", ar: "نسخ أيقونية" },
           desc: {
-            en: "Highlighted editions with key facts and imagery.",
-            ar: "عرض النسخ الأبرز مع أهم المعلومات والصور.",
+            en: "A handful of the most iconic editions, each with the facts that actually matter, not a full stat sheet.",
+            ar: "عدد قليل من أكتر النسخ أيقونية، كل واحدة بالمعلومات اللي فعلاً مهمة مش جدول إحصائيات كامل.",
           },
         },
         {
           icon: "fa-star",
           title: { en: "Legendary Players", ar: "لاعبون أسطوريون" },
           desc: {
-            en: "Player spotlight cards across eras.",
-            ar: "بطاقات تسليط ضوء على لاعبين من عصور مختلفة.",
+            en: "Player spotlight cards spanning different eras, picked for the moment they're known for rather than career totals.",
+            ar: "بطاقات تسليط ضوء على لاعبين من عصور مختلفة، اتختاروا على اللحظة اللي اشتهروا بيها مش إجمالي مشوارهم.",
           },
         },
         {
           icon: "fa-futbol",
           title: { en: "Moment Cards", ar: "بطاقات اللحظات" },
           desc: {
-            en: "Bite-sized unforgettable-moment storytelling.",
-            ar: "سرد قصير للحظات لا تُنسى في شكل بطاقات.",
+            en: "Short, punchy write-ups of specific unforgettable moments — a sentence or two, not a paragraph.",
+            ar: "كتابة قصيرة ومباشرة عن لحظات لا تُنسى محددة، سطر أو اتنين مش فقرة كاملة.",
           },
         },
         {
           icon: "fa-timeline",
           title: { en: "Scroll Storytelling", ar: "سرد بالتمرير" },
           desc: {
-            en: "Chronological scroll-reveal pacing.",
-            ar: "إيقاع زمني يتكشف مع التمرير في الصفحة.",
+            en: "Sections reveal chronologically as you scroll, each firing once so re-scrolling doesn't repeat the animation.",
+            ar: "الأقسام بتظهر زمنيًا وانت بتعمل سكرول، وكل قسم بيتفعل مرة واحدة عشان التكرار في السكرول مايكررش الحركة.",
           },
         },
       ],
@@ -844,65 +844,65 @@
         {
           title: { en: "Narrative Outline", ar: "تخطيط السرد" },
           desc: {
-            en: "Picked the editions and moments to feature.",
-            ar: "اختيار النسخ واللحظات اللي هتُعرض.",
+            en: "Chose which editions and moments actually earn a spot before writing any HTML.",
+            ar: "اخترت أنهي نسخ ولحظات فعلاً تستاهل مكان قبل ما أكتب أي HTML.",
           },
         },
         {
           title: { en: "Section Build", ar: "بناء الأقسام" },
           desc: {
-            en: "Built each era as its own scroll section.",
-            ar: "بناء كل عصر كقسم مستقل بالصفحة.",
+            en: "Each era became its own self-contained scroll section, easy to reorder if the narrative needed it.",
+            ar: "كل عصر بقى قسم سكرول مستقل قائم بذاته، سهل إعادة ترتيبه لو السرد احتاج كده.",
           },
         },
         {
           title: { en: "Motion Pass", ar: "مرحلة الحركة" },
           desc: {
-            en: "Added scroll-reveal timing for pacing.",
-            ar: "إضافة توقيت ظهور عند التمرير لضبط الإيقاع.",
+            en: "Added scroll-reveal timing after the content was locked, tuning the delay until the pacing felt intentional.",
+            ar: "أضفت توقيت الظهور عند السكرول بعد ما المحتوى اتثبت، وضبطت التأخير لحد ما الإيقاع حسّ مقصود.",
           },
         },
         {
           title: { en: "Polish & Ship", ar: "التلميع والنشر" },
           desc: {
-            en: "Fine-tuned spacing and deployed.",
-            ar: "ضبط المسافات بدقة ثم النشر.",
+            en: "Fine-tuned spacing between sections, then deployed.",
+            ar: "ضبطت المسافات بين الأقسام بدقة، وبعدين نشرت.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Too many editions made the page feel endless.",
-            ar: "كثرة النسخ خلت الصفحة تحس بلا نهاية.",
+            en: "An early draft tried to cover every edition and ended up feeling endless rather than curated.",
+            ar: "مسودة أولى حاولت تغطي كل النسخ، وطلعت حاسة بلا نهاية بدل ما تحس منتقاة.",
           },
           solution: {
-            en: "Curated to the most iconic editions only, trimming for pacing over completeness.",
-            ar: "اقتصرت على النسخ الأكثر أيقونية فقط، لصالح الإيقاع بدل الشمولية.",
+            en: "Cut it down to the most iconic editions only — pacing mattered more than completeness here.",
+            ar: "قللتها للنسخ الأكثر أيقونية بس؛ الإيقاع كان أهم من الشمولية هنا.",
           },
         },
         {
           problem: {
-            en: "Scroll-reveal timing felt off on fast scrollers.",
-            ar: "توقيت ظهور المحتوى عند التمرير كان غريب مع من يسكرول بسرعة.",
+            en: "Scroll-reveal timing felt broken for anyone scrolling fast, since sections would fire out of order.",
+            ar: "توقيت ظهور المحتوى كان بيحس غلط لمن يعمل سكرول بسرعة، لأن الأقسام كانت بتتفعل مش بالترتيب.",
           },
           solution: {
-            en: "Tuned intersection thresholds and added a max-once trigger per section.",
-            ar: "ضبطت حدود intersection وأضفت شرط تشغيل مرة واحدة لكل قسم.",
+            en: "Tuned the intersection observer's threshold and added a fire-once flag per section.",
+            ar: "ضبطت حدود intersection observer وأضفت علامة تفعيل-مرة-واحدة لكل قسم.",
           },
         },
       ],
       performance: {
-        en: "Sections load their imagery only as they approach the viewport, keeping the scroll story light despite the visual density.",
-        ar: "الأقسام تحمّل صورها فقط عند اقترابها من الشاشة، ما يخلي القصة خفيفة رغم الكثافة البصرية.",
+        en: "Each section's imagery only loads as it approaches the viewport, so the page stays light even with this much visual density packed into it.",
+        ar: "صور كل قسم بتحمّل بس وهي قربانة من الشاشة، فالصفحة بتفضل خفيفة رغم الكثافة البصرية اللي فيها.",
       },
       lessons: {
-        en: "This project taught me to think in narrative pacing, not just layout — treating scroll position as a storytelling tool.",
-        ar: "المشروع ده علّمني أفكر في إيقاع السرد مش بس التصميم، وأتعامل مع موضع السكرول كأداة سرد.",
+        en: "This one made me think in terms of pacing rather than layout, treating how far someone has scrolled as a storytelling tool, not just a trigger for CSS.",
+        ar: "المشروع ده خلاني أفكر بالإيقاع مش بس التخطيط، وأتعامل مع مكان السكرول كأداة سرد مش مجرد trigger للـ CSS.",
       },
       result: {
-        en: "A quick, enjoyable editorial trip through World Cup history that feels more like a highlight reel than a wiki page.",
-        ar: "رحلة تحريرية سريعة وممتعة عبر تاريخ كأس العالم، تحس أقرب لملخص لحظات من كونها صفحة ويكيبيديا.",
+        en: "A quick, focused trip through World Cup history that reads like a highlight reel someone actually curated, not a page copied from Wikipedia.",
+        ar: "رحلة سريعة ومركزة في تاريخ كأس العالم بتتقرأ كملخص لحظات فعلاً منتقى، مش صفحة متنسخة من ويكيبيديا.",
       },
     },
 
@@ -924,48 +924,48 @@
       demo: "https://mot5ss-portfolio.vercel.app/",
       github: "https://github.com/peteremad438-ux/mot5ss-portfolio.git",
       overview: {
-        en: "A freelance project organizing Coptic hymns into a calm, media-friendly library that's easy to browse during prayer or study.",
-        ar: "مشروع لعميل ينظّم الألحان القبطية في مكتبة هادئة وسهلة الوسائط، تسهل التصفح أثناء الصلاة أو الدرس.",
+        en: "A freelance project organizing Coptic hymns into a calm, browsable library, built for someone opening it during prayer or study, not casual scrolling.",
+        ar: "مشروع لعميل ينظم الألحان القبطية في مكتبة هادئة سهلة التصفح، اتبنى لحد بيفتحه وقت الصلاة أو الدرس مش تصفح عابر.",
       },
       challenge: {
-        en: "Hymn media needed organized categorization and reliable playback delivery, in an interface calm enough for a spiritual context.",
-        ar: "الألحان كانت محتاجة تصنيف منظم وتشغيل وسائط موثوق، في واجهة هادئة تناسب السياق الروحي.",
+        en: "Hymn audio needed reliable, fast playback and clear categorization, in an interface calm enough to actually fit a spiritual context — not something that felt like a generic music app.",
+        ar: "الألحان الصوتية كانت محتاجة تشغيل سريع وموثوق وتصنيف واضح، في واجهة هادئة تليق فعلاً بالسياق الروحي، مش حاجة حاسة كأي تطبيق موسيقى عادي.",
       },
       approach: {
-        en: "I built a clean category-first structure with soft purple tones and used Cloudinary for reliable, fast audio/media delivery instead of hosting media directly.",
-        ar: "بنيت هيكل يعتمد على التصنيف أولاً بألوان بنفسجية هادئة، واستخدمت Cloudinary لتوصيل الوسائط الصوتية بسرعة وموثوقية بدل استضافتها مباشرة.",
+        en: "I structured everything category-first with a soft purple palette, and moved media hosting entirely to Cloudinary instead of serving audio files directly — that decision alone solved most of the reliability problems before they started.",
+        ar: "نظمت كل حاجة على أساس التصنيف أولاً بلوحة بنفسجية هادئة، ونقلت استضافة الوسائط بالكامل لـ Cloudinary بدل تشغيل ملفات الصوت مباشرة، والقرار ده لوحده حل أغلب مشاكل الموثوقية قبل ما تبدأ أصلاً.",
       },
       features: [
         {
           icon: "fa-layer-group",
           title: { en: "Categorized Library", ar: "مكتبة مصنّفة" },
           desc: {
-            en: "Hymns grouped by occasion and season.",
-            ar: "ألحان مصنفة حسب المناسبة والموسم.",
+            en: "Hymns grouped by occasion and liturgical season, collapsible so the list never overwhelms.",
+            ar: "الألحان مجمعة حسب المناسبة والموسم الطقسي، وقابلة للطي عشان القائمة متبقاش مرهقة.",
           },
         },
         {
           icon: "fa-cloud",
           title: { en: "Cloudinary Delivery", ar: "توصيل عبر Cloudinary" },
           desc: {
-            en: "Fast, reliable media hosting via Cloudinary.",
-            ar: "استضافة وسائط سريعة وموثوقة عبر Cloudinary.",
+            en: "Audio is hosted and streamed through Cloudinary's CDN instead of the site's own server.",
+            ar: "الصوت مستضاف ومبثوث عبر شبكة Cloudinary بدل سيرفر الموقع نفسه.",
           },
         },
         {
           icon: "fa-play",
           title: { en: "Simple Player UI", ar: "واجهة تشغيل بسيطة" },
           desc: {
-            en: "Distraction-free playback controls.",
-            ar: "أزرار تشغيل بسيطة بلا تشتيت.",
+            en: "Just play, pause, and a progress bar — nothing competing for attention while someone's listening.",
+            ar: "تشغيل وإيقاف وشريط تقدم بس، مفيش حاجة بتنافس على الانتباه وهو بيسمع.",
           },
         },
         {
           icon: "fa-language",
-          title: { en: "Bilingual Content", ar: "محتوى ثنائي اللغة" },
+          title: { en: "Bilingual Titles", ar: "عناوين ثنائية اللغة" },
           desc: {
-            en: "Arabic/English support for wider reach.",
-            ar: "دعم عربي/إنجليزي لوصول أوسع.",
+            en: "Hymn titles are available in Arabic and English so the library serves both a local and a diaspora audience.",
+            ar: "عناوين الألحان متاحة بالعربي والإنجليزي عشان المكتبة تخدم الجمهور المحلي وجمهور المهجر مع بعض.",
           },
         },
       ],
@@ -974,65 +974,65 @@
         {
           title: { en: "Content Structuring", ar: "تنظيم المحتوى" },
           desc: {
-            en: "Categorized hymns with the client by occasion.",
-            ar: "تصنيف الألحان مع العميل حسب المناسبة.",
+            en: "Categorized every hymn by occasion together with the client before building any UI.",
+            ar: "صنفت كل لحن حسب المناسبة مع العميل قبل ما أبني أي واجهة.",
           },
         },
         {
           title: { en: "Media Pipeline", ar: "مسار الوسائط" },
           desc: {
-            en: "Connected Cloudinary for hosting and delivery.",
-            ar: "ربط Cloudinary للاستضافة والتوصيل.",
+            en: "Connected Cloudinary early, once it became clear self-hosted audio wasn't going to hold up on slower connections.",
+            ar: "ربطت Cloudinary بدري، لما بان واضح إن الصوت المستضاف ذاتيًا مش هيصمد على اتصالات أبطأ.",
           },
         },
         {
           title: { en: "Calm UI Build", ar: "بناء واجهة هادئة" },
           desc: {
-            en: "Designed a quiet, distraction-free interface.",
-            ar: "تصميم واجهة هادئة بلا تشتيت.",
+            en: "Stripped the player interface down repeatedly until nothing was left that didn't need to be there.",
+            ar: "بسّطت واجهة المشغل أكتر من مرة لحد ما اتشال منها أي حاجة مكنتش لازمة.",
           },
         },
         {
           title: { en: "Test & Deliver", ar: "الاختبار والتسليم" },
           desc: {
-            en: "Verified playback across devices, then delivered.",
-            ar: "التأكد من التشغيل على أجهزة متعددة ثم التسليم.",
+            en: "Verified playback on three different connection speeds before final delivery.",
+            ar: "تأكدت من التشغيل على 3 سرعات اتصال مختلفة قبل التسليم النهائي.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Directly hosted audio files were slow on weaker connections.",
-            ar: "ملفات الصوت المستضافة مباشرة كانت بطيئة على الاتصالات الضعيفة.",
+            en: "Audio files hosted directly on the server buffered noticeably on weaker connections.",
+            ar: "ملفات الصوت المستضافة مباشرة على السيرفر كانت بتعمل تقطيع واضح على اتصالات ضعيفة.",
           },
           solution: {
-            en: "Migrated media delivery to Cloudinary for adaptive, faster streaming.",
-            ar: "نقلت توصيل الوسائط لـ Cloudinary لتشغيل أسرع وأكثر تكيفًا.",
+            en: "Migrated everything to Cloudinary, which handles adaptive delivery automatically.",
+            ar: "نقلت كل حاجة لـ Cloudinary، اللي بيدير توصيل متكيف تلقائيًا.",
           },
         },
         {
           problem: {
-            en: "Category lists grew long and hard to scan.",
-            ar: "قوائم التصنيفات كبرت وصعب تصفحها.",
+            en: "The category list grew past twenty entries and became hard to scan in one glance.",
+            ar: "قائمة التصنيفات كبرت لأكتر من عشرين عنصر وبقت صعب تتصفحها بنظرة واحدة.",
           },
           solution: {
-            en: "Added collapsible category groups to keep the interface calm.",
-            ar: "أضفت مجموعات تصنيف قابلة للطي للحفاظ على هدوء الواجهة.",
+            en: "Grouped categories into collapsible sections so the default view only shows the top-level list.",
+            ar: "جمّعت التصنيفات في مجموعات قابلة للطي عشان العرض الافتراضي يبين القائمة الرئيسية بس.",
           },
         },
       ],
       performance: {
-        en: "Offloading media to Cloudinary's CDN removed the biggest load-time bottleneck, keeping the interface itself lightweight.",
-        ar: "نقل الوسائط لشبكة Cloudinary أزال أكبر عنق زجاجة في وقت التحميل، وخلّى الواجهة نفسها خفيفة.",
+        en: "Offloading audio to Cloudinary's CDN removed the single biggest load-time bottleneck in the project, and kept the front-end itself lightweight enough to load instantly.",
+        ar: "نقل الصوت لشبكة Cloudinary شال أكبر عنق زجاجة في وقت التحميل في المشروع كله، وخلى الواجهة نفسها خفيفة كفاية تحمّل فورًا.",
       },
       lessons: {
-        en: "Learned to treat media hosting as its own architectural decision, not an afterthought bolted onto the frontend.",
-        ar: "اتعلمت أتعامل مع استضافة الوسائط كقرار معماري مستقل، مش تفصيلة بتتضاف بعد كده للواجهة.",
+        en: "This taught me to treat media hosting as an architecture decision made on day one, not something bolted on after the front-end is already built.",
+        ar: "ده علّمني أتعامل مع استضافة الوسائط كقرار معماري بياخد من أول يوم، مش حاجة بتتضاف بعد ما الواجهة تخلص.",
       },
       result: {
-        en: "A peaceful, well-organized hymn library that plays reliably and feels appropriate for its spiritual purpose.",
-        ar: "مكتبة ألحان منظمة وهادئة تشتغل بثبات وتحس مناسبة لغرضها الروحي.",
+        en: "A quiet, well-organized hymn library that plays reliably regardless of connection speed and feels appropriate for its purpose.",
+        ar: "مكتبة ألحان هادئة ومنظمة بتشتغل بثبات بغض النظر عن سرعة الاتصال، وحاسة مناسبة لغرضها.",
       },
     },
 
@@ -1054,91 +1054,211 @@
       demo: "https://calculator-self-gamma-67.vercel.app/",
       github: "https://github.com/peteremad438-ux/project.git",
       overview: {
-        en: "A focused calculator app that makes everyday arithmetic quick and clear through a responsive interface.",
-        ar: "تطبيق آلة حاسبة عملي يجعل العمليات الحسابية اليومية سريعة وواضحة من خلال واجهة متجاوبة.",
+        en: "A small, focused calculator built to nail the basics — clear input, instant feedback, comfortable to use one-handed on a phone.",
+        ar: "آلة حاسبة صغيرة ومركزة اتبنت عشان تظبط الأساسيات: إدخال واضح، استجابة فورية، ومريحة الاستخدام بإيد واحدة على الموبايل.",
       },
       challenge: {
-        en: "Create a calculator that handles the essential operations cleanly while staying easy to use on small screens.",
-        ar: "إنشاء آلة حاسبة تنفذ العمليات الأساسية بوضوح وتظل سهلة الاستخدام على الشاشات الصغيرة.",
+        en: "There's nothing to hide behind in a calculator — no content to distract from a clunky button or a laggy keypress. Every interaction had to feel immediate.",
+        ar: "في الآلة الحاسبة مفيش حاجة تختبي وراها، مفيش محتوى يشتت الانتباه عن زرار غير مريح أو استجابة بطيئة. كل تفاعل كان لازم يحس فوري.",
       },
       approach: {
-        en: "I organized the display and keypad into a clear hierarchy, then used a vivid lime accent to give the tool a distinctive visual identity.",
-        ar: "نظمت شاشة العرض ولوحة الأزرار في تسلسل واضح، واستخدمت لونًا ليمونيًا ساطعًا لمنح الأداة هوية بصرية مميزة.",
+        en: "I kept the display and keypad in a strict visual hierarchy, and used one vivid lime accent to give an otherwise plain tool some personality.",
+        ar: "خليت شاشة العرض ولوحة الأزرار في تسلسل هرمي واضح، واستخدمت لون ليموني ساطع واحد عشان يدي أداة بسيطة شخصية خاصة بيها.",
       },
       features: [
         {
-          icon: "fa-calculator",
+          icon: "fa-divide",
           title: { en: "Core Operations", ar: "العمليات الأساسية" },
           desc: {
-            en: "Handles the arithmetic needed for everyday calculations.",
-            ar: "تنفذ العمليات الحسابية المطلوبة للاستخدام اليومي.",
+            en: "Handles the four basic operations plus percentage and clear, without a single unnecessary function cluttering the layout.",
+            ar: "بتنفذ العمليات الأربع الأساسية بالإضافة للنسبة المئوية والمسح، من غير أي دالة زيادة تزحم التصميم.",
           },
         },
         {
-          icon: "fa-code",
+          icon: "fa-grip",
           title: { en: "Clear Keypad", ar: "لوحة أزرار واضحة" },
           desc: {
-            en: "A readable button layout keeps input fast and predictable.",
-            ar: "تنسيق أزرار واضح يجعل الإدخال سريعًا ومتوقعًا.",
+            en: "A readable button grid with generous tap targets, sized for actual thumbs, not mouse cursors.",
+            ar: "شبكة أزرار واضحة بمساحة لمس كافية، متحسوبة على أساس الأصابع الحقيقية مش مؤشر الماوس.",
           },
         },
         {
-          icon: "fa-link",
+          icon: "fa-mobile-screen",
           title: { en: "Responsive Layout", ar: "تصميم متجاوب" },
           desc: {
-            en: "The calculator remains comfortable to use across screen sizes.",
-            ar: "تظل الآلة الحاسبة مريحة للاستخدام على مختلف أحجام الشاشات.",
+            en: "Stays comfortable to use from a small phone screen up to a full desktop window.",
+            ar: "تفضل مريحة الاستخدام من شاشة موبايل صغيرة لحد نافذة ديسكتوب كاملة.",
           },
         },
         {
-          icon: "fa-gauge-high",
+          icon: "fa-bolt",
           title: { en: "Fast Interaction", ar: "تفاعل سريع" },
           desc: {
-            en: "Lightweight code keeps every keypress feeling immediate.",
-            ar: "الكود الخفيف يجعل الاستجابة لكل ضغطة فورية.",
+            en: "Zero dependencies and a handful of event listeners keep every keypress feeling instant.",
+            ar: "من غير أي اعتماديات خارجية وبعدد قليل من الـ event listeners، كل ضغطة زرار بتحس فورية.",
           },
         },
       ],
       tech: ["HTML5", "CSS3", "JavaScript"],
       process: [
         {
-          title: { en: "Content Priority", ar: "أولوية المحتوى" },
+          title: { en: "Interaction Map", ar: "خريطة التفاعل" },
           desc: {
-            en: "Chose the 3 facts a visitor sees first.",
-            ar: "اختيار أهم 3 معلومات يشوفها الزائر أولاً.",
+            en: "Listed every operation the calculator needed to support before drawing a single button.",
+            ar: "حصرت كل عملية الآلة الحاسبة محتاجة تدعمها قبل ما أرسم أي زرار.",
           },
         },
         {
-          title: { en: "Single-Column Layout", ar: "تصميم عمود واحد" },
+          title: { en: "Display Logic", ar: "منطق الشاشة" },
           desc: {
-            en: "Built a tight, single-column flow.",
-            ar: "بناء تدفق عمود واحد مضبوط.",
+            en: "Built the calculation and display-formatting logic first, then wired the UI on top of working functions.",
+            ar: "بنيت منطق الحساب وتنسيق العرض الأول، وبعدين ربطت الواجهة فوق دوال شغالة فعلاً.",
           },
         },
         {
-          title: { en: "Micro-Styling", ar: "تنسيق دقيق" },
+          title: { en: "Keypad Layout", ar: "تصميم لوحة الأزرار" },
           desc: {
-            en: "Fine-tuned spacing and chip styling.",
-            ar: "ضبط دقيق للمسافات وتصميم الوسوم.",
+            en: "Iterated on button sizing and spacing until nothing felt cramped on a small screen.",
+            ar: "جربت أحجام ومسافات الأزرار أكتر من مرة لحد ما مفيش حاجة حسّت ضيقة على شاشة صغيرة.",
           },
         },
         {
           title: { en: "Ship", ar: "النشر" },
           desc: {
-            en: "Deployed as a lightweight standalone page.",
-            ar: "نشر الصفحة كصفحة مستقلة خفيفة.",
+            en: "Deployed as a lightweight, dependency-free standalone page.",
+            ar: "نشرتها كصفحة مستقلة خفيفة بدون أي اعتماديات.",
           },
         },
       ],
       problems: [
         {
           problem: {
-            en: "Too many skills made the card feel busy.",
-            ar: "كثرة المهارات خلت الكارت يحس مزدحم.",
+            en: "Chained operations (like 5 + 3 × 2) initially calculated left-to-right instead of respecting operator precedence.",
+            ar: "العمليات المتسلسلة (زي 5 + 3 × 2) كانت في الأول بتتحسب من اليسار لليمين من غير مراعاة أولوية العمليات.",
           },
           solution: {
-            en: "Grouped skills into a few priority chips instead of listing everything.",
-            ar: "جمّعت المهارات في وسوم قليلة ذات أولوية بدل سرد كل حاجة.",
+            en: "Rewrote the evaluation logic to respect standard operator precedence before displaying a result.",
+            ar: "أعدت كتابة منطق الحساب عشان يراعي أولوية العمليات القياسية قبل ما يعرض النتيجة.",
+          },
+        },
+      ],
+      performance: {
+        en: "Zero external dependencies and a single CSS file keep this near-instant to load on any connection.",
+        ar: "من غير أي اعتماديات خارجية وملف CSS واحد بس، الأداة تحمّل فوريًا تقريبًا على أي اتصال.",
+      },
+      lessons: {
+        en: "A good reminder that a tiny surface area still deserves the same care as a big one — there's nowhere to hide a rough edge in something this small.",
+        ar: "تذكير كويس إن حتى المساحة الصغيرة تستاهل نفس مستوى العناية زي الكبيرة؛ في حاجة بالحجم ده مفيش مكان تخبي فيه أي عيب.",
+      },
+      result: {
+        en: "A calculator that does exactly what it needs to, feels responsive on any device, and doesn't get in its own way.",
+        ar: "آلة حاسبة بتعمل بالظبط اللي المفروض تعمله، بتحس سريعة الاستجابة على أي جهاز، ومش بتقف في طريق نفسها.",
+      },
+    },
+
+    "simple-card": {
+      accent: "#06b6d4",
+      rgb: "6,182,212",
+      icon: "fa-id-card",
+      hero: "card.jpeg",
+      gallery: ["card.jpeg"],
+      title: { en: "SIMPLE CARD", ar: "كارت تعريفي بسيط" },
+      tag: {
+        en: "Personal Card · Freelance Project",
+        ar: "كارت تعريفي شخصي · مشروع فريلانس",
+      },
+      summary: {
+        en: "A personal card showcasing skills, projects, and a clean professional identity.",
+        ar: "كارت شخصي يعرض المهارات والمشاريع وهوية مهنية نظيفة.",
+      },
+      demo: "https://rewis-jet.vercel.app/",
+      github: "https://github.com/peteremad438-ux/project.git",
+      overview: {
+        en: "A single-screen personal card built for situations where a full portfolio is overkill — a quick link to send someone who just needs your skills, projects, and contact info in one glance.",
+        ar: "كارت شخصي بشاشة واحدة اتبنى للمواقف اللي فيها البورتفوليو الكامل يبقى زيادة عن اللزوم؛ لينك سريع تبعته لحد محتاج يشوف مهاراتك ومشاريعك وبيانات التواصل من نظرة واحدة.",
+      },
+      challenge: {
+        en: "The whole point of a card like this is that it loads instantly and says everything in one screen — any scroll or delay defeats the purpose.",
+        ar: "الهدف الأساسي من كارت زي ده إنه يحمّل فورًا ويقول كل حاجة في شاشة واحدة؛ أي سكرول أو تأخير بيلغي الفايدة منه.",
+      },
+      approach: {
+        en: "I limited the whole page to one viewport height on desktop, prioritized three pieces of information — role, top skills, and contact — and left everything else out.",
+        ar: "حددت الصفحة كلها بارتفاع شاشة واحدة على الديسكتوب، وركزت على 3 معلومات بس: الدور، أهم المهارات، والتواصل، وسبت أي حاجة زيادة برا.",
+      },
+      features: [
+        {
+          icon: "fa-id-card",
+          title: { en: "Single-Screen Layout", ar: "تصميم شاشة واحدة" },
+          desc: {
+            en: "Everything a visitor needs sits in one view — no scrolling required to understand who you are.",
+            ar: "كل اللي الزائر محتاجه موجود في شاشة واحدة، من غير الحاجة لسكرول عشان يفهم إنت مين.",
+          },
+        },
+        {
+          icon: "fa-list-check",
+          title: { en: "Priority Skill Chips", ar: "وسوم مهارات ذات أولوية" },
+          desc: {
+            en: "Skills are grouped into a handful of chips instead of a long list, so the strongest ones don't get lost.",
+            ar: "المهارات مجمعة في عدد قليل من الوسوم بدل قائمة طويلة، عشان أقواها متضيعش وسط الباقي.",
+          },
+        },
+        {
+          icon: "fa-link",
+          title: { en: "Quick Contact Links", ar: "روابط تواصل سريعة" },
+          desc: {
+            en: "Direct links to GitHub, email, and social profiles — no contact form, no extra step.",
+            ar: "روابط مباشرة لـ GitHub والإيميل والحسابات الاجتماعية، من غير فورم تواصل ولا خطوة زيادة.",
+          },
+        },
+        {
+          icon: "fa-gauge-high",
+          title: { en: "Instant Load", ar: "تحميل فوري" },
+          desc: {
+            en: "No frameworks, no external fonts blocking render — the card is visible before most sites finish their first request.",
+            ar: "من غير فريموركس ولا خطوط خارجية بتأخر العرض؛ الكارت بيبان قبل ما أغلب المواقع تخلص أول طلب ليها أصلاً.",
+          },
+        },
+      ],
+      tech: ["HTML5", "CSS3"],
+      process: [
+        {
+          title: { en: "Content Priority", ar: "أولوية المحتوى" },
+          desc: {
+            en: "Chose the three facts a visitor sees first, and cut everything that didn't fit that list.",
+            ar: "اخترت أهم 3 معلومات الزائر هيشوفها الأول، وشلت أي حاجة مكانتش داخلة في القايمة دي.",
+          },
+        },
+        {
+          title: { en: "Single-Column Layout", ar: "تصميم عمود واحد" },
+          desc: {
+            en: "Built one tight column instead of a multi-section homepage, keeping the whole thing scannable in seconds.",
+            ar: "بنيت عمود واحد مضبوط بدل صفحة رئيسية بأقسام متعددة، عشان الكارت كله يتقرأ في ثواني.",
+          },
+        },
+        {
+          title: { en: "Micro-Styling", ar: "تنسيق دقيق" },
+          desc: {
+            en: "Fine-tuned spacing and chip styling over several small passes rather than one big redesign.",
+            ar: "ضبطت المسافات وتصميم الوسوم على كذا مرحلة صغيرة بدل إعادة تصميم واحدة كبيرة.",
+          },
+        },
+        {
+          title: { en: "Ship", ar: "النشر" },
+          desc: {
+            en: "Deployed as a lightweight standalone page with no build step.",
+            ar: "نشرتها كصفحة مستقلة خفيفة من غير أي خطوة بناء.",
+          },
+        },
+      ],
+      problems: [
+        {
+          problem: {
+            en: "Listing every skill made the card feel busy and undercut the point of keeping it minimal.",
+            ar: "سرد كل مهارة خلى الكارت يحس مزدحم وضيّع الهدف من إنه يفضل بسيط.",
+          },
+          solution: {
+            en: "Grouped skills into a few priority chips and left the rest for the full portfolio link instead.",
+            ar: "جمّعت المهارات في وسوم قليلة ذات أولوية وسبت الباقي للينك البورتفوليو الكامل بدل ما أحطهم هنا.",
           },
         },
       ],
@@ -1147,8 +1267,8 @@
         ar: "بدون أي اعتماديات خارجية وملف CSS واحد فقط، الكارت يحمّل فورياً تقريباً على أي اتصال.",
       },
       lessons: {
-        en: "A great constraint exercise — proof that a tiny surface area can still feel deliberate and polished.",
-        ar: "تمرين ممتاز في القيود، وإثبات إن مساحة صغيرة جداً ممكن كمان تحس مدروسة ومصقولة.",
+        en: "A good constraint exercise — proof that a tiny surface area can still feel deliberate if every element on it earns its place.",
+        ar: "تمرين جيد في القيود، وإثبات إن مساحة صغيرة جدًا لسه ممكن تحس مدروسة لو كل عنصر فيها فعلاً مستاهل مكانه.",
       },
       result: {
         en: "A clean, instant-loading personal card that says exactly what it needs to, and nothing more.",
@@ -1248,6 +1368,14 @@
       </button>
 
       <div class="btp-body btp-body--no-hero">
+        <div class="btp-modal-header" data-reveal="up">
+          <div class="btp-modal-icon"><i class="fa-solid ${d.icon}"></i></div>
+          <div class="btp-modal-header-text">
+            <span class="btp-hero-tag">${tr(d.tag)}</span>
+            <h2 class="btp-modal-title">${tr(d.title)}</h2>
+          </div>
+        </div>
+
         <section class="btp-section" data-reveal="up">
           <span class="btp-section-eyebrow">01 · ${ar ? "نظرة عامة" : "Overview"}</span>
           <h3>${ar ? "نظرة عامة على المشروع" : "Project Overview"}</h3>
