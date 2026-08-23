@@ -1036,70 +1036,70 @@
       },
     },
 
-    "simple-card": {
-      accent: "#06b6d4",
-      rgb: "6,182,212",
-      icon: "fa-id-card",
-      hero: "card.jpeg",
-      gallery: ["card.jpeg"],
-      title: { en: "SIMPLE CARD", ar: "كارت تعريفي بسيط" },
+    calculator: {
+      accent: "#b8f000",
+      rgb: "184,240,0",
+      icon: "fa-calculator",
+      hero: "{14B7F15F-9338-4BED-A1B0-10EF836A7183}.png",
+      gallery: ["{14B7F15F-9338-4BED-A1B0-10EF836A7183}.png"],
+      title: { en: "CALCULATOR", ar: "آلة حاسبة" },
       tag: {
-        en: "Personal Identity Card · Freelance",
-        ar: "بطاقة تعريف شخصية · عمل حر",
+        en: "Calculator App · Freelance",
+        ar: "تطبيق آلة حاسبة · عمل حر",
       },
       summary: {
-        en: "A personal card showcasing skills, projects, and a clean professional identity.",
-        ar: "كارت شخصي يعرض المهارات والمشاريع وهوية مهنية نظيفة.",
+        en: "A fast, responsive calculator with a clean interface for everyday arithmetic.",
+        ar: "آلة حاسبة سريعة ومتجاوبة بواجهة نظيفة للعمليات الحسابية اليومية.",
       },
-      demo: "https://rewis-jet.vercel.app/",
+      demo: "https://calculator-self-gamma-67.vercel.app/",
       github: "https://github.com/peteremad438-ux/project.git",
       overview: {
-        en: "A compact single-page identity card — the kind of link-in-bio alternative that presents someone's skills and work at a glance.",
-        ar: "كارت تعريفي بصفحة واحدة، بديل لروابط البايو بيعرض مهارات وأعمال الشخص بنظرة واحدة.",
+        en: "A focused calculator app that makes everyday arithmetic quick and clear through a responsive interface.",
+        ar: "تطبيق آلة حاسبة عملي يجعل العمليات الحسابية اليومية سريعة وواضحة من خلال واجهة متجاوبة.",
       },
       challenge: {
-        en: "Fit a full professional identity — skills, projects, contact — into one small, fast-loading card without feeling cramped.",
-        ar: "استيعاب هوية مهنية كاملة، مهارات ومشاريع وتواصل، في كارت صغير وسريع التحميل بلا ما يحس بالازدحام.",
+        en: "Create a calculator that handles the essential operations cleanly while staying easy to use on small screens.",
+        ar: "إنشاء آلة حاسبة تنفذ العمليات الأساسية بوضوح وتظل سهلة الاستخدام على الشاشات الصغيرة.",
       },
       approach: {
-        en: "I used a cyan accent with tight vertical rhythm and a single-column flow, prioritizing the two or three facts a visitor actually needs first.",
-        ar: "استخدمت لون سماوي وإيقاع رأسي مضبوط وتصميم عمود واحد، مع تقديم أهم معلومتين أو ثلاثة اللي الزائر محتاجها فعلاً أولاً.",
+        en: "I organized the display and keypad into a clear hierarchy, then used a vivid lime accent to give the tool a distinctive visual identity.",
+        ar: "نظمت شاشة العرض ولوحة الأزرار في تسلسل واضح، واستخدمت لونًا ليمونيًا ساطعًا لمنح الأداة هوية بصرية مميزة.",
       },
       features: [
         {
-          icon: "fa-id-card",
-          title: { en: "Identity Header", ar: "رأسية تعريفية" },
+          icon: "fa-calculator",
+          title: { en: "Core Operations", ar: "العمليات الأساسية" },
           desc: {
-            en: "Name, role, and a one-line pitch up top.",
-            ar: "الاسم والدور وجملة تعريف مختصرة في الأعلى.",
+            en: "Handles the arithmetic needed for everyday calculations.",
+            ar: "تنفذ العمليات الحسابية المطلوبة للاستخدام اليومي.",
           },
         },
         {
           icon: "fa-code",
-          title: { en: "Skill Chips", ar: "وسوم المهارات" },
+          title: { en: "Clear Keypad", ar: "لوحة أزرار واضحة" },
           desc: {
-            en: "Compact, scannable skill tags.",
-            ar: "وسوم مهارات مختصرة وسهلة القراءة.",
+            en: "A readable button layout keeps input fast and predictable.",
+            ar: "تنسيق أزرار واضح يجعل الإدخال سريعًا ومتوقعًا.",
           },
         },
         {
           icon: "fa-link",
-          title: { en: "Quick Links", ar: "روابط سريعة" },
+          title: { en: "Responsive Layout", ar: "تصميم متجاوب" },
           desc: {
-            en: "Direct links to projects and socials.",
-            ar: "روابط مباشرة للمشاريع ووسائل التواصل.",
+            en: "The calculator remains comfortable to use across screen sizes.",
+            ar: "تظل الآلة الحاسبة مريحة للاستخدام على مختلف أحجام الشاشات.",
           },
         },
         {
           icon: "fa-gauge-high",
-          title: { en: "Instant Load", ar: "تحميل فوري" },
+          title: { en: "Fast Interaction", ar: "تفاعل سريع" },
           desc: {
-            en: "Single-page, near-zero-dependency footprint.",
-            ar: "صفحة واحدة بأقل اعتماديات ممكنة.",
+            en: "Lightweight code keeps every keypress feeling immediate.",
+            ar: "الكود الخفيف يجعل الاستجابة لكل ضغطة فورية.",
           },
         },
       ],
-      tech: ["HTML5", "CSS3"],
+      tech: ["HTML5", "CSS3", "JavaScript"],
       process: [
         {
           title: { en: "Content Priority", ar: "أولوية المحتوى" },
