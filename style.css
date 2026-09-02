@@ -189,7 +189,7 @@ body::after {
   align-items: center;
   justify-content: center;
   font-family: "Clash Display", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   /* Scales continuously with viewport width: small on phones,
      medium on tablets, large on laptops/desktops — no hard jumps. */
   font-size: clamp(1.65rem, 7.2vw, 4.5rem);
